@@ -1,0 +1,55 @@
+{
+    "npm": true,
+    "moduleResolution": "node",
+    "entrypoint": "index.html",
+    "shell": "lit-element-bootstrap-docs.js",
+    "fragments": [
+        "views/home/home-view.js",
+        "views/behaviour/collapse-view.js",
+        "views/layout/grid-view.js",
+        "views/components/alerts-view.js",
+        "views/components/badges-view.js",
+        "views/components/breadcrumbs-view.js",
+        "views/components/buttons-group-view.js",
+        "views/components/buttons-view.js",
+        "views/components/cards-view.js",
+        "views/components/carousel-view.js",
+        "views/components/dropdowns-view.js",
+        "views/components/forms-view.js",
+        "views/components/input-group-view.js",
+        "views/components/jumbotron-view.js",
+        "views/components/list-groups-view.js",
+        "views/components/media-object-view.js",
+        "views/components/modal-view.js",
+        "views/components/navbar-view.js",
+        "views/components/navs-view.js",
+        "views/components/pagination-view.js",
+        "views/components/progress-view.js"
+    ],   
+    "sources": [
+        "manifest/**",
+        "package.json"
+    ],
+    "extraDependencies": [
+        "manifest.json",
+        "node_modules/@webcomponents/webcomponentsjs/**"
+    ],
+    "builds": [{
+        "name": "es5-bundled",
+        "bundle": true,
+        "js": {
+            "transformModulesToAmd": true
+        },
+        "addServiceWorker": true,
+        "addPushManifest": true
+    },
+    {
+        "name": "es6-bundled",
+        "bundle": true,
+        "js": {
+            "transformModulesToAmd": true
+        },
+        "addServiceWorker": true,
+        "addPushManifest": true
+    }]
+}

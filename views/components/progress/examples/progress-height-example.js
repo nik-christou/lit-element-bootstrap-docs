@@ -1,0 +1,47 @@
+
+import { LitElement, html } from 'lit-element';
+import { BsProgress, BsProgressBar } from 'lit-element-bootstrap/components/progress';
+import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
+import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+
+class ProgressHeightExample extends LitElement {
+    
+    static get styles() {
+        return [
+            BsContentRebootCss,
+            BsContentTypographyCss,
+            BsContentCodeCss,
+            BsCodeSyntaxCss
+        ];
+    }
+
+    render() {
+        return html`
+            
+            <bs-example>
+                
+                <bs-progress style="height: 1px;">
+                    <bs-progress-bar completed="25"></bs-progress-bar>
+                </bs-progress>
+                
+                <br />
+                
+                <bs-progress style="height: 20px;">
+                    <bs-progress-bar completed="25"></bs-progress-bar>
+                </bs-progress>
+                
+            </bs-example>
+            <bs-highlight>
+                <pre><code class="language-html" data-lang="html">
+<span class="nt">&lt;bs-progress</span> <span class="na">style=</span><span class="s">"height: 1px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;bs-progress-bar</span> <span class="na">completed=</span><span class="s">"25"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-progress-bar&gt;</span>
+<span class="nt">&lt;bs-progress&gt;</span>
+<span class="nt">&lt;bs-progress</span> <span class="na">style=</span><span class="s">"height: 20px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;bs-progress-bar</span> <span class="na">completed=</span><span class="s">"25"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-progress-bar&gt;</span>
+<span class="nt">&lt;bs-progress&gt;</span>
+</code></pre></bs-highlight>
+        `;
+    }
+};
+
+window.customElements.define('progress-height-example', ProgressHeightExample);
