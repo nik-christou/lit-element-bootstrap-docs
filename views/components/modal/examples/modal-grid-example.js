@@ -17,7 +17,7 @@ class ModalGridExample extends LitElement {
             BsCodeSyntaxCss,
             BsSpacingCss,
             css`
-                bs-col[demo] {
+                bs-column[demo] {
                     padding-top: 0.75rem;
                     padding-bottom: 0.75rem;
                     background-color: rgba(86,61,124,0.15);
@@ -84,22 +84,22 @@ class ModalGridExample extends LitElement {
     <span class="nt">&lt;bs-modal-body</span> <span class="na">slot=</span><span class="s">"body"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;bs-container</span> <span class="na">fluid</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-row&gt;</span>
-                <span class="nt">&lt;bs-col</span> <span class="na">md-4</span><span class="nt">&gt;</span>md-4<span class="nt">&lt;/bs-column&gt;</span>
-                <span class="nt">&lt;bs-col</span> <span class="na">md-4</span> <span class="na">class=</span><span class="s">"ml-auto"</span><span class="nt">&gt;</span>md-4 .ml-auto<span class="nt">&lt;/bs-column&gt;</span>
+                <span class="nt">&lt;bs-column</span> <span class="na">md-4</span><span class="nt">&gt;</span>md-4<span class="nt">&lt;/bs-column&gt;</span>
+                <span class="nt">&lt;bs-column</span> <span class="na">md-4</span> <span class="na">class=</span><span class="s">"ml-auto"</span><span class="nt">&gt;</span>md-4 .ml-auto<span class="nt">&lt;/bs-column&gt;</span>
             <span class="nt">&lt;/bs-row&gt;</span>
             <span class="nt">&lt;bs-row&gt;</span>
-                <span class="nt">&lt;bs-col</span> <span class="na">md-3</span> <span class="na">class=</span><span class="s">"ml-auto"</span><span class="nt">&gt;</span>md-3 .ml-auto<span class="nt">&lt;/bs-column&gt;</span>
-                <span class="nt">&lt;bs-col</span> <span class="na">md-2</span> <span class="na">class=</span><span class="s">"ml-auto"</span><span class="nt">&gt;</span>md-2 .ml-auto<span class="nt">&lt;/bs-column&gt;</span>
+                <span class="nt">&lt;bs-column</span> <span class="na">md-3</span> <span class="na">class=</span><span class="s">"ml-auto"</span><span class="nt">&gt;</span>md-3 .ml-auto<span class="nt">&lt;/bs-column&gt;</span>
+                <span class="nt">&lt;bs-column</span> <span class="na">md-2</span> <span class="na">class=</span><span class="s">"ml-auto"</span><span class="nt">&gt;</span>md-2 .ml-auto<span class="nt">&lt;/bs-column&gt;</span>
             <span class="nt">&lt;/bs-row&gt;</span>
             <span class="nt">&lt;bs-row&gt;</span>
-                <span class="nt">&lt;bs-col</span> <span class="na">md-6</span> <span class="na">class=</span><span class="s">"ml-auto"</span><span class="nt">&gt;</span>md-6 .ml-auto<span class="nt">&lt;/bs-column&gt;</span>
+                <span class="nt">&lt;bs-column</span> <span class="na">md-6</span> <span class="na">class=</span><span class="s">"ml-auto"</span><span class="nt">&gt;</span>md-6 .ml-auto<span class="nt">&lt;/bs-column&gt;</span>
             <span class="nt">&lt;/bs-row&gt;</span>
             <span class="nt">&lt;bs-row&gt;</span>
-                <span class="nt">&lt;bs-col</span> <span class="na">sm-9</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;bs-column</span> <span class="na">sm-9</span><span class="nt">&gt;</span>
                     Level 1: sm-9
                     <span class="nt">&lt;bs-row&gt;</span>
-                        <span class="nt">&lt;bs-col</span> <span class="na">xs-8 sm-6</span><span class="nt">&gt;</span>Level 2: xs-8 sm-6<span class="nt">&lt;/bs-column&gt;</span>
-                        <span class="nt">&lt;bs-col</span> <span class="na">xs-8 sm-6</span><span class="nt">&gt;</span>Level 2: xs-8 sm-6<span class="nt">&gt;</span><span class="nt">&lt;/bs-column&gt;</span>
+                        <span class="nt">&lt;bs-column</span> <span class="na">xs-8 sm-6</span><span class="nt">&gt;</span>Level 2: xs-8 sm-6<span class="nt">&lt;/bs-column&gt;</span>
+                        <span class="nt">&lt;bs-column</span> <span class="na">xs-8 sm-6</span><span class="nt">&gt;</span>Level 2: xs-8 sm-6<span class="nt">&gt;</span><span class="nt">&lt;/bs-column&gt;</span>
                     <span class="nt">&lt;/bs-row&gt;</span>
                 <span class="nt">&lt;/bs-column&gt;</span>
             <span class="nt">&lt;/bs-row&gt;</span>

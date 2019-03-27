@@ -6,7 +6,6 @@ import { BsContentRebootCss } from 'lit-element-bootstrap/content';
 import './component/drawer/drawer-layout';
 import './component/drawer/drawer-sidebar';
 import './component/drawer/drawer-navbar';
-import './views/loading/loading-view';
 
 class LitElementBootstrapDocs extends LitElement {
     
@@ -94,10 +93,6 @@ class LitElementBootstrapDocs extends LitElement {
     firstUpdated() {
         const drawerLayoutElement = this.shadowRoot.querySelector('drawer-layout');
         installRouter((location) => this._locationChanged(location, drawerLayoutElement));
-        // installMediaQueryWatcher(`(min-width: 576px) and (max-width: 768px)`, (matches) => this._smallDevicesLayoutChanged(matches));
-        // installMediaQueryWatcher(`(min-width: 768px) and (max-width: 992px)`, (matches) => this._mediumDevicesLayoutChanged(matches));
-        // installMediaQueryWatcher(`(min-width: 992px) and (max-width: 1200px)`, (matches) => this._largeDevicesLayoutChanged(matches));
-        // installMediaQueryWatcher(`(min-width: 1200px)`, (matches) => this._extraLargeDevicesLayoutChanged(matches));
     }
     
     _locationChanged(location, drawerLayoutElement) {
@@ -171,6 +166,7 @@ class LitElementBootstrapDocs extends LitElement {
         
         switch (view) {
             case 'home':                    return 'home-view';
+            case 'loading':                 return 'loading-view';
             case 'layout/containers':       return 'container-view';
             case 'layout/grid':             return 'grid-view';
             case 'component/alerts':        return 'alerts-view';
@@ -200,6 +196,7 @@ class LitElementBootstrapDocs extends LitElement {
         
         switch (view) {
             case 'home':                    return './views/home/home-view.js';
+            case 'loading':                 return './views/loading/loading-view.js';
             case 'layout/containers':       return './views/layout/container/container-view.js';
             case 'layout/grid':             return './views/layout/grid/grid-view.js';
             case 'component/alerts':        return './views/components/alerts/alerts-view.js';

@@ -72,7 +72,7 @@ export class CollapseMultiTargetExample extends BsCollapseMixin(LitElement) {
 <span class="nt">&lt;/p&gt;</span>
         
 <span class="nt">&lt;bs-row&gt;</span>
-    <span class="nt">&lt;bs-col</span> <span class="na">xs</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>
         <span class="nt">&lt;bs-collapsable</span> <span class="na">expanded</span> <span class="na">id=</span><span class="s">"multiCollapseExample1"</span> <span class="na">class=</span><span class="s">"multi-collapse"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-card&gt;</span>
                 <span class="nt">&lt;bs-card-body&gt;</span>
@@ -80,8 +80,8 @@ export class CollapseMultiTargetExample extends BsCollapseMixin(LitElement) {
                 <span class="nt">&lt;/bs-card-body&gt;</span>
             <span class="nt">&lt;/bs-card&gt;</span>
         <span class="nt">&lt;/bs-collapsable&gt;</span>
-    <span class="nt">&lt;/bs-col&gt;</span>
-    <span class="nt">&lt;bs-col</span> <span class="na">xs</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/bs-column&gt;</span>
+    <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>
         <span class="nt">&lt;bs-collapsable</span> <span class="na">expanded</span> <span class="na">id=</span><span class="s">"multiCollapseExample2"</span> <span class="na">class=</span><span class="s">"multi-collapse"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-card&gt;</span>
                 <span class="nt">&lt;bs-card-body&gt;</span>
@@ -89,7 +89,7 @@ export class CollapseMultiTargetExample extends BsCollapseMixin(LitElement) {
                 <span class="nt">&lt;/bs-card-body&gt;</span>
             <span class="nt">&lt;/bs-card&gt;</span>
         <span class="nt">&lt;/bs-collapsable&gt;</span>
-    <span class="nt">&lt;/bs-col&gt;</span>
+    <span class="nt">&lt;/bs-column&gt;</span>
 <span class="nt">&lt;/bs-row&gt;</span>
 </code></pre></bs-highlight>
         `;

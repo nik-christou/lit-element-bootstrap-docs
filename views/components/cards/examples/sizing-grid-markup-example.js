@@ -55,7 +55,7 @@ class SizingGridMarkupExample extends LitElement {
             </bs-example>
             <bs-highlight>
                 <pre><code class="language-html" data-lang="html"><span class="nt">&lt;bs-row&gt;</span>
-    <span class="nt">&lt;bs-col</span> <span class="na">sm-6</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;bs-column</span> <span class="na">sm-6</span><span class="nt">&gt;</span>
         <span class="nt">&lt;bs-card&gt;</span> 
             <span class="nt">&lt;bs-card-body&gt;</span> 
                 <span class="nt">&lt;bs-card-title</span> <span class="na">slot=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>
@@ -68,7 +68,7 @@ class SizingGridMarkupExample extends LitElement {
             <span class="nt">&lt;/bs-card-body&gt;</span>
         <span class="nt">&lt;/bs-card&gt;</span>
     <span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;bs-col</span> <span class="na">sm-6</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;bs-column</span> <span class="na">sm-6</span><span class="nt">&gt;</span>
         <span class="nt">&lt;bs-card&gt;</span> 
             <span class="nt">&lt;bs-card-body&gt;</span> 
                 <span class="nt">&lt;bs-card-title</span> <span class="na">slot=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>

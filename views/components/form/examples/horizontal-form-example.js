@@ -91,21 +91,21 @@ class HorizontalFormExample extends LitElement {
 
     <span class="nt">&lt;bs-form-group</span> <span class="na">row</span><span class="nt">&gt;</span>
         <span class="nt">&lt;bs-form-label</span> <span class="na">slot=</span><span class="s">"label"</span> <span class="na">sm-2</span> <span class="na">column</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/bs-form-label&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Email"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-input&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
     <span class="nt">&lt;/bs-form-group&gt;</span>
 
     <span class="nt">&lt;bs-form-group</span> <span class="na">row</span><span class="nt">&gt;</span>
         <span class="nt">&lt;bs-form-label</span> <span class="na">slot=</span><span class="s">"label"</span> <span class="na">sm-2</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/bs-form-label&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-input&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
     <span class="nt">&lt;/bs-form-group&gt;</span>
 
     <span class="nt">&lt;bs-form-group</span> <span class="na">row</span><span class="nt">&gt;</span>
         <span class="nt">&lt;bs-form-label</span> <span class="na">slot=</span><span class="s">"label"</span> <span class="na">column</span> <span class="na">sm-2</span> <span class="na">class=</span><span class="s">"pt-0"</span><span class="nt">&gt;</span>Radios<span class="nt">&lt;/bs-form-label&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">sm-10</span> <span class="na">slot=</span><span class="s">"control"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">sm-10</span> <span class="na">slot=</span><span class="s">"control"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-radio-name-group</span> <span class="na">name=</span><span class="s">"gridRadios"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;bs-form-check-group&gt;</span>
                     <span class="nt">&lt;bs-form-radio-input</span> <span class="na">slot=</span><span class="s">"check"</span> <span class="na">checked</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">value=</span><span class="s">"option1"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-radio-input&gt;</span>
@@ -125,7 +125,7 @@ class HorizontalFormExample extends LitElement {
     
     <span class="nt">&lt;bs-form-group</span> <span class="na">row</span><span class="nt">&gt;</span>
         <span class="nt">&lt;bs-form-label</span> <span class="na">slot=</span><span class="s">"label"</span> <span class="na">sm-2</span><span class="nt">&gt;</span>Checkbox<span class="nt">&lt;/bs-form-label&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-check-group&gt;</span>
                 <span class="nt">&lt;bs-form-checkbox-input</span> <span class="na">slot=</span><span class="s">"check"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-checkbox-input&gt;</span>
                 <span class="nt">&lt;bs-form-check-label</span> <span class="na">slot=</span><span class="s">"label"</span><span class="nt">&gt;</span>Example checkbox <span class="nt">&lt;/bs-form-check-label&gt;</span>
@@ -134,7 +134,7 @@ class HorizontalFormExample extends LitElement {
     <span class="nt">&lt;/bs-form-group&gt;</span>
     
     <span class="nt">&lt;bs-form-group</span> <span class="na">row</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-button</span> <span class="na">primary</span> <span class="na">button-type</span><span class="s">"submit"</span> <span class="nt">&gt;</span>Sign in<span class="nt">&lt;/bs-button&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
     <span class="nt">&lt;/bs-form-group&gt;</span>

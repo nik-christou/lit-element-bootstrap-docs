@@ -5,26 +5,28 @@
     "shell": "lit-element-bootstrap-docs.js",
     "fragments": [
         "views/home/home-view.js",
-        "views/behaviour/collapse-view.js",
-        "views/layout/grid-view.js",
-        "views/components/alerts-view.js",
-        "views/components/badges-view.js",
-        "views/components/breadcrumbs-view.js",
-        "views/components/buttons-group-view.js",
-        "views/components/buttons-view.js",
-        "views/components/cards-view.js",
-        "views/components/carousel-view.js",
-        "views/components/dropdowns-view.js",
-        "views/components/forms-view.js",
-        "views/components/input-group-view.js",
-        "views/components/jumbotron-view.js",
-        "views/components/list-groups-view.js",
-        "views/components/media-object-view.js",
-        "views/components/modal-view.js",
-        "views/components/navbar-view.js",
-        "views/components/navs-view.js",
-        "views/components/pagination-view.js",
-        "views/components/progress-view.js"
+        "views/loading/loading-view.js",
+        "views/behaviour/collapse/collapse-view.js",
+        "views/layout/grid/grid-view.js",
+        "views/layout/container/container-view.js",
+        "views/components/alerts/alerts-view.js",
+        "views/components/badges/badges-view.js",
+        "views/components/breadcrumb/breadcrumbs-view.js",
+        "views/components/button/buttons-view.js",
+        "views/components/button-group/buttons-group-view.js",
+        "views/components/cards/cards-view.js",
+        "views/components/carousel/carousel-view.js",
+        "views/components/dropdown/dropdowns-view.js",
+        "views/components/form/forms-view.js",
+        "views/components/input-group/input-group-view.js",
+        "views/components/jumbotron/jumbotron-view.js",
+        "views/components/list-group/list-groups-view.js",
+        "views/components/media-object/media-object-view.js",
+        "views/components/modal/modal-view.js",
+        "views/components/navbar/navbar-view.js",
+        "views/components/navs/navs-view.js",
+        "views/components/pagination/pagination-view.js",
+        "views/components/progress/progress-view.js"
     ],   
     "sources": [
         "manifest/**",
@@ -32,24 +34,8 @@
     ],
     "extraDependencies": [
         "manifest.json",
+        "views/components/navbar/examples/bootstrap-solid.svg",
+        "views/components/media-object/examples/img-placeholder.svg",
         "node_modules/@webcomponents/webcomponentsjs/**"
-    ],
-    "builds": [{
-        "name": "es5-bundled",
-        "bundle": true,
-        "js": {
-            "transformModulesToAmd": true
-        },
-        "addServiceWorker": true,
-        "addPushManifest": true
-    },
-    {
-        "name": "es6-bundled",
-        "bundle": true,
-        "js": {
-            "transformModulesToAmd": true
-        },
-        "addServiceWorker": true,
-        "addPushManifest": true
-    }]
+    ]
 }

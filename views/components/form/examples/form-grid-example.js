@@ -37,10 +37,10 @@ class FormGridExample extends LitElement {
                 <pre><code class="language-html" data-lang="html">
 <span class="nt">&lt;bs-form&gt;</span>
     <span class="nt">&lt;bs-row&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">xs</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-input</span> <span class="na">placeholder=</span><span class="s">"First name"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-input&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">xs</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-input</span> <span class="na">placeholder=</span><span class="s">"Last name"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-input&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
     <span class="nt">&lt;/bs-row&gt;</span>

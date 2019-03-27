@@ -48,19 +48,19 @@ class HorizontalFormSizingExample extends LitElement {
 <span class="nt">&lt;bs-form&gt;</span>
     <span class="nt">&lt;bs-form-group</span> <span class="na">row</span><span class="nt">&gt;</span>
         <span class="nt">&lt;bs-form-label</span> <span class="na">slot=</span><span class="s">"label"</span> <span class="na">sm-2</span> <span class="na">column-sm</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/bs-form-label&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-input</span> <span class="na">sm</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"col-form-label-sm"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-input&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
     <span class="nt">&lt;/bs-form-group&gt;</span>
     <span class="nt">&lt;bs-form-group</span> <span class="na">row</span><span class="nt">&gt;</span>
         <span class="nt">&lt;bs-form-label</span> <span class="na">slot=</span><span class="s">"label"</span> <span class="na">sm-2</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/bs-form-label&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-input</span> <span class="na">sm</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"col-form-label"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-input&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
     <span class="nt">&lt;/bs-form-group&gt;</span>
     <span class="nt">&lt;bs-form-group</span> <span class="na">row</span><span class="nt">&gt;</span>
         <span class="nt">&lt;bs-form-label</span> <span class="na">slot=</span><span class="s">"label"</span> <span class="na">sm-2</span> <span class="na">column-lg</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/bs-form-label&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">slot=</span><span class="s">"control"</span> <span class="na">sm-10</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-input</span> <span class="na">lg</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"col-form-label-lg"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-input&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
     <span class="nt">&lt;/bs-form-group&gt;</span>

@@ -38,13 +38,13 @@ class ColumnSizingExample extends LitElement {
             <bs-highlight>
                 <pre><code class="language-html" data-lang="html"><span class="nt">&lt;bs-form&gt;</span>
     <span class="nt">&lt;bs-form-row&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">xs-7</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">xs-7</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-input</span> <span class="na">placeholder=</span><span class="s">"City"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-input&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">xs</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-input</span> <span class="na">placeholder=</span><span class="s">"State"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-input&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">xs</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-input</span> <span class="na">placeholder=</span><span class="s">"Zip"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-input&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
     <span class="nt">&lt;/bs-form-row&gt;</span>

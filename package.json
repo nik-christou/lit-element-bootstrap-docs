@@ -6,23 +6,16 @@
     "license": "MIT",
     "scripts": {
         "serve": "polymer serve",
-        "serve-network": "polymer serve --hostname 192.168.10.180 --port 8081",
-        "serve-es5-bundle": "polymer serve build/es5-bundled",
-        "serve-es6-bundle": "polymer serve build/es6-bundled",
-        "build-es5-bundle": "polymer build --preset es5-bundled",
-        "build-es6-bundle": "polymer build --preset es6-bundled",
-        "lint": "polymer lint",
-        "js-lint": "eslint ./src --ext .js --format codeframe",
-        "js-lint-fix": "eslint ./src --ext .js --format codeframe --fix",
-        "js-lint-report": "eslint ./src --ext .js --format codeframe --no-color --output-file ./eslint-issues.txt"
+        "build": "polymer build --preset es6-bundled",
+        "serve-build": "polymer serve build/es6-bundled"
     },
     "devDependencies": {
-        "eslint": "^5.12.1",
         "polymer-cli": "^1.9.7"
     },
     "dependencies": {
         "@webcomponents/webcomponentsjs": "2.2.1",
         "lit-element": "^2.0.1",
+        "lit-element-bootstrap": "^1.0.0-alpha.1",
         "popper.js": "^1.14.4",
         "pwa-helpers": "^0.9.1"
     }

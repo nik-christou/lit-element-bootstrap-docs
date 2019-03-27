@@ -60,20 +60,20 @@ class ColumnAutoSizingExample extends LitElement {
                 <pre><code class="language-html" data-lang="html">
 <span class="nt">&lt;bs-form&gt;</span>
     <span class="nt">&lt;bs-form-row</span> <span class="na">class=</span><span class="s">"align-items-center"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">xs-auto</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">xs-auto</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-label</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/bs-form-label&gt;</span>
             <span class="nt">&lt;bs-form-input</span> <span class="na">class=</span><span class="s">"mb-2"</span> <span class="na">placeholder=</span><span class="s">"Jane Doe"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-input&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">xs-auto</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">xs-auto</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-label</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/bs-form-label&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">xs-auto</span> <span class="na">class=</span><span class="s">"my-1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">xs-auto</span> <span class="na">class=</span><span class="s">"my-1"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-form-check-group&gt;</span> 
                 <span class="nt">&lt;bs-form-checkbox-input</span> <span class="na">slot=</span><span class="s">"check"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-form-checkbox-input&gt;</span>
                 <span class="nt">&lt;bs-form-check-label</span> <span class="na">slot=</span><span class="s">"label"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/bs-form-check-label&gt;</span>
             <span class="nt">&lt;/bs-form-check-group&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">xs-auto</span> <span class="na">class=</span><span class="s">"my-1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">xs-auto</span> <span class="na">class=</span><span class="s">"my-1"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;bs-button</span> <span class="na">primary</span> <span class="na">button-type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/bs-button&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
     <span class="nt">&lt;/bs-form-row&gt;</span>

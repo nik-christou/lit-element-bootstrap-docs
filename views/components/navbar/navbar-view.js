@@ -60,8 +60,6 @@ class NavbarView extends LitElement {
             
             <navbar-form-brand-example></navbar-form-brand-example>
             
-            <p>Input groups work, too:</p>
-            
             <navbar-form-input-group-example></navbar-form-input-group-example>
             
             <navbar-form-buttons-example></navbar-form-buttons-example>

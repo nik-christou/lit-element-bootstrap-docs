@@ -13,7 +13,7 @@ class NestedGridExample extends LitElement {
             BsContentCodeCss,
             BsCodeSyntaxCss,
             css`
-                bs-col[demo] {
+                bs-column[demo] {
                     padding-top: 0.75rem;
                     padding-bottom: 0.75rem;
                     background-color: rgba(86,61,124,0.15);
@@ -44,11 +44,11 @@ class NestedGridExample extends LitElement {
                 <pre><code class="language-html" data-lang="html">
 <span class="nt">&lt;bs-container&gt;</span>
     <span class="nt">&lt;bs-row&gt;</span>
-        <span class="nt">&lt;bs-col</span> <span class="na">sm-9</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bs-column</span> <span class="na">sm-9</span><span class="nt">&gt;</span>
             Level 1: sm-9
             <span class="nt">&lt;bs-row&gt;</span>
-                <span class="nt">&lt;bs-col</span> <span class="na">xs-8 sm-6</span><span class="nt">&gt;</span>Level 2: xs-8 sm-6<span class="nt">&lt;/bs-column&gt;</span>
-                <span class="nt">&lt;bs-col</span> <span class="na">xs-8 sm-6</span><span class="nt">&gt;</span>Level 2: xs-8 sm-6<span class="nt">&lt;/bs-column&gt;</span>
+                <span class="nt">&lt;bs-column</span> <span class="na">xs-8 sm-6</span><span class="nt">&gt;</span>Level 2: xs-8 sm-6<span class="nt">&lt;/bs-column&gt;</span>
+                <span class="nt">&lt;bs-column</span> <span class="na">xs-8 sm-6</span><span class="nt">&gt;</span>Level 2: xs-8 sm-6<span class="nt">&lt;/bs-column&gt;</span>
             <span class="nt">&lt;/bs-row&gt;</span>
         <span class="nt">&lt;/bs-column&gt;</span>
     <span class="nt">&lt;/bs-row&gt;</span>
