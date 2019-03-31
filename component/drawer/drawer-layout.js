@@ -1,6 +1,6 @@
 
 import { LitElement, html, css } from 'lit-element';
-import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
+import { installMediaQueryWatcher } from 'pwa-helpers/media-query';
 import { BsRow, BsColumn, BsContainer} from 'lit-element-bootstrap/layout/grid';
 import { BsContentRebootCss } from 'lit-element-bootstrap/content';
 

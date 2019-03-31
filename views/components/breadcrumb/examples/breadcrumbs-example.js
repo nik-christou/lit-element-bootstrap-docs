@@ -1,6 +1,6 @@
 
 import { LitElement, html } from 'lit-element';
-import { BsBreadrumb, BsBreadrumbItem, BsBreadcrumbCss } from 'lit-element-bootstrap/components/breadcrumb';
+import { BsBreadrumb, BsBreadrumbItem } from 'lit-element-bootstrap/components/breadcrumb';
 import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
@@ -11,8 +11,7 @@ class BreadcrumBsExample extends LitElement {
             BsContentRebootCss,
             BsContentTypographyCss,
             BsContentCodeCss,
-            BsCodeSyntaxCss,
-            BsBreadcrumbCss
+            BsCodeSyntaxCss
         ];
     }
     
@@ -21,15 +20,16 @@ class BreadcrumBsExample extends LitElement {
             
             <bs-example>
                 
+                
                 <bs-breadcrumb>
                     <bs-breadcrumb-item title="Home" target="/home" active></bs-breadcrumb-item>
                 </bs-breadcrumb>
-            
+                
                 <bs-breadcrumb>
                     <bs-breadcrumb-item title="Home" target="/home"></bs-breadcrumb-item>
                     <bs-breadcrumb-item title="Library" target="/library" active></bs-breadcrumb-item>
                 </bs-breadcrumb>
-        
+                
                 <bs-breadcrumb>
                     <bs-breadcrumb-item title="Home" target="/home"></bs-breadcrumb-item>
                     <bs-breadcrumb-item title="Library" target="/library"></bs-breadcrumb-item>

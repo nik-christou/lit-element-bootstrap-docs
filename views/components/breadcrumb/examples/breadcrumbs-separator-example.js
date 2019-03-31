@@ -1,6 +1,6 @@
 
 import { LitElement, html, css } from 'lit-element';
-import { BsBreadrumb, BsBreadrumbItem, BsBreadcrumbCss } from 'lit-element-bootstrap/components/breadcrumb';
+import { BsBreadrumb, BsBreadrumbItem } from 'lit-element-bootstrap/components/breadcrumb';
 import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
@@ -12,7 +12,6 @@ class BreadcrumbsSeparatorExample extends LitElement {
             BsContentTypographyCss,
             BsContentCodeCss,
             BsCodeSyntaxCss,
-            BsBreadcrumbCss,
             css`
                 bs-breadcrumb.arrowSeparator {
                     --breadcrumb-divider: ">";

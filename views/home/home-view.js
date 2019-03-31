@@ -14,7 +14,6 @@ class HomeView extends LitElement {
         return html`
             <h1>lit-element-bootstrap</h1>
             <p>Implementation of Bootstrap v4.1.3 as LitElement web components.</p>
-            <p>Current version: 1.0.0-alpha.1</p>
         `;
     }
 };

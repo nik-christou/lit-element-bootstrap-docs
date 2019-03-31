@@ -5,7 +5,7 @@ import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstra
 import { BsPositionCss, BsSpacingCss, BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
 import { BsNavbar, BsNavbarToggler, BsNavbarBrandLink } from 'lit-element-bootstrap/components/navbar';
 
-import '../icons/bars-icon.js';
+import '../icons/bars-icon';
 
 class DrawerNavbar extends LitElement {
     

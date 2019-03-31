@@ -1,11 +1,11 @@
 
 import { LitElement, html } from 'lit-element';
-import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
+import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
 import { BsContentRebootCss, BsContentTypographyCss, BsContentCodeCss } from  'lit-element-bootstrap/content';
 
-import './examples/collapse-accordion-example.js';
-import './examples/collapse-single-target-example.js';
-import './examples/collapse-multi-target-example.js';
+import './examples/collapse-accordion-example';
+import './examples/collapse-single-target-example';
+import './examples/collapse-multi-target-example';
 
 class CollapseView extends LitElement {
     

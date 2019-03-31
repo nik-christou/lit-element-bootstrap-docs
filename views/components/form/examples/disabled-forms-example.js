@@ -6,7 +6,7 @@ import { BsFormCheckboxInput, BsFormCheckGroup, BsFormSelect } from 'lit-element
 import { BsForm, BsFormInput, BsFormLabel, BsFormGroup, BsFormFieldset } from 'lit-element-bootstrap/components/form';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import '../../../../component/callout/bs-callout.js';
+import '../../../../component/callout/bs-callout';
 
 class DisabledFormsExample extends LitElement {
 
