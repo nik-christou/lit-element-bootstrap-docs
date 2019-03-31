@@ -4604,6 +4604,14 @@ lazystream@^1.0.0:
   dependencies:
     readable-stream "^2.0.5"
 
+lit-element-bootstrap@^1.0.0-alpha.3:
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/lit-element-bootstrap/-/lit-element-bootstrap-1.0.0-alpha.3.tgz#ee86d41a7f150ca2746ff38b291778eba353099d"
+  integrity sha512-1bHPLaotnixntA0KbEB5XWZcja6IV3sEzH5knXRLhQVjbVCF1YcdMfshB3lIa7HvKeOoGroQv3Cejevk5+Eetg==
+  dependencies:
+    lit-element "^2.1.0"
+    popper.js "^1.14.4"
+
 lit-element@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-2.1.0.tgz#85bc3f1da0227f4b13de8a1be978229b9fa327e9"
