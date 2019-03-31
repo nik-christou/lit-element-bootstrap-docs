@@ -1,6 +1,6 @@
 {
     "name": "lit-element-bootstrap-docs",
-    "version": "1.0.0-alpha.3",
+    "version": "1.0.0-alpha.4",
     "main": "lit-element-bootstrap-docs.js",
     "description": "Polymer Bootstrap documentation and examples",
     "license": "MIT",
@@ -15,7 +15,7 @@
     "dependencies": {
         "@webcomponents/webcomponentsjs": "2.2.7",
         "lit-element": "^2.1.0",
-        "lit-element-bootstrap": "^1.0.0-alpha.3",
+        "lit-element-bootstrap": "^1.0.0-alpha.4",
         "popper.js": "^1.14.4",
         "pwa-helpers": "^0.9.1"
     }
