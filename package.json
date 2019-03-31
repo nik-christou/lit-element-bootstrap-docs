@@ -6,8 +6,8 @@
     "license": "MIT",
     "scripts": {
         "serve": "polymer serve",
-        "build": "polymer build --preset es6-bundled",
-        "serve-build": "polymer serve build/es6-bundled"
+        "build": "polymer build --preset es6-unbundled",
+        "serve-build": "polymer serve build/es6-unbundled"
     },
     "devDependencies": {
         "polymer-cli": "^1.9.7"
