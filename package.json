@@ -1,6 +1,6 @@
 {
     "name": "lit-element-bootstrap-docs",
-    "version": "1.0.0-alpha.1",
+    "version": "1.0.0-alpha.3",
     "main": "lit-element-bootstrap-docs.js",
     "description": "Polymer Bootstrap documentation and examples",
     "license": "MIT",
