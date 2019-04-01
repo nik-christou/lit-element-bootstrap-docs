@@ -2,6 +2,8 @@
 import { LitElement, css } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
+import 'lit-element-bootstrap/layout/grid/bs-container';
+
 class ContainerExample extends BsExampleMixin(LitElement) {
     
     static get styles() {

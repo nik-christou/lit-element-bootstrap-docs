@@ -1,18 +1,15 @@
 
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, css } from 'lit-element';
 import { BsSizingCss, BsDisplayCss } from 'lit-element-bootstrap/utilities';
-import { BsRow, BsColumn, BsContainer } from 'lit-element-bootstrap/layout/grid';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class ColumnBreakWithUtilitiesExample extends LitElement {
+import 'lit-element-bootstrap/layout/grid';
+
+class ColumnBreakWithUtilitiesExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss,
+            super.styles,
             BsSizingCss,
             BsDisplayCss,
             css`
@@ -25,35 +22,17 @@ class ColumnBreakWithUtilitiesExample extends LitElement {
             `
         ];
     }
-    
-    render() {
-        return html`
-            
-            <bs-example>
-                
-                <bs-row>
-                    <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
-                    <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
-                    <!-- Force next columns to break to new line at md breakpoint and up -->
-                    <div class="w-100 d-none d-md-block"></div>
-                    <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
-                    <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
-                </bs-row>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;bs-row&gt;</span>
-    <span class="nt">&lt;bs-column</span> <span class="na">xs-6 sm-3</span><span class="nt">&gt;</span>xs-6 sm-3<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;bs-column</span> <span class="na">xs-6 sm-3</span><span class="nt">&gt;</span>xs-6 sm-3<span class="nt">&lt;/bs-column&gt;</span>
-        
-    <span class="nt">&lt;!--</span> Force next columns to break to new line at md breakpoint and up <span class="nt">--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"w-100 d-none d-md-block"</span><span class="nt">&gt;</span><span class="nt">&lt;/div&gt;</span>
-    
-    <span class="nt">&lt;bs-column</span> <span class="na">xs-6 sm-3</span><span class="nt">&gt;</span>xs-6 sm-3<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;bs-column</span> <span class="na">xs-6 sm-3</span><span class="nt">&gt;</span>xs-6 sm-3<span class="nt">&lt;/bs-column&gt;</span>
-<span class="nt">&lt;/bs-row&gt;</span>
-</code></pre></bs-highlight>
+
+    _getExample() {
+        return `
+            <bs-row>
+                <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
+                <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
+                <!-- Force next columns to break to new line at md breakpoint and up -->
+                <div class="w-100 d-none d-md-block"></div>
+                <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
+                <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
+            </bs-row>
         `;
     }
 };

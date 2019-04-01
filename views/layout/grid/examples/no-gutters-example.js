@@ -1,17 +1,14 @@
 
-import { LitElement, html, css } from 'lit-element';
-import { BsRow, BsColumn } from 'lit-element-bootstrap/layout/grid';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { LitElement, css } from 'lit-element';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class NoGuttersExample extends LitElement {
+import 'lit-element-bootstrap/layout/grid';
+
+class NoGuttersExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss,
+            super.styles,
             css`
                 bs-column[demo] {
                     padding-top: 0.75rem;
@@ -22,25 +19,13 @@ class NoGuttersExample extends LitElement {
             `
         ];
     }
-    
-    render() {
-        return html`
-            
-            <bs-example>
-                
-                <bs-row no-gutters>
-                    <bs-column xs-12 sm-6 md-8 demo>xs-12 sm-6 md-8</bs-column>
-                    <bs-column xs-6 md-4 demo>xs-6 md-4</bs-column>
-                </bs-row>
-        
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;bs-row</span> <span class="na">no-gutters</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;bs-column</span> <span class="na">xs-12 sm-6 md-8</span><span class="nt">&gt;</span>xs-12 sm-6 md-8<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;bs-column</span> <span class="na">xs-6 md-4</span><span class="nt">&gt;</span>xs-6 md-4<span class="nt">&lt;/bs-column&gt;</span>
-<span class="nt">&lt;/bs-row&gt;</span>
-</code></pre></bs-highlight>
+
+    _getExample() {
+        return `
+            <bs-row no-gutters>
+                <bs-column xs-12 sm-6 md-8 demo>xs-12 sm-6 md-8</bs-column>
+                <bs-column xs-6 md-4 demo>xs-6 md-4</bs-column>
+            </bs-row>
         `;
     }
 };

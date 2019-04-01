@@ -1,18 +1,15 @@
 
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, css } from 'lit-element';
 import { BsSizingCss } from 'lit-element-bootstrap/utilities';
-import { BsRow, BsColumn } from 'lit-element-bootstrap/layout/grid';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class EqualWidthMultiRowExample extends LitElement {
+import 'lit-element-bootstrap/layout/grid';
+
+class EqualWidthMultiRowExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss,
+            super.styles,
             BsSizingCss,
             css`
                 bs-column[demo] {
@@ -24,31 +21,16 @@ class EqualWidthMultiRowExample extends LitElement {
             `
         ];
     }
-    
-    render() {
-        return html`
-            
-            <bs-example>
-                
-                <bs-row>
-                    <bs-column xs demo>col</bs-column>
-                    <bs-column xs demo>col</bs-column>
-                    <div class="w-100"></div>
-                    <bs-column xs demo>col</bs-column>
-                    <bs-column xs demo>col</bs-column>
-                </bs-row>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;bs-row&gt;</span>
-    <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>col<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>col<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"w-100"</span><span class="nt">&gt;</span><span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>col<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>col<span class="nt">&lt;/bs-column&gt;</span>
-<span class="nt">&lt;/bs-row&gt;</span>
-</code></pre></bs-highlight>
+
+    _getExample() {
+        return `
+            <bs-row>
+                <bs-column xs demo>col</bs-column>
+                <bs-column xs demo>col</bs-column>
+                <div class="w-100"></div>
+                <bs-column xs demo>col</bs-column>
+                <bs-column xs demo>col</bs-column>
+            </bs-row>
         `;
     }
 };

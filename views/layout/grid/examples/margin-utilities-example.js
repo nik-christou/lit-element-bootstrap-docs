@@ -1,18 +1,15 @@
 
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, css } from 'lit-element';
 import { BsSpacingCss } from 'lit-element-bootstrap/utilities';
-import { BsRow, BsColumn, BsContainer } from 'lit-element-bootstrap/layout/grid';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class MarginUtilitiesExample extends LitElement {
+import 'lit-element-bootstrap/layout/grid';
+
+class MarginUtilitiesExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss,
+            super.styles,
             BsSpacingCss,
             css`
                 bs-column[demo] {
@@ -29,44 +26,22 @@ class MarginUtilitiesExample extends LitElement {
         ];
     }
     
-    render() {
-        return html`
-            
-            <bs-example>
-                
-                <bs-container>
-                    <bs-row>
-                        <bs-column md-4 demo>md-4</bs-column>
-                        <bs-column md-4 demo class="ml-auto">md-4 .ml-auto</bs-column>
-                    </bs-row>
-                    <bs-row>
-                        <bs-column md-3 demo class="ml-md-auto">md-3 .ml-md-auto</bs-column>
-                        <bs-column md-3 demo class="ml-md-auto">md-3 .ml-md-auto</bs-column>
-                    </bs-row>
-                    <bs-row>
-                        <bs-column xs-auto demo class="mr-auto">xs-auto .mr-auto</bs-column>
-                        <bs-column xs-auto demo>xs-auto</bs-column>
-                    </bs-row>
-                </bs-container>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;bs-container&gt;</span>
-    <span class="nt">&lt;bs-row&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">md-4</span><span class="nt">&gt;</span>md-4<span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">md-4</span> <span class="na">class=</span><span class="s">"ml-auto"</span><span class="nt">&gt;</span>md-4 ml-auto<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;/bs-row&gt;</span>
-    <span class="nt">&lt;bs-row&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">md-3</span> <span class="na">class=</span><span class="s">"ml-md-auto"</span><span class="nt">&gt;</span>md-3 ml-md-auto<span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">md-3</span> <span class="na">class=</span><span class="s">"ml-md-auto"</span><span class="nt">&gt;</span>md-3 ml-md-auto<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;/bs-row&gt;</span>
-    <span class="nt">&lt;bs-row&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">xs-auto</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>xs-auto mr-auto<span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">md-3</span><span class="nt">&gt;</span>xs-auto<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;/bs-row&gt;</span>
-<span class="nt">&lt;/bs-container&gt;</span>
-</code></pre></bs-highlight>
+    _getExample() {
+        return `
+            <bs-container>
+                <bs-row>
+                    <bs-column md-4 demo>md-4</bs-column>
+                    <bs-column md-4 demo class="ml-auto">md-4 .ml-auto</bs-column>
+                </bs-row>
+                <bs-row>
+                    <bs-column md-3 demo class="ml-md-auto">md-3 .ml-md-auto</bs-column>
+                    <bs-column md-3 demo class="ml-md-auto">md-3 .ml-md-auto</bs-column>
+                </bs-row>
+                <bs-row>
+                    <bs-column xs-auto demo class="mr-auto">xs-auto .mr-auto</bs-column>
+                    <bs-column xs-auto demo>xs-auto</bs-column>
+                </bs-row>
+            </bs-container>
         `;
     }
 };

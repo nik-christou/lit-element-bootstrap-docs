@@ -1,18 +1,15 @@
 
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, css } from 'lit-element';
 import { BsSizingCss } from 'lit-element-bootstrap/utilities';
-import { BsRow, BsColumn, BsContainer } from 'lit-element-bootstrap/layout/grid';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class ColumnBreakExample extends LitElement {
+import 'lit-element-bootstrap/layout/grid';
+
+class ColumnBreakExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss,
+            super.styles,
             BsSizingCss,
             css`
                 bs-column[demo] {
@@ -24,35 +21,17 @@ class ColumnBreakExample extends LitElement {
             `
         ];
     }
-    
-    render() {
-        return html`
-            
-            <bs-example>
-        
-                <bs-row>
-                    <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
-                    <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
-                    <!-- Force next columns to break to new line -->
-                    <div class="w-100"></div>
-                    <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
-                    <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
-                </bs-row>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;bs-row&gt;</span>
-    <span class="nt">&lt;bs-column</span> <span class="na">xs-6 sm-3</span><span class="nt">&gt;</span>xs-6 sm-3<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;bs-column</span> <span class="na">xs-6 sm-3</span><span class="nt">&gt;</span>xs-6 sm-3<span class="nt">&lt;/bs-column&gt;</span>
-        
-    <span class="nt">&lt;!-- </span> Force next columns to break to new line <span class="nt"> --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"w-100"</span><span class="nt">&gt;</span><span class="nt">&lt;/div&gt;</span>
-    
-    <span class="nt">&lt;bs-column</span> <span class="na">xs-6 sm-3</span><span class="nt">&gt;</span>xs-6 sm-3<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;bs-column</span> <span class="na">xs-6 sm-3</span><span class="nt">&gt;</span>xs-6 sm-3<span class="nt">&lt;/bs-column&gt;</span>
-<span class="nt">&lt;/bs-row&gt;</span>
-</code></pre></bs-highlight>
+
+    _getExample() {
+        return `
+            <bs-row>
+                <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
+                <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
+                <!-- Force next columns to break to new line -->
+                <div class="w-100"></div>
+                <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
+                <bs-column xs-6 sm-3 demo>xs-6 sm-3</bs-column>
+            </bs-row>
         `;
     }
 };

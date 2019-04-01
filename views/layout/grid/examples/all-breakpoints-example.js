@@ -1,17 +1,14 @@
 
-import { LitElement, html, css } from 'lit-element';
-import { BsRow, BsColumn, BsContainer } from 'lit-element-bootstrap/layout/grid';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { LitElement, css } from 'lit-element';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class AllBreakpointsExample extends LitElement {
+import 'lit-element-bootstrap/layout/grid';
+
+class AllBreakpointsExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss,
+            super.styles,
             css`
                 bs-column[demo] {
                     padding-top: 0.75rem;
@@ -23,40 +20,20 @@ class AllBreakpointsExample extends LitElement {
         ];
     }
     
-    render() {
-        return html`
-            
-            <bs-example>
-                
-                <bs-container>
-                    <bs-row>
-                        <bs-column xs demo>col</bs-column>
-                        <bs-column xs demo>col</bs-column>
-                        <bs-column xs demo>col</bs-column>
-                        <bs-column xs demo>col</bs-column>
-                    </bs-row>
-                    <bs-row>
-                        <bs-column xs-8 demo>col-8</bs-column>
-                        <bs-column xs-4 demo>col-4</bs-column>
-                    </bs-row>
-                </bs-container>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;bs-container&gt;</span>
-    <span class="nt">&lt;bs-row&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>col<span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>col<span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>col<span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">xs</span><span class="nt">&gt;</span>col<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;/bs-row&gt;</span>
-    <span class="nt">&lt;bs-row&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">xs-8</span><span class="nt">&gt;</span>col-8<span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">xs-4</span><span class="nt">&gt;</span>col-4<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;/bs-row&gt;</span>
-<span class="nt">&lt;/bs-container&gt;</span>
-</code></pre></bs-highlight>
+    _getExample() {
+        return `
+            <bs-container>
+                <bs-row>
+                    <bs-column xs demo>col</bs-column>
+                    <bs-column xs demo>col</bs-column>
+                    <bs-column xs demo>col</bs-column>
+                    <bs-column xs demo>col</bs-column>
+                </bs-row>
+                <bs-row>
+                    <bs-column xs-8 demo>col-8</bs-column>
+                    <bs-column xs-4 demo>col-4</bs-column>
+                </bs-row>
+            </bs-container>
         `;
     }
 };

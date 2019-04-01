@@ -1,17 +1,14 @@
 
-import { LitElement, html, css } from 'lit-element';
-import { BsRow, BsColumn, BsContainer } from 'lit-element-bootstrap/layout/grid';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { LitElement, css } from 'lit-element';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class EqualWidthColumnsExample extends LitElement {
+import 'lit-element-bootstrap/layout/grid';
+
+class EqualWidthColumnsExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss,
+            super.styles,
             css`
                 bs-column[demo] {
                     padding-top: 0.75rem;
@@ -23,30 +20,15 @@ class EqualWidthColumnsExample extends LitElement {
         ];
     }
     
-    render() {
-        return html`
-            
-            <bs-example>
-                
-                <bs-container>
-                    <bs-row>
-                        <bs-column sm demo>One of three columns</bs-column>
-                        <bs-column sm demo>One of three columns</bs-column>
-                        <bs-column sm demo>One of three columns</bs-column>
-                    </bs-row>
-                </bs-container>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;bs-container&gt;</span>
-    <span class="nt">&lt;bs-row&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">sm</span><span class="nt">&gt;</span>One of three columns<span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">sm</span><span class="nt">&gt;</span>One of three columns<span class="nt">&lt;/bs-column&gt;</span>
-        <span class="nt">&lt;bs-column</span> <span class="na">sm</span><span class="nt">&gt;</span>One of three columns<span class="nt">&lt;/bs-column&gt;</span>
-    <span class="nt">&lt;/bs-row&gt;</span>
-<span class="nt">&lt;/bs-container&gt;</span>
-</code></pre></bs-highlight>
+    _getExample() {
+        return `
+            <bs-container>
+                <bs-row>
+                    <bs-column sm demo>One of three columns</bs-column>
+                    <bs-column sm demo>One of three columns</bs-column>
+                    <bs-column sm demo>One of three columns</bs-column>
+                </bs-row>
+            </bs-container>
         `;
     }
 };

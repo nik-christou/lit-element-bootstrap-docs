@@ -2,13 +2,11 @@
 import { html } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
-
-// import prismjs global in window 
-import 'prismjs/components/prism-core.js';
 import { PrismDefaultCss } from './prism-default-css';
 
 import './bs-example';
 import './bs-highlight';
+import 'prismjs/components/prism-core.js';
 import 'prismjs/components/prism-markup';
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
 
