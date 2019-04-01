@@ -17,6 +17,7 @@
         "lit-element": "^2.1.0",
         "lit-element-bootstrap": "^1.0.0-alpha.4",
         "popper.js": "^1.14.4",
+        "prismjs": "^1.16.0",
         "pwa-helpers": "^0.9.1"
     }
 }
