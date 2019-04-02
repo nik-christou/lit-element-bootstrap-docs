@@ -1,18 +1,15 @@
 
-import { LitElement, html, css } from 'lit-element';
-import { BsLinkButton } from 'lit-element-bootstrap/components/button';
-import { BsCard, BsCardImg, BsCardTitle, BsCardText, BsCardBody } from 'lit-element-bootstrap/components/card';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { LitElement, css } from 'lit-element';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class BasicCardExample extends LitElement {
+import 'lit-element-bootstrap/components/button';
+import 'lit-element-bootstrap/components/card';
+
+class BasicCardExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss,
+            super.styles,
             css`
                 bs-card {
                     width: 18rem;
@@ -33,43 +30,23 @@ class BasicCardExample extends LitElement {
             `
         ];
     }
-    
-    render() {
-        return html`
-            
-            <bs-example>
-                
-                <bs-card>
-                    <bs-card-img position="top" slot="top-image">
-                        <svg class="bd-placeholder-img" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                    </bs-card-img>
-                    <bs-card-body>
-                        <bs-card-title slot="card-title">
-                            <h5>Card title</h5>
-                        </bs-card-title>
-                        <bs-card-text slot="card-text">
-                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </bs-card-text>
-                        <bs-link-button primary>Go somewhere</bs-link-button>
-                    </bs-card-body>
-                </bs-card>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html"><span class="nt">&lt;bs-card&gt;</span> 
-    <span class="nt">&lt;bs-card-img</span> <span class="na">position=</span><span class="s">"top"</span> <span class="na">slot=</span><span class="s">"top-image"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span><span class="nt">&gt;</span><span class="nt">&lt;/img&gt;</span>
-    <span class="nt">&lt;/bs-card-img&gt;</span>
-    <span class="nt">&lt;bs-card-body&gt;</span>
-        <span class="nt">&lt;bs-card-title</span> <span class="na">slot=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;h5&gt;</span>Card title<span class="nt">&lt;/h5&gt;</span>
-        <span class="nt">&lt;/bs-card-title&gt;</span>
-        <span class="nt">&lt;bs-card-text</span> <span class="na">slot=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;p&gt;</span>Some quick example text to build on the card title and make up the bulk of the card's content.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/bs-card-text&gt;</span>
-        <span class="nt">&lt;bs-link-button</span> <span class="na">primary</span><span class="nt">&gt;</span>Go somewhere<span class="nt">&lt;/bs-link-button&gt;</span>
-    <span class="nt">&lt;/bs-card-body&gt;</span>
-<span class="nt">&lt;/bs-card&gt;</span></code></pre></bs-highlight>
+
+    _getExample() {
+        return `
+            <bs-card>
+                <bs-card-img position="top" slot="top-image">
+                    <svg class="bd-placeholder-img" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                </bs-card-img>
+                <bs-card-body>
+                    <bs-card-title slot="card-title">
+                        <h5>Card title</h5>
+                    </bs-card-title>
+                    <bs-card-text slot="card-text">
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </bs-card-text>
+                    <bs-link-button primary>Go somewhere</bs-link-button>
+                </bs-card-body>
+            </bs-card>
         `;
     }
 };
