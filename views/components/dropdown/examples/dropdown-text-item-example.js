@@ -10,7 +10,7 @@ class DropdownTextItemExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
-            suoper.styles,
+            super.styles,
             BsClearfixCss
         ];
     }

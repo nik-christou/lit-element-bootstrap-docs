@@ -6,7 +6,7 @@ import { BsFlexWrapCss, BsFlexDirectionCss } from 'lit-element-bootstrap/utiliti
 
 import 'lit-element-bootstrap/components/navs';
 
-class FlexUtilitiesNavExample extends LitElement {
+class FlexUtilitiesNavExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
