@@ -1,32 +1,25 @@
 
-import { LitElement, html } from 'lit-element';
+import { LitElement } from 'lit-element';
 import { BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
-import { BsNavbar, BsNavbarNav, BsNavbarCollapse } from 'lit-element-bootstrap/components/navbar';
-import { BsNavbarBrandLink, BsNavbarToggler, BsNavbarTogglerIcon } from 'lit-element-bootstrap/components/navbar';
-import { BsDropdown, BsDropdownMenu, BsDropdownItemLink } from 'lit-element-bootstrap/components/dropdown';
-import { BsNavItem, BsNavLink } from 'lit-element-bootstrap/components/navs';
-import { BsForm, BsFormInput } from 'lit-element-bootstrap/components/form';
-import { BsLinkButton } from 'lit-element-bootstrap/components/button';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class NavbarNavDropdownExample extends LitElement {
+import 'lit-element-bootstrap/components/navs';
+import 'lit-element-bootstrap/components/form';
+import 'lit-element-bootstrap/components/navbar';
+import 'lit-element-bootstrap/components/button';
+import 'lit-element-bootstrap/components/dropdown';
+
+class NavbarNavDropdownExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss,
+            super.styles,
             BsBackgroundColorsCss
         ];
     }
     
-    render() {
-        return html`
-            
-            <bs-example>
-        
+    _getExample() {
+        return `
             <bs-navbar navbar-light expand-lg class="bg-light">
                 <bs-navbar-brand-link>Navbar</bs-navbar-brand-link>
                 <bs-navbar-toggler>
@@ -56,41 +49,6 @@ class NavbarNavDropdownExample extends LitElement {
                     </bs-navbar-nav>
                 </bs-navbar-collapse>
             </bs-navbar>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;bs-navbar</span> <span class="na">navbar-light</span> <span class="na">expand-lg</span> <span class="na">class=</span><span class="s">"bg-light"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;bs-navbar-brand-link&gt;</span>Navbar<span class="nt">&lt;/bs-navbar-brand-link&gt;</span>
-    <span class="nt">&lt;bs-navbar-toggler&gt;</span>
-        <span class="nt">&lt;bs-navbar-toggler-icon&gt;</span><span class="nt">&lt;/bs-navbar-toggler-icon&gt;</span>
-    <span class="nt">&lt;/bs-navbar-toggler&gt;</span>
-    <span class="nt">&lt;bs-navbar-collapse&gt;</span>
-        <span class="nt">&lt;bs-navbar-nav&gt;</span>
-            <span class="nt">&lt;bs-nav-item&gt;</span>
-                <span class="nt">&lt;bs-nav-link</span> <span class="na">active</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/bs-nav-link&gt;</span>
-            <span class="nt">&lt;/bs-nav-item&gt;</span>
-            <span class="nt">&lt;bs-nav-item&gt;</span>
-                <span class="nt">&lt;bs-nav-link&gt;</span>Features<span class="nt">&lt;/bs-nav-link&gt;</span>
-            <span class="nt">&lt;/bs-nav-item&gt;</span>
-            <span class="nt">&lt;bs-nav-item&gt;</span>
-                <span class="nt">&lt;bs-nav-link&gt;</span>Pricing<span class="nt">&lt;/bs-nav-link&gt;</span>
-            <span class="nt">&lt;/bs-nav-item&gt;</span>
-            <span class="nt">&lt;bs-nav-item&gt;</span>
-                <span class="nt">&lt;bs-dropdown&gt;</span>
-                    <span class="nt">&lt;bs-link-button</span> <span class="na">dropdown-nav-link</span> <span class="na">dropdown-toggle</span><span class="nt">&gt;</span>Dropdown link<span class="nt">&lt;/bs-link-button&gt;</span>
-                    <span class="nt">&lt;bs-dropdown-menu</span> <span class="na">down</span> <span class="na">x-placement=</span><span class="s">"bottom-start"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;bs-dropdown-item-link</span> <span class="na">title=</span><span class="s">"Action"</span> <span class="na">index=</span><span class="s">"0"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-dropdown-item-link&gt;</span>
-                        <span class="nt">&lt;bs-dropdown-item-link</span> <span class="na">title=</span><span class="s">"Another action"</span> <span class="na">index=</span><span class="s">"1"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-dropdown-item-link&gt;</span>
-                        <span class="nt">&lt;bs-dropdown-divider&gt;</span><span class="nt">&lt;/bs-dropdown-divider&gt;</span>
-                        <span class="nt">&lt;bs-dropdown-item-link</span> <span class="na">title=</span><span class="s">"Something else here"</span> <span class="na">index=</span><span class="s">"2"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-dropdown-item-link&gt;</span>
-                    <span class="nt">&lt;/bs-dropdown-menu&gt;</span>
-                <span class="nt">&lt;/bs-dropdown&gt;</span>
-            <span class="nt">&lt;/bs-nav-item&gt;</span>
-        <span class="nt">&lt;bs-navbar-nav&gt;</span>
-    <span class="nt">&lt;/bs-navbar-collapse&gt;</span>
-<span class="nt">&lt;/bs-navbar&gt;</span>
-</code></pre></bs-highlight>
         `;
     }
 };

@@ -1,47 +1,19 @@
 
-import { LitElement, html } from 'lit-element';
-import { BsNav, BsNavItem, BsNavLink } from 'lit-element-bootstrap/components/navs';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { LitElement } from 'lit-element';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class TabsNavExample extends LitElement {
+import 'lit-element-bootstrap/components/navs';
+
+class TabsNavExample extends BsExampleMixin(LitElement) {
     
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss
-        ];
-    }
-
-    render() {
-        return html`
-            
-            <bs-example>
-                
-                <bs-nav tabs>
-                    <bs-nav-item><bs-nav-link active>Active</bs-nav-link></bs-nav-item>
-                    <bs-nav-item><bs-nav-link>Link</bs-nav-link></bs-nav-item>
-                    <bs-nav-item><bs-nav-link>Link</bs-nav-link></bs-nav-item>
-                    <bs-nav-item><bs-nav-link disabled>Disabled</bs-nav-link></bs-nav-item>
-                </bs-nav>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;bs-nav</span> <span class="na">tabs</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;bs-nav-item&gt;</span> 
-        <span class="nt">&lt;bs-nav-link</span> <span class="na">active</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/bs-nav-link&gt;</span>
-    <span class="nt">&lt;/bs-nav-item&gt;</span>
-    <span class="nt">&lt;bs-nav-item&gt;</span>
-        <span class="nt">&lt;bs-nav-link&gt;</span>Link<span class="nt">&lt;/bs-nav-link&gt;</span>
-    <span class="nt">&lt;/bs-nav-item&gt;</span>
-    <span class="nt">&lt;bs-nav-item&gt;</span>
-        <span class="nt">&lt;bs-nav-link</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/bs-nav-link&gt;</span>
-    <span class="nt">&lt;/bs-nav-item&gt;</span>
-<span class="nt">&lt;/bs-nav&gt;</span>
-</code></pre></bs-highlight>
+    _getExample() {
+        return `
+            <bs-nav tabs>
+                <bs-nav-item><bs-nav-link active>Active</bs-nav-link></bs-nav-item>
+                <bs-nav-item><bs-nav-link>Link</bs-nav-link></bs-nav-item>
+                <bs-nav-item><bs-nav-link>Link</bs-nav-link></bs-nav-item>
+                <bs-nav-item><bs-nav-link disabled>Disabled</bs-nav-link></bs-nav-item>
+            </bs-nav>
         `;
     }
 };

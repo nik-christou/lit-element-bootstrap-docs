@@ -1,54 +1,20 @@
 
-import { LitElement, html } from 'lit-element';
-import { BsPageLink, BsPageItem, BsPagination } from 'lit-element-bootstrap/components/pagination';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { LitElement } from 'lit-element';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class PaginationOverviewExample extends LitElement {
+import 'lit-element-bootstrap/components/pagination';
+
+class PaginationOverviewExample extends BsExampleMixin(LitElement) {
     
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss
-        ];
-    }
-
-    render() {
-        return html`
-            
-            <bs-example>
-                
-                <bs-pagination>
-                    <bs-page-item><bs-page-link>Previous</bs-page-link></bs-page-item>
-                    <bs-page-item><bs-page-link>1</bs-page-link></bs-page-item>
-                    <bs-page-item><bs-page-link>2</bs-page-link></bs-page-item>
-                    <bs-page-item><bs-page-link>3</bs-page-link></bs-page-item>
-                    <bs-page-item><bs-page-link>Next</bs-page-link></bs-page-item>
-                </bs-pagination>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;bs-pagination&gt;</span>
-    <span class="nt">&lt;bs-page-item&gt;</span>
-        <span class="nt">&lt;bs-page-link&gt;</span>Previous<span class="nt">&lt;/bs-page-link&gt;</span>
-    <span class="nt">&lt;/bs-page-item&gt;</span>
-    <span class="nt">&lt;bs-page-item&gt;</span>
-        <span class="nt">&lt;bs-page-link&gt;</span>1<span class="nt">&lt;/bs-page-link&gt;</span>
-    <span class="nt">&lt;/bs-page-item&gt;</span>
-    <span class="nt">&lt;bs-page-item&gt;</span>
-        <span class="nt">&lt;bs-page-link&gt;</span>2<span class="nt">&lt;/bs-page-link&gt;</span>
-    <span class="nt">&lt;/bs-page-item&gt;</span>
-    <span class="nt">&lt;bs-page-item&gt;</span>
-        <span class="nt">&lt;bs-page-link&gt;</span>3<span class="nt">&lt;/bs-page-link&gt;</span>
-    <span class="nt">&lt;/bs-page-item&gt;</span>
-    <span class="nt">&lt;bs-page-item&gt;</span>
-        <span class="nt">&lt;bs-page-link&gt;</span>Next<span class="nt">&lt;/bs-page-link&gt;</span>
-    <span class="nt">&lt;/bs-page-item&gt;</span>
-<span class="nt">&lt;/bs-pagination&gt;</span>
-</code></pre></bs-highlight>
+    _getExample() {
+        return `
+            <bs-pagination>
+                <bs-page-item><bs-page-link>Previous</bs-page-link></bs-page-item>
+                <bs-page-item><bs-page-link>1</bs-page-link></bs-page-item>
+                <bs-page-item><bs-page-link>2</bs-page-link></bs-page-item>
+                <bs-page-item><bs-page-link>3</bs-page-link></bs-page-item>
+                <bs-page-item><bs-page-link>Next</bs-page-link></bs-page-item>
+            </bs-pagination>
         `;
     }
 };

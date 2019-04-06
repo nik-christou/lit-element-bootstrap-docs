@@ -1,42 +1,26 @@
 
-import { LitElement, html } from 'lit-element';
+import { LitElement } from 'lit-element';
 import { BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
-import { BsProgress, BsProgressBar } from 'lit-element-bootstrap/components/progress';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class ProgressMultipleBarsExample extends LitElement {
+import 'lit-element-bootstrap/components/progress';
+
+class ProgressMultipleBarsExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss,
+            super.styles,
             BsBackgroundColorsCss
         ];
     }
-
-    render() {
-        return html`
-            
-            <bs-example>
-                
-                <bs-progress>
-                    <bs-progress-bar completed="15"></bs-progress-bar>
-                    <bs-progress-bar completed="30" class="bg-success"></bs-progress-bar>
-                    <bs-progress-bar completed="20" class="bg-info"></bs-progress-bar>
-                </bs-progress>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;bs-progress&gt;</span>
-    <span class="nt">&lt;bs-progress-bar</span> <span class="na">completed=</span><span class="s">"15"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-progress-bar&gt;</span>
-    <span class="nt">&lt;bs-progress-bar</span> <span class="na">completed=</span><span class="s">"30"</span> <span class="na">class=</span><span class="s">"bg-success"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-progress-bar&gt;</span>
-    <span class="nt">&lt;bs-progress-bar</span> <span class="na">completed=</span><span class="s">"20"</span> <span class="na">class=</span><span class="s">"bg-info"</span><span class="nt">&gt;</span><span class="nt">&lt;/bs-progress-bar&gt;</span>
-<span class="nt">&lt;bs-progress&gt;</span>
-</code></pre></bs-highlight>
+    
+    _getExample() {
+        return `
+            <bs-progress>
+                <bs-progress-bar completed="15"></bs-progress-bar>
+                <bs-progress-bar completed="30" class="bg-success"></bs-progress-bar>
+                <bs-progress-bar completed="20" class="bg-info"></bs-progress-bar>
+            </bs-progress> 
         `;
     }
 };

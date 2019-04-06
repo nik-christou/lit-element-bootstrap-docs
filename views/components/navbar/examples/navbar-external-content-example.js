@@ -1,18 +1,15 @@
 
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, css } from 'lit-element';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 import { BsTextColorCss, BsSpacingCss, BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
-import { BsNavbar, BsNavbarToggler, BsNavbarTogglerIcon } from 'lit-element-bootstrap/components/navbar';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-class NavbarExternalContentExample extends LitElement {
+import 'lit-element-bootstrap/components/navbar';
+
+class NavbarExternalContentExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss,
+            super.styles,
             BsBackgroundColorsCss,
             BsSpacingCss,
             BsTextColorCss,
@@ -45,43 +42,22 @@ class NavbarExternalContentExample extends LitElement {
         ];
     }
     
-    render() {
-        return html`
-            
-            <bs-example>
-        
-                <div class="pos-f-t">
-                    <div id="navbarToggleExternalContent">
-                        <div class="bg-dark p-4">
-                            <h5 class="text-white h4">Collapsed content</h5>
-                            <span class="text-muted">Toggleable via the navbar brand.</span>
-                        </div>
+    _getExample() {
+        return `
+            <div class="pos-f-t">
+                <div id="navbarToggleExternalContent">
+                    <div class="bg-dark p-4">
+                        <h5 class="text-white h4">Collapsed content</h5>
+                        <span class="text-muted">Toggleable via the navbar brand.</span>
                     </div>
-                    
-                    <bs-navbar navbar-dark class="bg-dark">
-                        <bs-navbar-toggler>
-                            <bs-navbar-toggler-icon></bs-navbar-toggler-icon>
-                        </bs-navbar-toggler>
-                    </bs-navbar>
                 </div>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pos-f-t"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span> <span class="na">id=</span><span class="s">"navbarToggleExternalContent"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark p-4"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"text-white h4"</span><span class="nt">&gt;</span>Collapsed content<span class="nt">&lt;/h5&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Toggleable via the navbar brand.<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;bs-navbar</span> <span class="na">navbar-dark</span> <span class="na">class=</span><span class="s">"bg-dark"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;bs-navbar-toggler&gt;</span>
-            <span class="nt">&lt;bs-navbar-toggler-icon&gt;</span><span class="nt">&gt;&lt;/bs-navbar-toggler-icon&gt;</span>
-        <span class="nt">&lt;bs-navbar-toggler&gt;</span>
-    <span class="nt">&lt;/bs-navbar&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code>
-</code></pre></bs-highlight>
+
+                <bs-navbar navbar-dark class="bg-dark">
+                    <bs-navbar-toggler>
+                        <bs-navbar-toggler-icon></bs-navbar-toggler-icon>
+                    </bs-navbar-toggler>
+                </bs-navbar>
+            </div> 
         `;
     }
     
@@ -101,7 +77,6 @@ class NavbarExternalContentExample extends LitElement {
     }
     
     firstUpdated() {
-        
         const navbarToggler = this.shadowRoot.querySelector('bs-navbar-toggler');
         const externalContent = this.shadowRoot.querySelector('div#navbarToggleExternalContent');
         

@@ -1,36 +1,16 @@
 
-import { LitElement, html } from 'lit-element';
-import { BsProgress, BsProgressBar } from 'lit-element-bootstrap/components/progress';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { LitElement } from 'lit-element';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class ProgressLabelExample extends LitElement {
+import 'lit-element-bootstrap/components/progress';
+
+class ProgressLabelExample extends BsExampleMixin(LitElement) {
     
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss
-        ];
-    }
-
-    render() {
-        return html`
-            
-            <bs-example>
-                
-                <bs-progress>
-                    <bs-progress-bar completed="25">25%</bs-progress-bar>
-                </bs-progress>
-                
-            </bs-example>
-            <bs-highlight>
-                <pre><code class="language-html" data-lang="html">
-<span class="nt">&lt;bs-progress&gt;</span>
-    <span class="nt">&lt;bs-progress-bar</span> <span class="na">completed=</span><span class="s">"25"</span><span class="nt">&gt;</span>25%<span class="nt">&lt;/bs-progress-bar&gt;</span>
-<span class="nt">&lt;bs-progress&gt;</span>
-</code></pre></bs-highlight>
+    _getExample() {
+        return `
+            <bs-progress>
+                <bs-progress-bar completed="25">25%</bs-progress-bar>
+            </bs-progress>
         `;
     }
 };
