@@ -1,11 +1,11 @@
 
-import { LitElement, html } from 'lit-element';
+import { LitElement } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 import { BsSpacingCss, BsScreenreaderCss } from 'lit-element-bootstrap/utilities';
 
 import 'lit-element-bootstrap/components/button';
 
-class ReadonlyInlineExample extends LitElement {
+class ReadonlyInlineExample extends BsExampleMixin(LitElement) {
     
     static get styles() {
         return [
