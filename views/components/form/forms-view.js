@@ -66,10 +66,10 @@ class FormsView extends LitElement {
             <h4>Sizing</h4>
             
             <sizing-form-control-example></sizing-form-control-example>
-            
+          
             <br />
             <sizing-select-control-example></sizing-select-control-example>
-            
+        
             <br />
             
             <h4>Readonly</h4>
@@ -187,9 +187,7 @@ class FormsView extends LitElement {
             <h4>Disabled forms</h4>
             
             <disabled-forms-example></disabled-forms-example>
-
-            <br />
-            
+        
             <br />
             <br />
             <br />

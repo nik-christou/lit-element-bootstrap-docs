@@ -1,19 +1,29 @@
 
-import { LitElement, html } from 'lit-element';
-import { BsColumn } from 'lit-element-bootstrap/layout/grid';
-import { BsExample, BsHighlight, BsCodeSyntaxCss } from '../../../../component/example';
-import { BsForm, BsFormLabel, BsFormGroup, BsFormInput, BsFormInputPlaintext } from 'lit-element-bootstrap/components/form';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { LitElement } from 'lit-element';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-class ReadonlyPlaintextExample extends LitElement {
+import 'lit-element-bootstrap/layout/grid';
+import 'lit-element-bootstrap/components/form';
+
+class ReadonlyPlaintextExample extends BsExampleMixin(LitElement) {
     
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsContentCodeCss,
-            BsCodeSyntaxCss
-        ];
+    _getExample() {
+        return `
+            <bs-form>
+                <bs-form-group row>
+                    <bs-form-label column sm-2 slot="label">Email</bs-form-label>
+                    <bs-column sm-10 slot="control">
+                        <bs-form-input-plaintext readonly value="email@example.com"></bs-form-input-plaintext>
+                    </bs-column>
+                </bs-form-group>
+                <bs-form-group row>
+                    <bs-form-label column sm-2 slot="label">Password</bs-form-label>
+                    <bs-column sm-10 slot="control">
+                        <bs-form-input type="password" placeholder="Password"></bs-form-input>
+                    </bs-column>
+                </bs-form-group>
+            </bs-form>
+        `;
     }
     
     render() {
