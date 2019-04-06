@@ -60,10 +60,6 @@ class InputGroupView extends LitElement {
             
             <input-group-segmented-buttons-example></input-group-segmented-buttons-example>
             
-            <h2>Custom forms</h2>
-            
-            <h2 style="color:red;">Finish this when custom forms + custom select is done</h2>
-            
             <br />
             <br />
             <br />
