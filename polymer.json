@@ -29,13 +29,19 @@
         "views/components/progress/progress-view.js"
     ],   
     "sources": [
-        "manifest/**",
+        "icons/**",
+        "views/**/*",
+        "component/**/*",
         "package.json"
     ],
     "extraDependencies": [
         "manifest.json",
+        "sw-precache-config.js",
         "views/components/navbar/examples/bootstrap-solid.svg",
         "views/components/media-object/examples/img-placeholder.svg",
-        "node_modules/@webcomponents/webcomponentsjs/**"
+        "node_modules/@webcomponents/webcomponentsjs/**",
+        "node_modules/prismjs/components/prism-core.min.js",
+        "node_modules/prismjs/components/prism-markup.min.js",
+        "node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"
     ]
 }

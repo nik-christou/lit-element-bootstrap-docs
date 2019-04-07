@@ -3,27 +3,68 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="LitElement Bootstrap 4 Component Library docs" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="theme-color" content="#fff" />
-        <link rel="icon" href="manifest/favicon.ico" />
-        <link rel="manifest" href="./manifest.json" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
         <title>LitElement Bootstrap 4 Component Library</title>
+
+        <meta name="theme-color" content="#fff" />
+
+        <link rel="icon" href="icons/favicon.ico" />
+        <link rel="manifest" href="./manifest.json" />
+
+        <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="indie-catalog">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="indie-catalog">
+
+        <!-- Homescreen icons -->
+        <link rel="apple-touch-icon" href="icons/icon-48x48.png">
+        <link rel="apple-touch-icon" sizes="96x96" href="icons/icon-96x96.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192x192.png">
+
+        <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#fbbc05">
+        <meta name="msapplication-tap-highlight" content="no">
+
         <base href="/">
+
     </head>
     <body>
         
+        <lit-element-bootstrap-docs>        
+            <h1>LitElement Bootstrap Component Library docs loading...</h1>
+        </lit-element-bootstrap-docs>
+
+        <script type="text/javascript" src="./node_modules/prismjs/components/prism-core.min.js"></script>
+        <script type="text/javascript" src="./node_modules/prismjs/components/prism-markup.min.js"></script>
+        <script type="text/javascript" src="./node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
         <script type="text/javascript" src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-        
+
         <script type="module">
             window.WebComponents.waitFor(() => {
                 return import('./lit-element-bootstrap-docs.js');
             });
         </script>
-        
-        <lit-element-bootstrap-docs>        
-            <h1>LitElement Bootstrap 4 Component Library docs</h1>
-        </lit-element-bootstrap-docs>
+
+        <script>
+            // comment out the registration of service worker in local dev
+            // or just generate one and copy it in the root directory
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('service-worker.js');
+                });
+            }
+        </script>
+
+        <noscript>
+            Please enable JavaScript to view this website.
+        </noscript>
 
     </body>
 </html>

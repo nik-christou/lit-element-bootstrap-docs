@@ -10,7 +10,7 @@
         "serve-build": "polymer serve build/es6-unbundled"
     },
     "devDependencies": {
-        "polymer-cli": "^1.9.7"
+        "polymer-cli": "^1.9.8"
     },
     "dependencies": {
         "@webcomponents/webcomponentsjs": "2.2.7",

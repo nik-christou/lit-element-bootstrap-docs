@@ -36,7 +36,7 @@ class DrawerNavbar extends LitElement {
                 <bs-navbar-toggler>
                     <bars-icon></bars-icon>
                 </bs-navbar-toggler>
-                <bs-navbar-brand-link class="pl-2">Polymer Bootstrap</bs-navbar-brand-link>
+                <bs-navbar-brand-link class="pl-2">lit-element-bootstrap</bs-navbar-brand-link>
             </bs-navbar>
         `;
     }
