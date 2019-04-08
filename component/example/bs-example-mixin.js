@@ -9,6 +9,12 @@ import './bs-highlight';
 
 const BsExampleMixin = (superClass) => class extends superClass {
 
+    static get properties() {
+        return {
+            _isExampleTemplate: Boolean
+        };
+    }
+
     static get styles() {
         return [
             BsContentRebootCss,
@@ -17,6 +23,11 @@ const BsExampleMixin = (superClass) => class extends superClass {
             PrismDefaultCss
         ];
     };
+
+    constructor() {
+        super();
+        this._isExampleTemplate = false;
+    }
 
     _getHighlightedExample() {
         return this._getExample();
@@ -35,7 +46,12 @@ const BsExampleMixin = (superClass) => class extends superClass {
 
     render() {
         return html`
-            <bs-example>${unsafeHTML(this._getExample())}</bs-example>
+            <bs-example>
+                ${this._isExampleTemplate
+                    ? this._getExample()
+                    : unsafeHTML(this._getExample())
+                }
+            </bs-example>
             <bs-highlight>
                 <pre><code>${unsafeHTML(this._getExampleHighlighted())}</code></pre>
             </bs-highlight>
