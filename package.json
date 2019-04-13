@@ -7,7 +7,7 @@
     "scripts": {
         "serve": "polymer serve",
         "build": "polymer build --preset es6-unbundled",
-        "serve-build": "polymer serve build/es6-unbundled"
+        "serve:build": "polymer serve build/es6-unbundled"
     },
     "devDependencies": {
         "chai": "^4.2.0",
