@@ -14,6 +14,24 @@ module.exports = {
         '/node_modules/prismjs/components/prism-markup.min.js',
         '/node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js'
     ],
+    runtimeCaching: [
+        {
+            urlPattern: /home/,
+            handler: 'networkFirst'
+        },
+        {
+            urlPattern: /component\/\.*[a-z]*/,
+            handler: 'networkFirst'
+        },
+        {
+            urlPattern: /behaviour\/\.*[a-z]*/,
+            handler: 'networkFirst'
+        },
+        {
+            urlPattern: /layout\/\.*[a-z]*/,
+            handler: 'networkFirst'
+        }
+    ],
     navigateFallback: '/index.html',
     navigateFallbackWhitelist: [/^(?!.*\.js$|\/data\/).*/]
   }
