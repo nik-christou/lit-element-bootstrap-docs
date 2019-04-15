@@ -20,8 +20,6 @@ class ContainerView extends LitElement {
     render() {
         return html`
             
-            <h1>Testing caching</h1>
-
             <h1 class="bd-title" id="content">Container</h1>
         
             <container-example></container-example>
