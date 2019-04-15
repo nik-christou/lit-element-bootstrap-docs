@@ -8,7 +8,7 @@ import './component/drawer/drawer-sidebar';
 import './component/drawer/drawer-navbar';
 import './views/loading/loading-view';
 
-class LitElementBootstrapDocs extends LitElement {
+class AppDocs extends LitElement {
     
     static get properties() {
         return {
@@ -222,4 +222,4 @@ class LitElementBootstrapDocs extends LitElement {
     }
 };
 
-window.customElements.define('lit-element-bootstrap-docs', LitElementBootstrapDocs);
+window.customElements.define('app-docs', AppDocs);
