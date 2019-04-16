@@ -3,9 +3,10 @@ import { LitElement, html, css } from 'lit-element';
 import { BsFlexJustifyCss } from 'lit-element-bootstrap/utilities/flex';
 import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 import { BsPositionCss, BsSpacingCss, BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
-import { BsNavbar, BsNavbarToggler, BsNavbarBrandLink } from 'lit-element-bootstrap/components/navbar';
 
 import '../icons/bars-icon';
+import 'lit-element-bootstrap/components/navs';
+import 'lit-element-bootstrap/components/navbar';
 
 class DrawerNavbar extends LitElement {
     
@@ -20,10 +21,18 @@ class DrawerNavbar extends LitElement {
                 bs-navbar {
                     border-bottom: 1px solid rgba(0,0,0,0.0625);
                 }
+
+                bs-navbar-brand-link {
+                    margin-right: 0;
+                }
                 
                 bs-navbar > bs-navbar-toggler {
                     --navbar-toggler-border: none;
                     --navbar-toggler-outline-focus: none;
+                }
+
+                bs-navbar-nav {
+                    --navbar-nav-flex-direction: row;
                 }
             `,
             BsPositionCss
@@ -37,18 +46,19 @@ class DrawerNavbar extends LitElement {
                     <bars-icon></bars-icon>
                 </bs-navbar-toggler>
                 <bs-navbar-brand-link class="pl-2">lit-element-bootstrap</bs-navbar-brand-link>
+                <bs-navbar-nav class="ml-auto">
+                    <bs-nav-item>
+                        <bs-nav-link href="https://github.com/nik-christou/lit-element-bootstrap">
+                            <img width="24" src="/src/img/github_mark.png" />
+                        </bs-nav-link>
+                    </bs-nav-item>
+                </bs-navbar-nav>
             </bs-navbar>
         `;
     }
     
-    connectedCallback() {
-        super.connectedCallback();
+    firstUpdated() {
         this.addEventListener('bs-navbar-toggler-click', () => this._toggleSidedrawer());
-    }
-    
-    disconnectedCallback() {
-        super.disconnectedCallback();
-        this.removeEventListener('bs-navbar-toggler-click', () => this._toggleSidedrawer());
     }
     
     _toggleSidedrawer() {

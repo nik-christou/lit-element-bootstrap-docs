@@ -3,6 +3,7 @@ module.exports = {
         '/index.html',
         '/src/manifest.json',
         '/src/icons/**/*',
+        '/src/img/**/*',
         '/src/component/**/*',
         '/node_modules/lit-html/**/*',
         '/node_modules/lit-element/**/*',

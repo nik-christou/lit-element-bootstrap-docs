@@ -20,7 +20,7 @@ class NavbarBrandImagesExample extends BsExampleMixin(LitElement) {
         return `
             <bs-navbar navbar-light class="bg-light">
                 <bs-navbar-brand-link>
-                    <img src="/views/components/navbar/examples/bootstrap-solid.svg" width="30" height="30" alt="" />
+                    <img src="/src/img/bootstrap-solid.svg" width="30" height="30" alt="" />
                 </bs-navbar-brand-link>
             </bs-navbar>
 
@@ -28,7 +28,7 @@ class NavbarBrandImagesExample extends BsExampleMixin(LitElement) {
 
             <bs-navbar navbar-light class="bg-light">
                 <bs-navbar-brand-link>
-                    <img src="/views/components/navbar/examples/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" />
+                    <img src="/src/img/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" />
                     Bootstrap
                 </bs-navbar-brand-link>
             </bs-navbar> 

@@ -31,14 +31,14 @@
     "sources": [
         "src/icons/**",
         "src/views/**/*",
+        "src/img/**/*",
         "src/component/**/*",
         "package.json"
     ],
     "extraDependencies": [
         "sw-precache-config.js",
+        "src/img/**",
         "src/manifest.json",
-        "src/views/components/navbar/examples/bootstrap-solid.svg",
-        "src/views/components/media-object/examples/img-placeholder.svg",
         "node_modules/@webcomponents/webcomponentsjs/**",
         "node_modules/prismjs/components/prism-core.min.js",
         "node_modules/prismjs/components/prism-markup.min.js",
