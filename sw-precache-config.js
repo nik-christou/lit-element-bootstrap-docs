@@ -4,6 +4,7 @@ module.exports = {
         '/src/manifest.json',
         '/src/icons/**/*',
         '/src/img/**/*',
+        '/src/views/**/*',
         '/src/component/**/*',
         '/node_modules/lit-html/**/*',
         '/node_modules/lit-element/**/*',
