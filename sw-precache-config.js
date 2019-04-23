@@ -14,6 +14,8 @@ module.exports = {
         '/node_modules/@webcomponents/webcomponentsjs/**',
         '/node_modules/prismjs/components/prism-core.min.js',
         '/node_modules/prismjs/components/prism-markup.min.js',
+        '/node_modules/prismjs/components/prism-clike.min.js',
+        '/node_modules/prismjs/components/prism-javascript.min.js',
         '/node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js'
     ],
     runtimeCaching: [

@@ -54,10 +54,17 @@ class DrawerSidebar extends LitElement {
                     index="0" 
                     view="home">
                 </sidebar-menu-item>
+                <sidebar-menu-item 
+                    title="Getting Started" 
+                    label="Getting Started" 
+                    target="/getting-started" 
+                    index="1" 
+                    view="getting-started">
+                </sidebar-menu-item>
                 <sidebar-menu-item-expandable 
                     title="Layout" 
                     label="Layout" 
-                    index="1">
+                    index="2">
                         <angle-down-arrow slot="expandIcon"></angle-down-arrow>
                         <angle-up-arrow slot="minimizeIcon"></angle-up-arrow>
                         <sidebar-submenu slot="submenu">
@@ -80,7 +87,7 @@ class DrawerSidebar extends LitElement {
                 <sidebar-menu-item-expandable 
                     title="Components"
                     label="Components"
-                    index="2">
+                    index="3">
                         <angle-down-arrow slot="expandIcon"></angle-down-arrow>
                         <angle-up-arrow slot="minimizeIcon"></angle-up-arrow>
                         <sidebar-submenu slot="submenu">
@@ -215,7 +222,7 @@ class DrawerSidebar extends LitElement {
                 <sidebar-menu-item-expandable 
                     title="Behaviours" 
                     label="Behaviours" 
-                    index="3">
+                    index="4">
                         <angle-down-arrow slot="expandIcon"></angle-down-arrow>
                         <angle-up-arrow slot="minimizeIcon"></angle-up-arrow>
                         <sidebar-submenu slot="submenu">

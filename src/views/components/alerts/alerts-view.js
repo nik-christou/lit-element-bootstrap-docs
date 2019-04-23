@@ -1,15 +1,17 @@
 
 import { LitElement, html } from 'lit-element';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { TableOfContentMixin } from '../../../component/toc/table-of-content-mixin';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { PrismDefaultCss } from '../../../component/example/prism-default-css';
 
 import 'lit-element-bootstrap/layout/grid';
 import 'lit-element-bootstrap/components/navs';
 
+import '../../../component/example/bs-highlight';
 import '../../../component/toc/table-of-content';
 import '../../../component/toc/table-of-content-item';
-import '../../../component/callout/bs-callout';
 
 import './examples/contextual-alerts-example';
 import './examples/link-color-example';
@@ -24,14 +26,14 @@ class AlertsView extends TableOfContentMixin(LitElement) {
             BsContentRebootCss,
             BsContentTypographyCss,
             BsDocsContentCss,
-            BsContentCodeCss
+            BsContentCodeCss,
+            PrismDefaultCss
         ];
     }
     
     render() {
         return html`
           
-        <bs-container>
             <bs-row>
                 <bs-column md-9 order-md-first order-xs-last>
 
@@ -44,10 +46,20 @@ class AlertsView extends TableOfContentMixin(LitElement) {
                     <h3>Usage</h3>
                     
                     <p>Import all alert components:</p>
-                    <bs-highlight><pre><code>import 'lit-element-bootstrap/components/alert';</code></pre></bs-highlight>
+                    <bs-highlight>
+                        <pre><code id="importAllHighlight">${unsafeHTML(
+                        this._hightlightJavascript(
+                            `import 'lit-element-bootstrap/components/alert';`
+                        ))}</code></pre>
+                    </bs-highlight>
 
                     <p>Import individually:</p>
-                    <bs-highlight><pre><code>import 'lit-element-bootstrap/components/alert/bs-alert';</code></pre></bs-highlight>
+                    <bs-highlight>
+                        <pre><code id="importAllHighlight">${unsafeHTML(
+                            this._hightlightJavascript(
+                                `import 'lit-element-bootstrap/components/alert/bs-alert';`
+                            ))}</code></pre>
+                    </bs-highlight>
                     
                     <contextual-alerts-example></contextual-alerts-example>
                 
@@ -80,8 +92,17 @@ class AlertsView extends TableOfContentMixin(LitElement) {
                     </table-of-content>
                 </bs-column>
             </bs-row>
-        </bs-container>
         `;
+    }
+
+    _hightlightJavascript(text) {
+
+        const grammar = window.Prism.languages.javascript;
+        const language = 'javascript';
+        const normilazedText = window.Prism.plugins.NormalizeWhitespace.normalize(text);
+        const hightlightedText = window.Prism.highlight(normilazedText, grammar, language);
+
+        return hightlightedText;
     }
 };
 

@@ -138,6 +138,7 @@ class AppDocs extends LitElement {
         switch(viewPath) {
             case 'loading':                 return html`<loading-view></loading-view>`;
             case 'home':                    return html`<home-view></home-view>`;
+            case 'getting-started':         return html`<getting-started-view></getting-started-view>`;
             case 'layout/containers':       return html`<container-view></container-view>`;
             case 'layout/grid':             return html`<grid-view></grid-view>`;
             case 'component/alerts':        return html`<alerts-view></alerts-view>`;
@@ -167,6 +168,7 @@ class AppDocs extends LitElement {
         
         switch (view) {
             case 'home':                    return 'home-view';
+            case 'getting-started':                    return 'getting-started-view';
             case 'layout/containers':       return 'container-view';
             case 'layout/grid':             return 'grid-view';
             case 'component/alerts':        return 'alerts-view';
@@ -196,6 +198,7 @@ class AppDocs extends LitElement {
         
         switch (view) {
             case 'home':                    return './views/home/home-view.js';
+            case 'getting-started':         return './views/getting-started/getting-started-view.js';
             case 'layout/containers':       return './views/layout/container/container-view.js';
             case 'layout/grid':             return './views/layout/grid/grid-view.js';
             case 'component/alerts':        return './views/components/alerts/alerts-view.js';
