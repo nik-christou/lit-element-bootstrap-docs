@@ -12,18 +12,16 @@ export class BsExample extends LitElement {
                     display: block;
                     position: relative;
                     padding: 1rem;
-                    margin: 1rem -15px 0;
                     border: solid #f8f9fa;
-                    border-width: 0.2rem 0 0;
+                    border: 0.05rem solid #eeeeee;
+                    border-radius: var(--example-border-radius, 8px 8px 8px 8px);
                 }
                 
                 @media (min-width: 576px) {
-                    
                     :host {
                         padding: 1.5rem;
                         margin-right: 0;
                         margin-left: 0;
-                        border-width: 0.2rem;
                     }
                 }
             `

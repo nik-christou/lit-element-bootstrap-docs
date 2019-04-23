@@ -34,6 +34,12 @@ class DrawerNavbar extends LitElement {
                 bs-navbar-nav {
                     --navbar-nav-flex-direction: row;
                 }
+
+                @media (max-width: 576px) {
+                    bs-nav-link#githubLink {
+                        padding: 0;
+                    }
+                }
             `,
             BsPositionCss
         ];
@@ -48,7 +54,7 @@ class DrawerNavbar extends LitElement {
                 <bs-navbar-brand-link class="pl-2">lit-element-bootstrap</bs-navbar-brand-link>
                 <bs-navbar-nav class="ml-auto">
                     <bs-nav-item>
-                        <bs-nav-link href="https://github.com/nik-christou/lit-element-bootstrap">
+                        <bs-nav-link id="githubLink" href="https://github.com/nik-christou/lit-element-bootstrap">
                             <img width="24" src="/src/img/github_mark.png" />
                         </bs-nav-link>
                     </bs-nav-item>

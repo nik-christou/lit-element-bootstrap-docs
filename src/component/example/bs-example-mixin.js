@@ -1,5 +1,5 @@
 
-import { html } from 'lit-element';
+import { html, css } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 import { PrismDefaultCss } from './prism-default-css';
@@ -20,7 +20,17 @@ const BsExampleMixin = (superClass) => class extends superClass {
             BsContentRebootCss,
             BsContentTypographyCss,
             BsContentCodeCss,
-            PrismDefaultCss
+            PrismDefaultCss,
+            css`
+                bs-example {
+                    margin-top: 1rem;
+                    --example-border-radius: 8px 8px 0px 0px;
+                }
+
+                bs-highlight {
+                    --highlight-border-radius: 0px 0px 8px 8px;
+                }
+            `
         ];
     };
 

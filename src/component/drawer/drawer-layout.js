@@ -22,10 +22,12 @@ class DrawerLayout extends LitElement {
                     transform: translateX(220px);
                 }
 
+                /*
                 div.drawer-content-inner {
                     padding-left: 15px;
                     padding-right: 15px;
                 }
+                */
 
                 div.drawer-sidebar-wrapper {
                     top: 0;

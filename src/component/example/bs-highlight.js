@@ -16,7 +16,8 @@ export class BsHighlight extends LitElement {
                     padding: 1rem;
                     margin-bottom: 1rem;
                     background-color: #f8f9fa;
-                    -ms-overflow-style: -ms-autohiding-scrollbar;
+                    border: 0.05rem solid #eeeeee;
+                    border-radius: var(--highlight-border-radius, 8px 8px 8px 8px);
                 }
             `
         ];
