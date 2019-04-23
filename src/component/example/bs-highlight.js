@@ -8,15 +8,15 @@ export class BsHighlight extends LitElement {
         return [
             BsContentRebootCss,
             css`
+                :host {
+                    display: block;
+                }
+
                 .highlight {
                     padding: 1rem;
                     margin-bottom: 1rem;
                     background-color: #f8f9fa;
                     -ms-overflow-style: -ms-autohiding-scrollbar;
-                }
-                
-                @media (min-width: 576px) .highlight {
-                    padding: 1.5rem;
                 }
             `
         ];

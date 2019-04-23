@@ -57,8 +57,7 @@ class DrawerSidebar extends LitElement {
                 <sidebar-menu-item-expandable 
                     title="Layout" 
                     label="Layout" 
-                    index="1"
-                    view="layout">
+                    index="1">
                         <angle-down-arrow slot="expandIcon"></angle-down-arrow>
                         <angle-up-arrow slot="minimizeIcon"></angle-up-arrow>
                         <sidebar-submenu slot="submenu">
@@ -81,8 +80,7 @@ class DrawerSidebar extends LitElement {
                 <sidebar-menu-item-expandable 
                     title="Components"
                     label="Components"
-                    index="2"
-                    view="component">
+                    index="2">
                         <angle-down-arrow slot="expandIcon"></angle-down-arrow>
                         <angle-up-arrow slot="minimizeIcon"></angle-up-arrow>
                         <sidebar-submenu slot="submenu">
@@ -159,7 +157,7 @@ class DrawerSidebar extends LitElement {
                             <sidebar-submenu-item 
                                 title="Jumbotron" 
                                 label="Jumbotron"
-                                target="/component/jumbotron""
+                                target="/component/jumbotron"
                                 index="10"
                                 view="jumbotron">
                             </sidebar-submenu-item>
@@ -217,8 +215,7 @@ class DrawerSidebar extends LitElement {
                 <sidebar-menu-item-expandable 
                     title="Behaviours" 
                     label="Behaviours" 
-                    index="3" 
-                    view="behaviour">
+                    index="3">
                         <angle-down-arrow slot="expandIcon"></angle-down-arrow>
                         <angle-up-arrow slot="minimizeIcon"></angle-up-arrow>
                         <sidebar-submenu slot="submenu">

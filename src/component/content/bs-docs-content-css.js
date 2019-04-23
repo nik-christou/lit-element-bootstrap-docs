@@ -131,4 +131,11 @@ export const BsDocsContentCss = css`
     .bd-text-purple-bright {
         color: #7952b3
     }
+
+    @media (max-width: 576px) {
+        pre {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
 `;
