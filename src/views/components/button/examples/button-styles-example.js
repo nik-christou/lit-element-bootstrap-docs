@@ -21,4 +21,4 @@ class ButtonStylesExample extends BsExampleMixin(LitElement) {
     }
 };
 
-window.customElements.define('button-style-example', ButtonStylesExample);
+window.customElements.define('button-styles-example', ButtonStylesExample);

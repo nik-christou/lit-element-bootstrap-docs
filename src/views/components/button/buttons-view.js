@@ -3,7 +3,6 @@ import { LitElement, html } from 'lit-element';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import '../../../component/callout/bs-callout';
 import './examples/button-styles-example';
 import './examples/button-tags-example';
 import './examples/button-outlines-example';
@@ -30,7 +29,7 @@ class ButtonsView extends LitElement {
         
             <h1 class="bd-title" id="content">Buttons</h1>
             
-            <button-style-example></button-style-example>
+            <button-styles-example></button-styles-example>
             
             <h2>Button tags</h2>
             

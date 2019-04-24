@@ -14,6 +14,7 @@ export class BsHighlight extends LitElement {
 
                 .highlight {
                     padding: 1rem;
+                    padding-bottom: 0;
                     margin-bottom: 1rem;
                     background-color: #f8f9fa;
                     border: 0.05rem solid #eeeeee;
