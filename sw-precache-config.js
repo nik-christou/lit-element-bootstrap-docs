@@ -1,6 +1,8 @@
 module.exports = {
     staticFileGlobs: [
         '/index.html',
+        '/src/app-docs.js',
+        '/src/app-routing.js',
         '/src/manifest.json',
         '/src/icons/**/*',
         '/src/img/**/*',
@@ -33,6 +35,10 @@ module.exports = {
         },
         {
             urlPattern: /layout\/\.*[a-z]*/,
+            handler: 'networkFirst'
+        },
+        {
+            urlPattern: /getting-started\/\.*[a-z]*/,
             handler: 'networkFirst'
         }
     ],
