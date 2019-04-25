@@ -73,18 +73,45 @@ class GettingStartedView extends LitElement {
                 `))}</code></pre>
             </bs-highlight>
             
+            <p>After importing a component you can use its tag inside your render function:</p>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightMarkup(`
+                    
+                    <bs-alert primary>
+                        <div slot="message">A simple primary alert—check it out!</div>
+                    </bs-alert>
+
+                `))}</code></pre>
+            </bs-highlight>
+
+            <br />
+            
+            <h3>Framework Compatibility</h3>
+            <p>
+                lit-element-bootstrap components are build on LitElement which in turn is just a wrapper on
+                WebComponents therefore it should be compatible with all framerworks. 
+            </p>
+
             <br />
 
             <h3>Browser Compatibility</h3>
             <p>
-                Since lit-element-bootstrap is build using LitElement it has the same compatibility. 
-                All components are exported as ES6 classes and re-usable CSS is exported via the <a href="https://lit-element.polymer-project.org/guide/styles">css tagged template literal.</a> 
+                Since lit-element-bootstrap components are build using LitElement so it shares the same browser compatibility. 
+                All components are exported as ES6 classes and re-usable CSS is exported via the 
+                <a href="https://lit-element.polymer-project.org/guide/styles">css tagged template literal.</a> 
             </p>
-
         `;
     }
 
-    // import 'lit-element-bootstrap/components/alert/';
+    _hightlightMarkup(text) {
+
+        const grammar = window.Prism.languages.markup;
+        const language = 'markup';
+        const normilazedText = window.Prism.plugins.NormalizeWhitespace.normalize(text);
+        const hightlightedText = window.Prism.highlight(normilazedText, grammar, language);
+
+        return hightlightedText;
+    }
 
     _hightlightJavascript(text) {
 
