@@ -63,7 +63,8 @@ class DrawerSidebar extends LitElement {
                 </sidebar-menu-item>
                 <sidebar-menu-item-expandable 
                     title="Layout" 
-                    label="Layout" 
+                    label="Layout"
+                    view="layout"
                     index="2">
                         <angle-down-arrow slot="expandIcon"></angle-down-arrow>
                         <angle-up-arrow slot="minimizeIcon"></angle-up-arrow>
@@ -71,14 +72,14 @@ class DrawerSidebar extends LitElement {
                             <sidebar-submenu-item 
                                 title="Containers" 
                                 label="Containers" 
-                                target="/layout/containers"
+                                href="/layout/containers"
                                 index="0"
                                 view="containers">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Grid" 
                                 label="Grid" 
-                                target="/layout/grid" 
+                                href="/layout/grid" 
                                 index="1"
                                 view="grid">
                             </sidebar-submenu-item>
@@ -87,6 +88,7 @@ class DrawerSidebar extends LitElement {
                 <sidebar-menu-item-expandable 
                     title="Components"
                     label="Components"
+                    view="component"
                     index="3">
                         <angle-down-arrow slot="expandIcon"></angle-down-arrow>
                         <angle-up-arrow slot="minimizeIcon"></angle-up-arrow>
@@ -94,126 +96,126 @@ class DrawerSidebar extends LitElement {
                             <sidebar-submenu-item 
                                 title="Alerts" 
                                 label="Alerts" 
-                                target="/component/alerts" 
+                                href="/component/alerts" 
                                 index="0"
                                 view="alerts">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Badge" 
                                 label="Badge" 
-                                target="/component/badges" 
+                                href="/component/badges" 
                                 index="1"
                                 view="badges">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Breadcrumb" 
                                 label="Breadcrumb" 
-                                target="/component/breadcrumbs" 
+                                href="/component/breadcrumbs" 
                                 index="2"
                                 view="breadcrumbs">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Buttons" 
                                 label="Buttons" 
-                                target="/component/buttons" 
+                                href="/component/buttons" 
                                 index="3"
                                 view="buttons">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Button Group" 
                                 label="Button Group" 
-                                target="/component/buttons-group" 
+                                href="/component/buttons-group" 
                                 index="4"
                                 view="buttons-group">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Card" 
                                 label="Card" 
-                                target="/component/cards" 
+                                href="/component/cards" 
                                 index="5"
                                 view="cards">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Carousel" 
                                 label="Carousel" 
-                                target="/component/carousel" 
+                                href="/component/carousel" 
                                 index="6"
                                 view="carousel">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Dropdowns" 
                                 label="Dropdowns" 
-                                target="/component/dropdowns" 
+                                href="/component/dropdowns" 
                                 index="7"
                                 view="dropdowns">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Forms" 
                                 label="Forms" 
-                                target="/component/forms"
+                                href="/component/forms"
                                 index="8"
                                 view="forms">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Input Group" 
                                 label="Input Group" 
-                                target="/component/input-groups"
+                                href="/component/input-groups"
                                 index="9"
                                 view="input-groups">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Jumbotron" 
                                 label="Jumbotron"
-                                target="/component/jumbotron"
+                                href="/component/jumbotron"
                                 index="10"
                                 view="jumbotron">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="List Group" 
                                 label="List Group" 
-                                target="/component/list-groups" 
+                                href="/component/list-groups" 
                                 index="11"
                                 view="list-groups">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Media object" 
                                 label="Media object" 
-                                target="/component/media-object" 
+                                href="/component/media-object" 
                                 index="12"
                                 view="media-object">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Modal" 
                                 label="Modal" 
-                                target="/component/modal" 
+                                href="/component/modal" 
                                 index="13"
                                 view="modal">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Navs" 
                                 label="Navs"
-                                target="/component/navs"
+                                href="/component/navs"
                                 index="14"
                                 view="navs">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Navbar" 
                                 label="Navbar" 
-                                target="/component/navbar"
+                                href="/component/navbar"
                                 index="15"
                                 view="navbar">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Pagination" 
                                 label="Pagination" 
-                                target="/component/pagination"
+                                href="/component/pagination"
                                 index="16"
                                 view="pagination">
                             </sidebar-submenu-item>
                             <sidebar-submenu-item 
                                 title="Progress" 
                                 label="Progress"
-                                target="/component/progress"
+                                href="/component/progress"
                                 index="17"
                                 view="progress">
                             </sidebar-submenu-item>
@@ -221,7 +223,8 @@ class DrawerSidebar extends LitElement {
                 </sidebar-menu-item-expandable>
                 <sidebar-menu-item-expandable 
                     title="Behaviours" 
-                    label="Behaviours" 
+                    label="Behaviours"
+                    view="behaviour"
                     index="4">
                         <angle-down-arrow slot="expandIcon"></angle-down-arrow>
                         <angle-up-arrow slot="minimizeIcon"></angle-up-arrow>
@@ -229,7 +232,7 @@ class DrawerSidebar extends LitElement {
                             <sidebar-submenu-item 
                                 title="Collapse" 
                                 label="Collapse"
-                                target="/behaviour/collapse" 
+                                href="/behaviour/collapse" 
                                 index="0"
                                 view="collapse">
                             </sidebar-submenu-item>
@@ -245,7 +248,7 @@ class DrawerSidebar extends LitElement {
             return;
         }
         
-        super.performUpdate();
+        super.update();
         
         this._deactivateAllActiveItems();
         this._activateMatchingViewElement(view);
@@ -289,7 +292,7 @@ class DrawerSidebar extends LitElement {
             }
             
             const sidebarMenuItemExpandable = this.shadowRoot.querySelector(`sidebar-menu-item-expandable[view='${pathParam}']`);
-            
+
             if(sidebarMenuItemExpandable) {
                 sidebarMenuItemExpandable.expand();
                 sidebarMenuItemExpandable.scrollIntoView({behavior: "auto", block: "center", inline: "nearest"});

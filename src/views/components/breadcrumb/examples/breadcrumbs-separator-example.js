@@ -35,13 +35,13 @@ class BreadcrumbsSeparatorExample extends BsExampleMixin(LitElement) {
             </style>
 
             <bs-breadcrumb class="arrowSeparator">
-                <bs-breadcrumb-item title="Home" target="/home"></bs-breadcrumb-item>
-                <bs-breadcrumb-item title="Library" target="/library" active></bs-breadcrumb-item>
+                <bs-breadcrumb-item title="Home" href="/home"></bs-breadcrumb-item>
+                <bs-breadcrumb-item title="Library" href="/library" active></bs-breadcrumb-item>
             </bs-breadcrumb>
 
             <bs-breadcrumb class="svgSeparator">
-                <bs-breadcrumb-item title="Home" target="/home"></bs-breadcrumb-item>
-                <bs-breadcrumb-item title="Library" target="/library" active></bs-breadcrumb-item>
+                <bs-breadcrumb-item title="Home" href="/home"></bs-breadcrumb-item>
+                <bs-breadcrumb-item title="Library" href="/library" active></bs-breadcrumb-item>
             </bs-breadcrumb>
         `;
     }

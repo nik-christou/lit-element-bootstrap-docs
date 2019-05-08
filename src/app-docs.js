@@ -1,5 +1,5 @@
 
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html } from 'lit-element';
 import { installRouter } from 'pwa-helpers/router';
 import { BsContentRebootCss } from 'lit-element-bootstrap/content';
 import { DefaultThemeCss } from 'lit-element-bootstrap/theme/default-theme-css';
@@ -64,7 +64,7 @@ export class AppDocs extends LitElement {
 
         this._loadView(view)
             .then(this._updateSidebar(view))
-            .then(this._closeDrawerOnMobileDevices(drawerLayoutElement));
+            .then(this._updateDrawer(view, drawerLayoutElement));
     }
 
     async _loadView(view) {
@@ -79,11 +79,22 @@ export class AppDocs extends LitElement {
         const drawerSidebar = this.shadowRoot.querySelector('drawer-sidebar');
         drawerSidebar.updateView(view);
     }
-         
-    _closeDrawerOnMobileDevices(drawerLayoutElement) {
+
+    async _updateDrawer(view, drawerLayoutElement) {
         
-        if(window.matchMedia('(max-width: 768px)').matches) {
-            drawerLayoutElement.closeDrawer();
+        // if on mobile device or home page close sidebar drawer
+        if(window.matchMedia('(max-width: 768px)').matches || view === 'home') {
+            
+            drawerLayoutElement.updateComplete.then(() => {
+                drawerLayoutElement.closeDrawer();
+            });
+        
+        // if not on a mobile device and not on home page
+        } else if(view !== 'home') {
+            
+            drawerLayoutElement.updateComplete.then(() => {
+                drawerLayoutElement.openDrawer();
+            });
         }
     }
 };

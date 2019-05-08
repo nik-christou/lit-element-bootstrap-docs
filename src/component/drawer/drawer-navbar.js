@@ -51,7 +51,7 @@ class DrawerNavbar extends LitElement {
                 <bs-navbar-toggler>
                     <bars-icon></bars-icon>
                 </bs-navbar-toggler>
-                <bs-navbar-brand-link class="pl-2">lit-element-bootstrap</bs-navbar-brand-link>
+                <bs-navbar-brand-link class="pl-2" target="/home">lit-element-bootstrap</bs-navbar-brand-link>
                 <bs-navbar-nav class="ml-auto">
                     <bs-nav-item>
                         <bs-nav-link id="githubLink" href="https://github.com/nik-christou/lit-element-bootstrap">

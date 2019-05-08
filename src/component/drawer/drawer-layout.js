@@ -1,8 +1,9 @@
 
 import { LitElement, html, css } from 'lit-element';
 import { installMediaQueryWatcher } from 'pwa-helpers/media-query';
-import { BsRow, BsColumn, BsContainer} from 'lit-element-bootstrap/layout/grid';
 import { BsContentRebootCss } from 'lit-element-bootstrap/content';
+
+import 'lit-element-bootstrap/layout/grid';
 
 class DrawerLayout extends LitElement {
 
@@ -145,8 +146,10 @@ class DrawerLayout extends LitElement {
     firstUpdated() {
         this._setInitialDrawerOpenState();
         installMediaQueryWatcher('(max-width: 768px)', (matches) => this._smallDevicesLayoutChanged(matches));
+        
         const drawerLayoutBackdropElement = this.shadowRoot.querySelector('div.drawer-layout-backdrop');
         drawerLayoutBackdropElement.addEventListener('click', () => this._drawerLayoutBackdropClicked());
+
         this.addEventListener('toggleSidebarEvent', () => this._toggleSidebar());
     }
     
@@ -173,11 +176,11 @@ class DrawerLayout extends LitElement {
         if(this.drawerOpened) {
             this.closeDrawer();
         } else {
-            this._openDrawer();
+            this.openDrawer();
         }
     }
 
-    _openDrawer() {
+    openDrawer() {
 
         const drawerLayoutElement = this.shadowRoot.querySelector('div.drawer-layout');
         const sidebarWrapperElement = this.shadowRoot.querySelector('div.drawer-sidebar-wrapper');
@@ -187,12 +190,12 @@ class DrawerLayout extends LitElement {
         drawerLayoutElement.classList.remove('hide-sidedrawer');
         this._enableDrawerLayoutBackdrop();
     }
-    
+
     closeDrawer() {
 
         const drawerLayoutElement = this.shadowRoot.querySelector('div.drawer-layout');
         const sidebarWrapperElement = this.shadowRoot.querySelector('div.drawer-sidebar-wrapper');
-
+        
         this.drawerOpened = false;
         sidebarWrapperElement.classList.remove('active');
         drawerLayoutElement.classList.add('hide-sidedrawer');

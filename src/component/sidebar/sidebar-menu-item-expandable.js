@@ -7,6 +7,7 @@ class SidebarMenuItemExpandable extends LitElement {
         return {
             title: String,
             label: String,
+            view: String,
             index: { type: Number, reflect: true },
             expanded: { type: Boolean, reflect: true }
         };
@@ -58,7 +59,7 @@ class SidebarMenuItemExpandable extends LitElement {
     render() {
         return html`
             <div>
-                <a href="${this.target}" title="${this.title}">
+                <a title="${this.title}">
                     <div class="wrapper">
                         <span>${this.label}</span>
                         <slot name="expandIcon"></slot>

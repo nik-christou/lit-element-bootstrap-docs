@@ -1100,10 +1100,10 @@
     "@types/events" "*"
     "@types/inquirer" "*"
 
-"@webcomponents/webcomponentsjs@2.2.7":
-  version "2.2.7"
-  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.2.7.tgz#1f1a7a7aa083db5ae6aadaeda68caa8fd8657462"
-  integrity sha512-kPPjzV+5kpoWpTniyvBSPcXS33f3j/C6HvNOJ3YecF3pvz3XwVeU4ammbxtVy/osF3z7hr1DYNptIf4oPEvXZA==
+"@webcomponents/webcomponentsjs@2.2.10":
+  version "2.2.10"
+  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.2.10.tgz#6f6bee0277833ae98d7e5b46f1e0fdb48cd5ff44"
+  integrity sha512-5dzhUhP+h0qMiK0IWb7VNb0OGBoXO3AuI6Qi8t9PoKT50s5L1jv0xnwnLq+cFgPuTB8FLTNP8xIDmyoOsKBy9Q==
 
 "@webcomponents/webcomponentsjs@^1.0.7":
   version "1.3.3"
@@ -4663,10 +4663,10 @@ lazystream@^1.0.0:
   dependencies:
     readable-stream "^2.0.5"
 
-lit-element-bootstrap@^1.0.0-alpha.7:
-  version "1.0.0-alpha.7"
-  resolved "https://registry.yarnpkg.com/lit-element-bootstrap/-/lit-element-bootstrap-1.0.0-alpha.7.tgz#981beff45da24845206f0a07eec789e5bbdee421"
-  integrity sha512-b6Y7jfSWF79YHrggPs5v2Uwtm8XTwKDHgTUalSlUWZF5yjatX/Gek8NOD5zcq0B8HRROL3xg20LiqAXuQ2U0ZA==
+lit-element-bootstrap@^1.0.0-alpha.8:
+  version "1.0.0-alpha.8"
+  resolved "https://registry.yarnpkg.com/lit-element-bootstrap/-/lit-element-bootstrap-1.0.0-alpha.8.tgz#d7e1e5c3a9fe1faa1b946c6c7ed9c8c22ba53349"
+  integrity sha512-h+g2exgPwM0T8bBVSCo3REK54CmAaJVPWqy2a8dF0ZfFNkhRmgaTbeW5ioOJ2QWj/Vd8vyPkMFG4tYUGJ7rC+w==
   dependencies:
     lit-element "^2.1.0"
     popper.js "^1.14.4"

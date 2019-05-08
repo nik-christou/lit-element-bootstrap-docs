@@ -10,7 +10,7 @@ class SidebarSubmenuItem extends LitElement {
             title: { type: String, reflect: true },
             label: { type: String, reflect: true },
             active: { type: Boolean, reflect: true },
-            target: { type: String, reflect: true }
+            href: { type: String, reflect: true }
         };
     }
     
@@ -57,7 +57,7 @@ class SidebarSubmenuItem extends LitElement {
     render() {
         return html`
             <div>
-                <a href="${this.target}" title="${this.title}">
+                <a href="${this.href}" title="${this.title}">
                     <span>${this.label}</span>
                 </a>
             </div>
@@ -69,7 +69,7 @@ class SidebarSubmenuItem extends LitElement {
         this.view = '';
         this.title = '';
         this.label = '';
-        this.target = '';
+        this.href = '#';
         this.active = false;
     }
     
