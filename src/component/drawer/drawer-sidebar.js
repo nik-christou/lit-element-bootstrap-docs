@@ -18,7 +18,10 @@ class DrawerSidebar extends LitElement {
             BsContentRebootCss,
             BsBackgroundColorsCss,
             css`
-                
+                :host {
+                    display: block;
+                }
+
                 sidebar-menu, 
                 sidebar-menu-item, 
                 sidebar-submenu, 

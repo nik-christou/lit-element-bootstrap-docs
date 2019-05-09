@@ -11,6 +11,10 @@ class DrawerLayout extends LitElement {
         return [
             BsContentRebootCss,
             css`
+                :host {
+                    display: block;
+                }
+
                 div.drawer-content-wrapper {
                     margin-top: 70px;
                     min-height: 100%;

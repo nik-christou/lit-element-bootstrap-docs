@@ -14,7 +14,7 @@ class SidebarMenu extends LitElement {
                 padding-left: 0px;
                 padding-top: 15px;
                 position: relative;
-                margin-top: 55px;
+                margin-top: 65px;
                 overflow-y: hidden;
             }
 

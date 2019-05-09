@@ -18,6 +18,10 @@ class DrawerNavbar extends LitElement {
             BsFlexJustifyCss,
             BsBackgroundColorsCss,
             css`
+                :host {
+                    display: block;
+                }
+
                 bs-navbar {
                     border-bottom: 1px solid rgba(0,0,0,0.0625);
                 }
@@ -29,6 +33,7 @@ class DrawerNavbar extends LitElement {
                 bs-navbar > bs-navbar-toggler {
                     --navbar-toggler-border: none;
                     --navbar-toggler-outline-focus: none;
+                    --navbar-toggler-padding: 0;
                 }
 
                 bs-navbar-nav {
