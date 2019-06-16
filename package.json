@@ -1,6 +1,6 @@
 {
     "name": "lit-element-bootstrap-docs",
-    "version": "1.0.0-alpha.9",
+    "version": "1.0.0-alpha.13",
     "main": "src/app-docs.js",
     "description": "Polymer Bootstrap documentation and examples",
     "license": "MIT",
@@ -11,12 +11,12 @@
     },
     "devDependencies": {
         "chai": "^4.2.0",
-        "polymer-cli": "^1.9.9"
+        "polymer-cli": "^1.9.10"
     },
     "dependencies": {
-        "@webcomponents/webcomponentsjs": "2.2.10",
-        "lit-element": "^2.1.0",
-        "lit-element-bootstrap": "^1.0.0-alpha.10",
+        "@webcomponents/webcomponentsjs": "^2.2.10",
+        "lit-element": "^2.2.0",
+        "lit-element-bootstrap": "^1.0.0-alpha.13",
         "prismjs": "^1.16.0",
         "pwa-helpers": "^0.9.1"
     }
