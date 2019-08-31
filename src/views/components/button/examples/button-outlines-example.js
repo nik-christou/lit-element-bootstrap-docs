@@ -1,11 +1,22 @@
 
-import { LitElement } from 'lit-element';
+import { LitElement, css } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
 import 'lit-element-bootstrap/components/button';
 
 class ButtonOutlinesExample extends BsExampleMixin(LitElement) {
     
+    static get styles() {
+        return [
+            super.styles,
+            css`
+                bs-button {
+                    display: initial;
+                }
+            `
+        ];
+    }
+
     _getExample() {
         return `
             <bs-button outline-primary>Primary</bs-button>

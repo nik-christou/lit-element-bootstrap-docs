@@ -11,13 +11,13 @@
     },
     "devDependencies": {
         "chai": "^4.2.0",
-        "polymer-cli": "^1.9.10"
+        "polymer-cli": "^1.9.11"
     },
     "dependencies": {
         "@webcomponents/webcomponentsjs": "^2.2.10",
         "lit-element": "^2.2.0",
-        "lit-element-bootstrap": "^1.0.0-alpha.13",
-        "prismjs": "^1.16.0",
+        "lit-element-bootstrap": "^1.0.0-alpha.15",
+        "prismjs": "^1.17.1",
         "pwa-helpers": "^0.9.1"
     }
 }
