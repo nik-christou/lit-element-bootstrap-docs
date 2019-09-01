@@ -43,7 +43,6 @@ class DropdownsView extends LitElement {
         return html`
         
             <h1 class="bd-title" id="content">Dropdowns</h1>
-        
             
             <h3>Single Button</h3>
             

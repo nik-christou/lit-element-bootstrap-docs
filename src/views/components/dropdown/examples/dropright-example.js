@@ -1,5 +1,5 @@
 
-import { LitElement } from 'lit-element';
+import { LitElement, css } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
 import 'lit-element-bootstrap/components/button';
@@ -8,6 +8,17 @@ import 'lit-element-bootstrap/components/dropdown';
 
 class DroprightExample extends BsExampleMixin(LitElement) {
     
+    static get styles() {
+        return [
+            super.styles,
+            css`
+                bs-button-group {
+                    margin-right: 5px;
+                }
+            `
+        ];
+    }
+
     _getExample() {
         return `
             <bs-button-group>
