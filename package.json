@@ -15,8 +15,8 @@
     },
     "dependencies": {
         "@webcomponents/webcomponentsjs": "^2.2.10",
-        "lit-element": "^2.2.0",
-        "lit-element-bootstrap": "^1.0.0-alpha.19",
+        "lit-element": "2.2.0",
+        "lit-element-bootstrap": "^1.0.0-alpha.20",
         "prismjs": "^1.17.1",
         "pwa-helpers": "^0.9.1"
     }
