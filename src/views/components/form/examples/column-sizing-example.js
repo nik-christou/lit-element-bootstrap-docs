@@ -2,7 +2,7 @@
 import { LitElement } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-import 'lit-element-bootstrap/layout/grid';
+import 'lit-element-bootstrap/layout';
 import 'lit-element-bootstrap/components/form';
 
 class ColumnSizingExample extends BsExampleMixin(LitElement) {

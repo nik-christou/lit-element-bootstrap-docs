@@ -1,6 +1,8 @@
 
 import { LitElement, html } from 'lit-element';
-import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
+import { BaseViewMixin } from '../../base-view.js';
+import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
 import './examples/button-styles-example';
@@ -13,10 +15,11 @@ import './examples/button-disabled-state-example';
 import './examples/button-link-disabled-state-example';
 import './examples/button-toggle-example';
 
-class ButtonsView extends LitElement {
+class ButtonsView extends BaseViewMixin(LitElement) {
 
     static get styles() {
         return [
+            super.styles,
             BsContentRebootCss,
             BsContentTypographyCss,
             BsDocsContentCss,
@@ -29,6 +32,38 @@ class ButtonsView extends LitElement {
         
             <h1 class="bd-title" id="content">Buttons</h1>
             
+            <h4>Install</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // install scoped package
+                    npm install @lit-element-bootstrap/button
+                    
+                    // installed as part of all components
+                    npm install lit-element-bootstrap
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
+            <h4>Import</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // import all css & components
+                    import 'lit-element-bootstrap/components/button';
+
+                    // import specific component 
+                    import 'lit-element-bootstrap/components/button/bs-button.js';
+
+                    // import all css & components from the scoped package
+                    import '@lit-element-bootstrap/button';
+
+                    // import specific component from the scoped package
+                    import '@lit-element-bootstrap/button/bs-button.js';
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
             <button-styles-example></button-styles-example>
             
             <h2>Button tags</h2>

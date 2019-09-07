@@ -4,7 +4,7 @@ import { TableOfContentMixin } from '../../../../component/toc/table-of-content-
 import { BsDocsContentCss } from '../../../../component/content/bs-docs-content-css';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import 'lit-element-bootstrap/layout/grid';
+import 'lit-element-bootstrap/layout';
 import 'lit-element-bootstrap/components/navs';
 
 import '../../../../component/toc/table-of-content';

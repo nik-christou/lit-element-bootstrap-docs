@@ -3,7 +3,7 @@ import { LitElement, css } from 'lit-element';
 import { BsFlexAlignSelfCss } from 'lit-element-bootstrap/utilities/flex';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-import 'lit-element-bootstrap/layout/grid';
+import 'lit-element-bootstrap/layout';
 
 class VerticalAlignmentColumnExample extends BsExampleMixin(LitElement) {
     

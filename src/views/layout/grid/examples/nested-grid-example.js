@@ -2,7 +2,7 @@
 import { LitElement, css } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-import 'lit-element-bootstrap/layout/grid';
+import 'lit-element-bootstrap/layout';
 
 class NestedGridExample extends BsExampleMixin(LitElement) {
     

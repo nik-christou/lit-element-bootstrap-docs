@@ -3,7 +3,7 @@ import { LitElement, css } from 'lit-element';
 import { BsSpacingCss } from 'lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-import 'lit-element-bootstrap/layout/grid';
+import 'lit-element-bootstrap/layout';
 import 'lit-element-bootstrap/components/form';
 import 'lit-element-bootstrap/components/button';
 

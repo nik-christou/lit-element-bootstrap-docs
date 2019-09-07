@@ -1,6 +1,8 @@
 
 import { LitElement, html } from 'lit-element';
-import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
+import { BaseViewMixin } from '../../base-view.js';
+import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
 import '../../../component/callout/bs-callout';
@@ -11,10 +13,11 @@ import './examples/badge-contextual-example';
 import './examples/pill-badges-example';
 import './examples/badge-links-example';
 
-class BadgesView extends LitElement {
+class BadgesView extends BaseViewMixin(LitElement) {
     
     static get styles() {
         return [
+            super.styles,
             BsContentRebootCss,
             BsContentTypographyCss,
             BsDocsContentCss,
@@ -26,7 +29,39 @@ class BadgesView extends LitElement {
         return html`
         
             <h1 class="bd-title" id="content">Badges</h1>
-        
+
+            <h4>Install</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // install scoped package
+                    npm install @lit-element-bootstrap/badge
+                    
+                    // installed as part of all components
+                    npm install lit-element-bootstrap
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
+            <h4>Import</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // import all css & components
+                    import 'lit-element-bootstrap/components/badge';
+
+                    // import specific component 
+                    import 'lit-element-bootstrap/components/badge/bs-badge.js';
+
+                    // import all css & components from the scoped package
+                    import '@lit-element-bootstrap/badge';
+
+                    // import specific component from the scoped package
+                    import '@lit-element-bootstrap/badge/bs-badge.js';
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
             <badge-scales-example></badge-scales-example>
             
             <button-badge-example></button-badge-example>

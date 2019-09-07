@@ -1,9 +1,9 @@
 
 import { LitElement, html, css } from 'lit-element';
 import { installMediaQueryWatcher } from 'pwa-helpers/media-query';
-import { BsContentRebootCss } from 'lit-element-bootstrap/content';
+import { BsContentRebootCss } from 'lit-element-bootstrap/content/bs-content-reboot-css.js';
 
-import 'lit-element-bootstrap/layout/grid';
+import 'lit-element-bootstrap/layout';
 
 class DrawerLayout extends LitElement {
 

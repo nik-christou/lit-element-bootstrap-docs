@@ -4724,14 +4724,21 @@ lazystream@^1.0.0:
   dependencies:
     readable-stream "^2.0.5"
 
-lit-element-bootstrap@^1.0.0-alpha.18:
-  version "1.0.0-alpha.18"
-  resolved "https://registry.yarnpkg.com/lit-element-bootstrap/-/lit-element-bootstrap-1.0.0-alpha.18.tgz#981f85c6d308ab14a2d9404ea8a8f3474b5269e6"
-  integrity sha512-0NfQvHEE8q9gObc6rRY6K+vudtOtewGiR1s0VyHAKuaJxW0L9uNanKFXqFH0nP0aurBGbdjljkCEfxFF+ceW0w==
+lit-element-bootstrap@^1.0.0-alpha.19:
+  version "1.0.0-alpha.19"
+  resolved "https://registry.yarnpkg.com/lit-element-bootstrap/-/lit-element-bootstrap-1.0.0-alpha.19.tgz#32cdb8231f71e5001b04224581777f16915e51fa"
+  integrity sha512-6aAN9gpFuGoWl8IuGq0MkAvOruAvCpMzvarJeWeNO0NRdqW5SvlpB7nGMNF39U4j3ufDGmyZYUiPiryQhlaTeg==
   dependencies:
-    lit-element "^2.2.0"
+    lit-element "2.2.0"
     popper.js "^1.14.4"
     pwa-helpers "^0.9.1"
+
+lit-element@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-2.2.0.tgz#e853be38021f0c7743a10180affdf84b8a02400c"
+  integrity sha512-Mzs3H7IO4wAnpzqreHw6dQqp9IG+h/oN8X9pgNbMZbE7x6B0aNOwP5Nveox/5HE+65ZfW2PeULEjoHkrwpTnuQ==
+  dependencies:
+    lit-html "^1.0.0"
 
 lit-element@^2.2.0:
   version "2.2.1"

@@ -3,7 +3,7 @@ import { LitElement, html } from 'lit-element';
 import { BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 
-import 'lit-element-bootstrap/layout/grid';
+import 'lit-element-bootstrap/layout';
 import 'lit-element-bootstrap/components/navbar';
 
 class NavbarInnerContainerExample extends BsExampleMixin(LitElement) {

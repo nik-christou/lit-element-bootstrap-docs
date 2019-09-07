@@ -1,7 +1,9 @@
 
 import { LitElement, html } from 'lit-element';
-import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BaseViewMixin } from '../../base-view.js';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
+import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
+import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
 import './examples/input-group-basic-example';
 import './examples/input-group-sizing-example';
@@ -13,10 +15,11 @@ import './examples/input-group-multiple-buttons-example';
 import './examples/input-group-dropdowns-example';
 import './examples/input-group-segmented-buttons-example';
 
-class InputGroupView extends LitElement {
+class InputGroupView extends BaseViewMixin(LitElement) {
     
     static get styles() {
         return [
+            super.styles,
             BsContentRebootCss,
             BsContentTypographyCss,
             BsDocsContentCss
@@ -28,6 +31,38 @@ class InputGroupView extends LitElement {
 
             <h1 class="bd-title" id="content">Input group</h1>
             
+            <h4>Install</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // install scoped package
+                    npm install @lit-element-bootstrap/input-group
+                    
+                    // installed as part of all components
+                    npm install lit-element-bootstrap
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
+            <h4>Import</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // import all css & components
+                    import 'lit-element-bootstrap/components/input-group';
+
+                    // import specific component 
+                    import 'lit-element-bootstrap/components/input-group/bs-input-group.js';
+
+                    // import all css & components from the scoped package
+                    import '@lit-element-bootstrap/input-group';
+
+                    // import specific component from the scoped package
+                    import '@lit-element-bootstrap/input-group/bs-input-group.js';
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
             <input-group-basic-example></input-group-basic-example>
         
             <h2>Sizing</h2>

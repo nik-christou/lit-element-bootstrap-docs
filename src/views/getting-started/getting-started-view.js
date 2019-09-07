@@ -1,25 +1,23 @@
 
 import { LitElement, html,css } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
+import { BaseViewMixin } from '../base-view.js';
 import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 import { BsDocsContentCss } from '../../component/content/bs-docs-content-css';
 import { BsFlexOrderCss } from 'lit-element-bootstrap/utilities/flex/bs-flex-order-css';
-import { PrismDefaultCss } from '../../component/example/prism-default-css';
 
-import '../../component/example/bs-highlight';
-
-import 'lit-element-bootstrap/layout/grid';
+import 'lit-element-bootstrap/layout';
 import 'lit-element-bootstrap/components/navs';
 
-class GettingStartedView extends LitElement {
+class GettingStartedView extends BaseViewMixin(LitElement) {
     
     static get styles() {
         return [
+            super.styles,
             BsContentRebootCss,
             BsContentTypographyCss,
             BsDocsContentCss,
             BsFlexOrderCss,
-            PrismDefaultCss,
             css`
                 :host {
                     display: block;
@@ -44,12 +42,20 @@ class GettingStartedView extends LitElement {
             <br />
 
             <h3>Installation</h3>
+            <p>If you want to install all components then just instal the lit-element-bootstrap:</p>
             <bs-highlight>
                 <pre><code>${unsafeHTML(this._hightlightJavascript(
                     `npm install lit-element-bootstrap`
                 ))}</code></pre>
             </bs-highlight>
-
+            <p>If you're only interested in install just a specific component 
+            then you can install the scoped package which is available for each component:
+            </p>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `npm install @lit-element-bootstrap/alert`
+                ))}</code></pre>
+            </bs-highlight>
             <br />
 
             <h3>How to import</h3>
@@ -61,10 +67,13 @@ class GettingStartedView extends LitElement {
             </p>
             <bs-highlight>
                 <pre><code>${unsafeHTML(this._hightlightJavascript(`
-                    // e.g import only bs-alert
+                    // e.g import only bs-alert from the include all package
                     import 'lit-element-bootstrap/components/alert/bs-alert';
 
-                    // e.g import all alert components
+                    // e.g only alert component is available
+                    import '@lit-element-bootstrap/alert';
+
+                    // e.g import all alert components from the include all package
                     import 'lit-element-bootstrap/components/alert';
 
                     // e.g import all components (should be avoided)
@@ -101,26 +110,6 @@ class GettingStartedView extends LitElement {
                 <a href="https://lit-element.polymer-project.org/guide/styles">css tagged template literal.</a> 
             </p>
         `;
-    }
-
-    _hightlightMarkup(text) {
-
-        const grammar = window.Prism.languages.markup;
-        const language = 'markup';
-        const normilazedText = window.Prism.plugins.NormalizeWhitespace.normalize(text);
-        const hightlightedText = window.Prism.highlight(normilazedText, grammar, language);
-
-        return hightlightedText;
-    }
-
-    _hightlightJavascript(text) {
-
-        const grammar = window.Prism.languages.javascript;
-        const language = 'javascript';
-        const normilazedText = window.Prism.plugins.NormalizeWhitespace.normalize(text);
-        const hightlightedText = window.Prism.highlight(normilazedText, grammar, language);
-
-        return hightlightedText;
     }
 };
 

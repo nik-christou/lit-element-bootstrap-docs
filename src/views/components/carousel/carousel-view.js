@@ -1,5 +1,7 @@
 
 import { LitElement, html } from 'lit-element';
+import { BaseViewMixin } from '../../base-view.js';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
@@ -9,10 +11,11 @@ import './examples/slides-with-indicators-example';
 import './examples/slides-with-captions-example';
 import './examples/slide-with-crossfade-example';
 
-class CarouselView extends LitElement {
+class CarouselView extends BaseViewMixin(LitElement) {
     
     static get styles() {
         return [
+            super.styles,
             BsContentRebootCss,
             BsContentTypographyCss,
             BsDocsContentCss,
@@ -24,7 +27,39 @@ class CarouselView extends LitElement {
         return html`
         
             <h1 class="bd-title" id="content">Carousel</h1>
-            
+
+            <h4>Install</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // install scoped package
+                    npm install @lit-element-bootstrap/carousel
+                    
+                    // installed as part of all components
+                    npm install lit-element-bootstrap
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
+            <h4>Import</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // import all css & components
+                    import 'lit-element-bootstrap/components/carousel';
+
+                    // import specific component 
+                    import 'lit-element-bootstrap/components/carousel/bs-carousel.js';
+
+                    // import all css & components from the scoped package
+                    import '@lit-element-bootstrap/carousel';
+
+                    // import specific component from the scoped package
+                    import '@lit-element-bootstrap/carousel/bs-carousel.js';
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
             <slides-only-example></slides-only-example>
             
             <h3>With controls</h3>

@@ -1,5 +1,7 @@
 
 import { LitElement, html, css } from 'lit-element';
+import { BaseViewMixin } from '../../base-view.js';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
@@ -23,10 +25,11 @@ import './examples/dropdown-menu-text-example';
 import './examples/form-in-dropdown-menu-example';
 import './examples/offset-menu-example';
 
-class DropdownsView extends LitElement {
+class DropdownsView extends BaseViewMixin(LitElement) {
     
     static get styles() {
         return [
+            super.styles,
             BsContentRebootCss,
             BsContentTypographyCss,
             BsDocsContentCss,
@@ -43,7 +46,39 @@ class DropdownsView extends LitElement {
         return html`
         
             <h1 class="bd-title" id="content">Dropdowns</h1>
-            
+
+            <h4>Install</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // install scoped package
+                    npm install @lit-element-bootstrap/dropdown
+                    
+                    // installed as part of all components
+                    npm install lit-element-bootstrap
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
+            <h4>Import</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // import all css & components
+                    import 'lit-element-bootstrap/components/dropdown';
+
+                    // import specific component 
+                    import 'lit-element-bootstrap/components/dropdown/bs-dropdown.js';
+
+                    // import all css & components from the scoped package
+                    import '@lit-element-bootstrap/dropdown';
+
+                    // import specific component from the scoped package
+                    import '@lit-element-bootstrap/dropdown/bs-dropdown.js';
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
             <h3>Single Button</h3>
             
             <single-btn-dropdown-example></single-btn-dropdown-example>

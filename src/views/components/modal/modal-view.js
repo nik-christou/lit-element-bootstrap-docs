@@ -1,6 +1,8 @@
 
 import { LitElement, html } from 'lit-element';
-import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
+import { BaseViewMixin } from '../../base-view.js';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
+import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
 import './examples/static-modal-example';
@@ -12,10 +14,11 @@ import './examples/modal-varying-content-example';
 import './examples/modal-no-animation-example';
 import './examples/modal-sizes-example';
 
-class ModalView extends LitElement {
+class ModalView extends BaseViewMixin(LitElement) {
     
     static get styles() {
         return [
+            super.styles,
             BsContentRebootCss,
             BsContentTypographyCss,
             BsDocsContentCss,
@@ -27,7 +30,39 @@ class ModalView extends LitElement {
         return html`
 
             <h1 class="bd-title" id="content">Modal</h1>
-        
+
+            <h4>Install</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // install scoped package
+                    npm install @lit-element-bootstrap/modal
+                    
+                    // installed as part of all components
+                    npm install lit-element-bootstrap
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
+            <h4>Import</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // import all css & components
+                    import 'lit-element-bootstrap/components/modal';
+
+                    // import specific component 
+                    import 'lit-element-bootstrap/components/modal/bs-modal.js';
+
+                    // import all css & components from the scoped package
+                    import '@lit-element-bootstrap/modal';
+
+                    // import specific component from the scoped package
+                    import '@lit-element-bootstrap/modal/bs-modal.js';
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
             <static-modal-example></static-modal-example>
             
             <working-modal-demo-example></working-modal-demo-example>

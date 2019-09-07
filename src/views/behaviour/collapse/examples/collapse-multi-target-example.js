@@ -3,7 +3,7 @@ import { LitElement } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
 import { BsCollapseMixin} from 'lit-element-bootstrap/behaviour/collapse';
 
-import 'lit-element-bootstrap/layout/grid';
+import 'lit-element-bootstrap/layout';
 import 'lit-element-bootstrap/components/card';
 import 'lit-element-bootstrap/components/button';
 import 'lit-element-bootstrap/behaviour/collapse';

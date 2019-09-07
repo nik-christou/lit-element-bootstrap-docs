@@ -1,7 +1,9 @@
 
 import { LitElement, html } from 'lit-element';
+import { BaseViewMixin } from '../../base-view.js';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
 import '../../../component/callout/bs-callout';
 import './examples/single-media-example';
@@ -12,10 +14,11 @@ import './examples/bottom-alignment-media-example';
 import './examples/order-placement-media-example';
 import './examples/media-list-example';
 
-class MediaObjectView extends LitElement {
+class MediaObjectView extends BaseViewMixin(LitElement) {
     
     static get styles() {
         return [
+            super.styles,
             BsContentRebootCss,
             BsContentTypographyCss,
             BsDocsContentCss
@@ -26,7 +29,39 @@ class MediaObjectView extends LitElement {
         return html`
 
             <h1 class="bd-title" id="content">Media object</h1>
-        
+
+            <h4>Install</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // install scoped package
+                    npm install @lit-element-bootstrap/media-object
+                    
+                    // installed as part of all components
+                    npm install lit-element-bootstrap
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
+            <h4>Import</h4>
+            <bs-highlight>
+                <pre><code>${unsafeHTML(this._hightlightJavascript(
+                    `
+                    // import all css & components
+                    import 'lit-element-bootstrap/components/media-object';
+
+                    // import specific component 
+                    import 'lit-element-bootstrap/components/media-object/bs-media.js';
+
+                    // import all css & components from the scoped package
+                    import '@lit-element-bootstrap/media-object';
+
+                    // import specific component from the scoped package
+                    import '@lit-element-bootstrap/media-object/bs-media.js';
+                    `
+                ))}</code></pre>
+            </bs-highlight>
+
             <single-media-example></single-media-example>
             
             <h2>Nesting</h2>

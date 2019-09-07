@@ -1,8 +1,8 @@
 
 import { LitElement, html } from 'lit-element';
 import { installRouter } from 'pwa-helpers/router';
-import { BsContentRebootCss } from 'lit-element-bootstrap/content';
-import { DefaultThemeCss } from 'lit-element-bootstrap/theme/default-theme-css';
+import { BsContentRebootCss } from 'lit-element-bootstrap/content/bs-content-reboot-css.js';
+import { DefaultThemeCss } from 'lit-element-bootstrap/theme/default-theme-css.js';
 import { getTemplateToLoad, getViewCustomElementName,  getViewCustomElementPath } from './app-routing';
 
 import './component/drawer/drawer-layout';

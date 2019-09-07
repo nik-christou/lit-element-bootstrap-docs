@@ -4,7 +4,7 @@ import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstra
 import { BsTextCss, BsTextColorCss, BsSpacingCss, BsDisplayCss } from 'lit-element-bootstrap/utilities';
 import { BsFlexDisplayCss, BsFlexJustifyCss, BsFlexWrapCss, BsFlexAlignContentCss, BsFlexDirectionCss, BsFlexOrderCss } from 'lit-element-bootstrap/utilities/flex';
 
-import 'lit-element-bootstrap/layout/grid';
+import 'lit-element-bootstrap/layout';
 import 'lit-element-bootstrap/components/button/bs-link-button';
 import 'lit-element-bootstrap/components/jumbotron/bs-jumbotron'; 
 
@@ -53,7 +53,7 @@ class HomeView extends LitElement {
                             <bs-link-button outline-primary large href="/getting-started">Get started</bs-link-button>
                             <bs-link-button outline-secondary large href="https://github.com/nik-christou/lit-element-bootstrap" target="_black">Github</bs-link-button>
                         </div>
-                        <p class="text-muted">Current version: 1.0.0-alpha.18 (02 Sep 19)</p>
+                        <p class="text-muted">Current version: 1.0.0-alpha.19 (07 Sep 19)</p>
                     </bs-jumbotron>
                 </bs-column>
             </bs-row>
