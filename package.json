@@ -1,6 +1,6 @@
 {
     "name": "lit-element-bootstrap-docs",
-    "version": "1.0.0-alpha.13",
+    "version": "1.0.0-alpha.21",
     "main": "src/app-docs.js",
     "description": "Polymer Bootstrap documentation and examples",
     "license": "MIT",
@@ -16,7 +16,7 @@
     "dependencies": {
         "@webcomponents/webcomponentsjs": "^2.2.10",
         "lit-element": "2.2.0",
-        "lit-element-bootstrap": "^1.0.0-alpha.20",
+        "lit-element-bootstrap": "^1.0.0-alpha.21",
         "prismjs": "^1.17.1",
         "pwa-helpers": "^0.9.1"
     }
