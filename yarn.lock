@@ -485,10 +485,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@lit-element-bootstrap/button@^1.0.0-alpha.4":
-  version "1.0.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/@lit-element-bootstrap/button/-/button-1.0.0-alpha.4.tgz#57ddb1a1a321ebbf7f13bbe016bc0b0f3cb1d336"
-  integrity sha512-ZQMK2ahSLzgT0wzmtZ0wrj6QDtge3SOQ4qXLY0349Bm8gyBJ2hKTrl/aTBtWYfC/7oDwSom92RjXkZcAcGSxmA==
+"@lit-element-bootstrap/button@^1.0.0-alpha.5":
+  version "1.0.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@lit-element-bootstrap/button/-/button-1.0.0-alpha.5.tgz#552829c9cef668e82b6e9f15afcf2038b695e89f"
+  integrity sha512-7xQEXQJNyQx9iYWUIlPTSijnCE0ZpJxyMbqhji0THl9eZbN1+116kvJJ8X8WTndKi0PyYqrgXV5C1e0hGfLmBA==
   dependencies:
     "@lit-element-bootstrap/content" "^1.0.0-alpha.2"
     lit-element "2.2.0"
@@ -4790,12 +4790,12 @@ lazystream@^1.0.0:
   dependencies:
     readable-stream "^2.0.5"
 
-lit-element-bootstrap@^1.0.0-alpha.22:
-  version "1.0.0-alpha.22"
-  resolved "https://registry.yarnpkg.com/lit-element-bootstrap/-/lit-element-bootstrap-1.0.0-alpha.22.tgz#9b5dc2a26e20cc92d4808b2674806264e99ea4e2"
-  integrity sha512-Ih5lf8TQui/rbpq+XmdEcjoeDTkJ1L9b6vqHwDHutjlBlJ4jztaeopOz7I8m5QPkznO2/G8XlbDIIhtT9JEi9A==
+lit-element-bootstrap@^1.0.0-alpha.23:
+  version "1.0.0-alpha.23"
+  resolved "https://registry.yarnpkg.com/lit-element-bootstrap/-/lit-element-bootstrap-1.0.0-alpha.23.tgz#29338f54b7ac7bef97c5d488a86d9b33ff9bb839"
+  integrity sha512-KVQUU1J4hGOPMf3/6/lnOo4VtFUMWXXrbmRHjQOf7n8LExPo+c875LN0ncYj8mN3EGbd0znr77nPkTyULacRPA==
   dependencies:
-    "@lit-element-bootstrap/button" "^1.0.0-alpha.4"
+    "@lit-element-bootstrap/button" "^1.0.0-alpha.5"
     "@lit-element-bootstrap/content" "^1.0.0-alpha.2"
     "@lit-element-bootstrap/layout" "^1.0.0-alpha.1"
     "@lit-element-bootstrap/utilities" "^1.0.0-alpha.1"
