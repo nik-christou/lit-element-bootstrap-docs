@@ -9,8 +9,8 @@
 
         <meta name="theme-color" content="#fff" />
 
-        <link rel="icon" href="./src/icons/favicon.ico" />
-        <link rel="manifest" href="./src/manifest.json" />
+        <link rel="icon" href="./icons/favicon.ico" />
+        <link rel="manifest" href="./manifest.json" />
 
         <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
         <meta name="mobile-web-app-capable" content="yes">
@@ -22,20 +22,18 @@
         <meta name="apple-mobile-web-app-title" content="indie-catalog">
 
         <!-- Homescreen icons -->
-        <link rel="apple-touch-icon" href="./src/icons/icon-48x48.png">
-        <link rel="apple-touch-icon" sizes="96x96" href="./src/icons/icon-96x96.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="./src/icons/icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="192x192" href="./src/icons/icon-192x192.png">
+        <link rel="apple-touch-icon" href="./icons/icon-48x48.png">
+        <link rel="apple-touch-icon" sizes="96x96" href="./icons/icon-96x96.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./icons/icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="192x192" href="./icons/icon-192x192.png">
 
         <!-- Tile icon for Windows 8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="./src/icons/icon-144x144.png">
+        <meta name="msapplication-TileImage" content="./icons/icon-144x144.png">
         <meta name="msapplication-TileColor" content="#fbbc05">
         <meta name="msapplication-tap-highlight" content="no">
 
-        <base href="/src">
-
         <style type="text/css">
-
+            
             .loadingContainer {
                 text-align: center;
             }
@@ -60,7 +58,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-        
+
                 -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
                 animation: sk-bounce 2.0s infinite ease-in-out;
             }
@@ -77,15 +75,17 @@
 
             @keyframes sk-bounce {
                 0%, 100% { 
-                  transform: scale(0.0);
-                  -webkit-transform: scale(0.0);
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
                 } 50% { 
-                  transform: scale(1.0);
-                  -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0);
                 }
             }
 
         </style>
+        
+        <base href="/src">
 
     </head>
     <body>
@@ -105,27 +105,25 @@
 
         </app-docs>
 
-        <script type="text/javascript" src="./node_modules/prismjs/components/prism-core.min.js"></script>
-        <script type="text/javascript" src="./node_modules/prismjs/components/prism-markup.min.js"></script>
-        <script type="text/javascript" src="./node_modules/prismjs/components/prism-clike.min.js"></script>
-        <script type="text/javascript" src="./node_modules/prismjs/components/prism-javascript.min.js"></script>
-        <script type="text/javascript" src="./node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
-        <script type="text/javascript" src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer></script>
+        <script src="./import-map.json" type="importmap-shim"></script>
+        <script defer src="/web_modules/es-module-shims.min.js"></script>
 
-        <script type="module">
-            window.WebComponents.waitFor(() => {
-                return import('./src/app-docs.js');
-            });
-        </script>
+        <script type="text/javascript" src="./web_modules/prismjs/components/prism-core.min.js"></script>
+        <script type="text/javascript" src="./web_modules/prismjs/components/prism-markup.min.js"></script>
+        <script type="text/javascript" src="./web_modules/prismjs/components/prism-clike.min.js"></script>
+        <script type="text/javascript" src="./web_modules/prismjs/components/prism-javascript.min.js"></script>
+        <script type="text/javascript" src="./web_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+        
+        <script src="./src/app-docs.js" type="module-shim"></script>
         
         <script>
             // comment out the registration of service worker in local dev
             // or just generate one and copy it in the root directory
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('service-worker.js');
-                });
-            }
+            // if ('serviceWorker' in navigator) {
+            //     window.addEventListener('load', function() {
+            //         navigator.serviceWorker.register('service-worker.js');
+            //     });
+            // }
         </script>
 
     </body>

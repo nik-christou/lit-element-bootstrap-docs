@@ -1,8 +1,8 @@
 
 import { LitElement, css } from 'lit-element';
-import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/layout/bs-container.js';
+import 'lit-element-bootstrap/layout';
 
 class ContainerExample extends BsExampleMixin(LitElement) {
     

@@ -1,14 +1,14 @@
 
 import { LitElement, html } from 'lit-element';
 import { installRouter } from 'pwa-helpers/router';
-import { BsContentRebootCss } from 'lit-element-bootstrap/content/bs-content-reboot-css.js';
-import { DefaultThemeCss } from 'lit-element-bootstrap/theme/default-theme-css.js';
-import { getTemplateToLoad, getViewCustomElementName,  getViewCustomElementPath } from './app-routing';
+import { BsContentRebootCss } from 'lit-element-bootstrap/content';
+import { DefaultThemeCss } from 'lit-element-bootstrap/theme';
+import { getTemplateToLoad, getViewCustomElementName,  getViewCustomElementPath } from './app-routing.js';
 
-import './component/drawer/drawer-layout';
-import './component/drawer/drawer-sidebar';
-import './component/drawer/drawer-navbar';
-import './views/loading/loading-view';
+import './component/drawer/drawer-layout.js';
+import './component/drawer/drawer-sidebar.js';
+import './component/drawer/drawer-navbar.js';
+import './views/loading/loading-view.js';
 
 export class AppDocs extends LitElement {
     

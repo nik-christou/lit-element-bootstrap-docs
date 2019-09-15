@@ -5,14 +5,14 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import '../../../component/callout/bs-callout';
-import './examples/basic-button-group-example';
-import './examples/button-toolbar-example';
-import './examples/button-toolbar-input-groups-example';
-import './examples/sizing-button-group-example';
-import './examples/nesting-button-group-example';
-import './examples/vertical-button-group-example';
-import './examples/vertical-dropdown-group-example';
+import '../../../component/callout/bs-callout.js';
+import './examples/basic-button-group-example.js';
+import './examples/button-toolbar-example.js';
+import './examples/button-toolbar-input-groups-example.js';
+import './examples/sizing-button-group-example.js';
+import './examples/nesting-button-group-example.js';
+import './examples/vertical-button-group-example.js';
+import './examples/vertical-dropdown-group-example.js';
 
 class ButtonGroupView extends BaseViewMixin(LitElement) {
     

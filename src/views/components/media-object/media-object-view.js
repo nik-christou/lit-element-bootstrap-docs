@@ -2,17 +2,17 @@
 import { LitElement, html } from 'lit-element';
 import { BaseViewMixin } from '../../base-view.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
-import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
+import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import '../../../component/callout/bs-callout';
-import './examples/single-media-example';
-import './examples/nested-media-example';
-import './examples/top-alignment-media-example';
-import './examples/center-alignment-media-example';
-import './examples/bottom-alignment-media-example';
-import './examples/order-placement-media-example';
-import './examples/media-list-example';
+import '../../../component/callout/bs-callout.js';
+import './examples/single-media-example.js';
+import './examples/nested-media-example.js';
+import './examples/top-alignment-media-example.js';
+import './examples/center-alignment-media-example.js';
+import './examples/bottom-alignment-media-example.js';
+import './examples/order-placement-media-example.js';
+import './examples/media-list-example.js';
 
 class MediaObjectView extends BaseViewMixin(LitElement) {
     

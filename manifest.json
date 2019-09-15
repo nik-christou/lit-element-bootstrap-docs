@@ -3,7 +3,7 @@
   "manifest_version": 1,
   "name": "lit-element-bootstrap",
   "short_name": "lit-element-bootstrap",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.24",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fff",

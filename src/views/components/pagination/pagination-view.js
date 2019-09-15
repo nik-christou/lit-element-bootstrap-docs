@@ -5,13 +5,13 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import './examples/pagination-overview-example';
-import './examples/pagination-icons-example';
-import './examples/pagination-states-example';
-import './examples/pagination-large-size-example';
-import './examples/pagination-small-size-example';
-import './examples/pagination-center-alignment-example';
-import './examples/pagination-right-alignment-example';
+import './examples/pagination-overview-example.js';
+import './examples/pagination-icons-example.js';
+import './examples/pagination-states-example.js';
+import './examples/pagination-large-size-example.js';
+import './examples/pagination-small-size-example.js';
+import './examples/pagination-center-alignment-example.js';
+import './examples/pagination-right-alignment-example.js';
 
 class PaginationView extends BaseViewMixin(LitElement) {
     

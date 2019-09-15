@@ -2,13 +2,13 @@
 import { LitElement, html } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BaseViewMixin } from '../../base-view.js';
-import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
+import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import './examples/contextual-alerts-example';
-import './examples/link-color-example';
-import './examples/additional-content-example';
-import './examples/dismissing-alert-example';
+import './examples/contextual-alerts-example.js';
+import './examples/link-color-example.js';
+import './examples/additional-content-example.js';
+import './examples/dismissing-alert-example.js';
 
 class AlertsView extends BaseViewMixin(LitElement) {
     

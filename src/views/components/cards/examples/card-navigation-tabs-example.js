@@ -1,7 +1,7 @@
 
 import { LitElement } from 'lit-element';
 import { BsTextCss } from 'lit-element-bootstrap/utilities';
-import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
 import 'lit-element-bootstrap/components/card';
 import 'lit-element-bootstrap/components/navs';

@@ -3,30 +3,33 @@ import { LitElement, html} from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BaseViewMixin } from '../../base-view.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
-import { BsContentRebootCss, BsContentCodeCss, BsContenTableCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BsContentRebootCss, 
+    BsContentCodeCss, 
+    BsContenTableCss, 
+    BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import './examples/equal-width-columns-example';
-import './examples/equal-width-example';
-import './examples/equal-width-multiline-example';
-import './examples/one-column-width-example';
-import './examples/variable-width-content-example';
-import './examples/equal-width-multi-row-example';
-import './examples/all-breakpoints-example';
-import './examples/stacked-to-horizontal-example';
-import './examples/mix-and-match-example';
-import './examples/vertical-alignment-example';
-import './examples/vertical-alignment-column-example';
-import './examples/horizontal-alignment-example';
-import './examples/no-gutters-example';
-import './examples/column-wrapping-example';
-import './examples/column-break-example';
-import './examples/column-break-with-utilities-example';
-import './examples/reorder-columns-example';
-import './examples/reorder-columns-responsive-example';
-import './examples/offset-columns-example';
-import './examples/offset-columns-reset-example';
-import './examples/margin-utilities-example';
-import './examples/nested-grid-example';
+import './examples/equal-width-columns-example.js';
+import './examples/equal-width-example.js';
+import './examples/equal-width-multiline-example.js';
+import './examples/one-column-width-example.js';
+import './examples/variable-width-content-example.js';
+import './examples/equal-width-multi-row-example.js';
+import './examples/all-breakpoints-example.js';
+import './examples/stacked-to-horizontal-example.js';
+import './examples/mix-and-match-example.js';
+import './examples/vertical-alignment-example.js';
+import './examples/vertical-alignment-column-example.js';
+import './examples/horizontal-alignment-example.js';
+import './examples/no-gutters-example.js';
+import './examples/column-wrapping-example.js';
+import './examples/column-break-example.js';
+import './examples/column-break-with-utilities-example.js';
+import './examples/reorder-columns-example.js';
+import './examples/reorder-columns-responsive-example.js';
+import './examples/offset-columns-example.js';
+import './examples/offset-columns-reset-example.js';
+import './examples/margin-utilities-example.js';
+import './examples/nested-grid-example.js';
 
 class GridView extends BaseViewMixin(LitElement) {
     

@@ -1,23 +1,54 @@
 {
     "name": "lit-element-bootstrap-docs",
-    "version": "1.0.0-alpha.22",
+    "version": "1.0.0-alpha.24",
     "main": "src/app-docs.js",
-    "description": "Polymer Bootstrap documentation and examples",
+    "description": "lit-element-bootstrap documentation and examples",
     "license": "MIT",
     "scripts": {
-        "serve": "polymer serve",
-        "build": "polymer build --preset es6-unbundled",
-        "serve:build": "polymer serve build/es6-unbundled"
+        "pika:install": "pika install",
+        "serve": "es-dev-server --compatibility all --app-index index.html"
     },
     "devDependencies": {
-        "chai": "^4.2.0",
-        "polymer-cli": "^1.9.11"
+        "@pika/web": "^0.6.1",
+        "es-dev-server": "^1.18.0"
     },
     "dependencies": {
-        "@webcomponents/webcomponentsjs": "^2.2.10",
+        "es-module-shims": "^0.4.4",
+        "lit-html": "^1.1.2",
         "lit-element": "2.2.0",
         "lit-element-bootstrap": "^1.0.0-alpha.24",
         "prismjs": "^1.17.1",
         "pwa-helpers": "^0.9.1"
+    },
+    "@pika/web": {
+        "webDependencies": [
+          "lit-html/directives/unsafe-html.js",
+          "lit-element",
+          "lit-element-bootstrap/theme",
+          "lit-element-bootstrap/content",
+          "lit-element-bootstrap/utilities",
+          "lit-element-bootstrap/layout",
+          "lit-element-bootstrap/behaviour/collapse",
+          "lit-element-bootstrap/components/alert",
+          "lit-element-bootstrap/components/badge",
+          "lit-element-bootstrap/components/breadcrumb",
+          "lit-element-bootstrap/components/button",
+          "lit-element-bootstrap/components/button-group",
+          "lit-element-bootstrap/components/card",
+          "lit-element-bootstrap/components/carousel",
+          "lit-element-bootstrap/components/dropdown",
+          "lit-element-bootstrap/components/form",
+          "lit-element-bootstrap/components/input-group",
+          "lit-element-bootstrap/components/jumbotron",
+          "lit-element-bootstrap/components/list-group",
+          "lit-element-bootstrap/components/media-object",
+          "lit-element-bootstrap/components/modal",
+          "lit-element-bootstrap/components/navbar",
+          "lit-element-bootstrap/components/navs",
+          "lit-element-bootstrap/components/pagination",
+          "lit-element-bootstrap/components/progress",
+          "pwa-helpers/router.js",
+          "pwa-helpers/media-query.js"
+        ]
     }
 }

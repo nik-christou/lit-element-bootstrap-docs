@@ -1,0 +1,31 @@
+{
+  "imports": {
+    "lit-element": "./web_modules/lit-element.js",
+    "lit-html/directives/unsafe-html.js": "./web_modules/lit-html/directives/unsafe-html.js",
+    "pwa-helpers/router": "./web_modules/pwa-helpers/router.js",
+    "pwa-helpers/media-query": "./web_modules/pwa-helpers/media-query.js",
+    "lit-element-bootstrap/content": "./web_modules/lit-element-bootstrap/content.js",
+    "lit-element-bootstrap/utilities": "./web_modules/lit-element-bootstrap/utilities.js",
+    "lit-element-bootstrap/layout": "./web_modules/lit-element-bootstrap/layout.js",
+    "lit-element-bootstrap/theme": "./web_modules/lit-element-bootstrap/theme.js",
+    "lit-element-bootstrap/behaviour/collapse": "./web_modules/lit-element-bootstrap/behaviour/collapse.js",
+    "lit-element-bootstrap/components/alert": "./web_modules/lit-element-bootstrap/components/alert.js",
+    "lit-element-bootstrap/components/badge": "./web_modules/lit-element-bootstrap/components/badge.js",
+    "lit-element-bootstrap/components/breadcrumb": "./web_modules/lit-element-bootstrap/components/breadcrumb.js",
+    "lit-element-bootstrap/components/button-group": "./web_modules/lit-element-bootstrap/components/button-group.js",
+    "lit-element-bootstrap/components/button": "./web_modules/lit-element-bootstrap/components/button.js",
+    "lit-element-bootstrap/components/card": "./web_modules/lit-element-bootstrap/components/card.js",
+    "lit-element-bootstrap/components/carousel": "./web_modules/lit-element-bootstrap/components/carousel.js",
+    "lit-element-bootstrap/components/dropdown": "./web_modules/lit-element-bootstrap/components/dropdown.js",
+    "lit-element-bootstrap/components/form": "./web_modules/lit-element-bootstrap/components/form.js",
+    "lit-element-bootstrap/components/input-group": "./web_modules/lit-element-bootstrap/components/input-group.js",
+    "lit-element-bootstrap/components/jumbotron": "./web_modules/lit-element-bootstrap/components/jumbotron.js",
+    "lit-element-bootstrap/components/list-group": "./web_modules/lit-element-bootstrap/components/list-group.js",
+    "lit-element-bootstrap/components/media-object": "./web_modules/lit-element-bootstrap/components/media-object.js",
+    "lit-element-bootstrap/components/modal": "./web_modules/lit-element-bootstrap/components/modal.js",
+    "lit-element-bootstrap/components/navbar": "./web_modules/lit-element-bootstrap/components/navbar.js",
+    "lit-element-bootstrap/components/navs": "./web_modules/lit-element-bootstrap/components/navs.js",
+    "lit-element-bootstrap/components/pagination": "./web_modules/lit-element-bootstrap/components/pagination.js",
+    "lit-element-bootstrap/components/progress": "./web_modules/lit-element-bootstrap/components/progress.js"
+  }
+}

@@ -1,7 +1,7 @@
 
 import { LitElement, css } from 'lit-element';
-import { BsFlexAlignSelfCss } from 'lit-element-bootstrap/utilities/flex';
-import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
+import { BsFlexAlignSelfCss } from 'lit-element-bootstrap/utilities';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
 import 'lit-element-bootstrap/layout';
 

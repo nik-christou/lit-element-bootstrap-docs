@@ -1,6 +1,6 @@
 
 import { LitElement } from 'lit-element';
-import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 import { BsCollapseMixin} from 'lit-element-bootstrap/behaviour/collapse';
 
 import 'lit-element-bootstrap/components/card';

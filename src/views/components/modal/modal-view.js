@@ -5,14 +5,14 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import './examples/static-modal-example';
-import './examples/working-modal-demo-example';
-import './examples/modal-long-content-example';
-import './examples/modal-centered-example';
-import './examples/modal-grid-example';
-import './examples/modal-varying-content-example';
-import './examples/modal-no-animation-example';
-import './examples/modal-sizes-example';
+import './examples/static-modal-example.js';
+import './examples/working-modal-demo-example.js';
+import './examples/modal-long-content-example.js';
+import './examples/modal-centered-example.js';
+import './examples/modal-grid-example.js';
+import './examples/modal-varying-content-example.js';
+import './examples/modal-no-animation-example.js';
+import './examples/modal-sizes-example.js';
 
 class ModalView extends BaseViewMixin(LitElement) {
     

@@ -5,17 +5,17 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import '../../../component/callout/bs-callout';
-import './examples/basic-list-group-example';
-import './examples/active-list-group-items-example';
-import './examples/disabled-list-group-items-example';
-import './examples/links-list-group-example';
-import './examples/buttons-list-group-example';
-import './examples/flush-list-group-example';
-import './examples/contextual-list-group-example';
-import './examples/contextual-links-list-group-example';
-import './examples/badges-list-group-example';
-import './examples/custom-content-list-group-example';
+import '../../../component/callout/bs-callout.js';
+import './examples/basic-list-group-example.js';
+import './examples/active-list-group-items-example.js';
+import './examples/disabled-list-group-items-example.js';
+import './examples/links-list-group-example.js';
+import './examples/buttons-list-group-example.js';
+import './examples/flush-list-group-example.js';
+import './examples/contextual-list-group-example.js';
+import './examples/contextual-links-list-group-example.js';
+import './examples/badges-list-group-example.js';
+import './examples/custom-content-list-group-example.js';
 
 class ListGroupsView extends BaseViewMixin(LitElement) {
    

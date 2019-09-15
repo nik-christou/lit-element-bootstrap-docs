@@ -5,15 +5,15 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import './examples/input-group-basic-example';
-import './examples/input-group-sizing-example';
-import './examples/input-group-checkbox-radio-example';
-import './examples/input-group-multiple-inputs-example';
-import './examples/input-group-multiple-addons-example';
-import './examples/input-group-button-addons-example';
-import './examples/input-group-multiple-buttons-example';
-import './examples/input-group-dropdowns-example';
-import './examples/input-group-segmented-buttons-example';
+import './examples/input-group-basic-example.js';
+import './examples/input-group-sizing-example.js';
+import './examples/input-group-checkbox-radio-example.js';
+import './examples/input-group-multiple-inputs-example.js';
+import './examples/input-group-multiple-addons-example.js';
+import './examples/input-group-button-addons-example.js';
+import './examples/input-group-multiple-buttons-example.js';
+import './examples/input-group-dropdowns-example.js';
+import './examples/input-group-segmented-buttons-example.js';
 
 class InputGroupView extends BaseViewMixin(LitElement) {
     

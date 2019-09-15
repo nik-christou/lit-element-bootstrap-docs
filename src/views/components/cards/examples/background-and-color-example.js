@@ -1,7 +1,7 @@
 
 import { LitElement, css } from 'lit-element';
 import { BsTextColorCss, BsSpacingCss, BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
-import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
 class BackgroundAndColorExample extends BsExampleMixin(LitElement) {
     

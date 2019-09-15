@@ -1,10 +1,10 @@
 
 import { LitElement, html, css } from 'lit-element';
-import { BsFlexJustifyCss } from 'lit-element-bootstrap/utilities/flex';
+import { BsFlexJustifyCss } from 'lit-element-bootstrap/utilities';
 import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 import { BsPositionCss, BsSpacingCss, BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
 
-import '../icons/bars-icon';
+import '../icons/bars-icon.js';
 import 'lit-element-bootstrap/components/navs';
 import 'lit-element-bootstrap/components/navbar';
 

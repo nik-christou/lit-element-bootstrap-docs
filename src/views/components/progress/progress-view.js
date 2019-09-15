@@ -2,16 +2,16 @@
 import { LitElement, html } from 'lit-element';
 import { BaseViewMixin } from '../../base-view.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
-import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
+import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import './examples/progress-width-example';
-import './examples/progress-label-example';
-import './examples/progress-height-example';
-import './examples/progress-backgrounds-example';
-import './examples/progress-multiple-bars-example';
-import './examples/progress-striped-example';
-import './examples/progress-animated-stripes-example';
+import './examples/progress-width-example.js';
+import './examples/progress-label-example.js';
+import './examples/progress-height-example.js';
+import './examples/progress-backgrounds-example.js';
+import './examples/progress-multiple-bars-example.js';
+import './examples/progress-striped-example.js';
+import './examples/progress-animated-stripes-example.js';
 
 class ProgressView extends BaseViewMixin(LitElement) {
     

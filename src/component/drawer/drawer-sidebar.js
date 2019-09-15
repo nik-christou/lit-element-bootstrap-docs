@@ -3,13 +3,13 @@ import { LitElement, html, css } from 'lit-element';
 import { BsContentRebootCss } from 'lit-element-bootstrap/content';
 import { BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
 
-import '../sidebar/sidebar-menu';
-import '../sidebar/sidebar-submenu';
-import '../sidebar/sidebar-menu-item';
-import '../sidebar/sidebar-submenu-item';
-import '../sidebar/sidebar-menu-item-expandable';
-import '../icons/arrow/angle-up-arrow';
-import '../icons/arrow/angle-down-arrow';
+import '../sidebar/sidebar-menu.js';
+import '../sidebar/sidebar-submenu.js';
+import '../sidebar/sidebar-menu-item.js';
+import '../sidebar/sidebar-submenu-item.js';
+import '../sidebar/sidebar-menu-item-expandable.js';
+import '../icons/arrow/angle-up-arrow.js';
+import '../icons/arrow/angle-down-arrow.js';
 
 class DrawerSidebar extends LitElement {
     

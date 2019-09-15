@@ -2,31 +2,31 @@
 import { LitElement, html } from 'lit-element';
 import { BaseViewMixin } from '../../base-view.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
-import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
+import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import './examples/navbar-all-components-example';
-import './examples/navbar-brand-example';
-import './examples/navbar-brand-images-example';
-import './examples/navbar-nav-example';
-import './examples/navbar-nav-dropdown-example';
-import './examples/navbar-form-example';
-import './examples/navbar-form-brand-example';
-import './examples/navbar-form-input-group-example';
-import './examples/navbar-form-buttons-example';
-import './examples/navbar-text-inline-example';
-import './examples/navbar-text-mix-elements-example';
-import './examples/navbar-color-scheme-example';
-import './examples/navbar-outer-container-example';
-import './examples/navbar-inner-container-example';
-import './examples/navbar-default-placement-example';
-import './examples/navbar-fixed-top-example';
-import './examples/navbar-fixed-bottom-example';
-import './examples/navbar-sticky-top-example';
-import './examples/navbar-hidden-brand-example';
-import './examples/navbar-left-toggler-example';
-import './examples/navbar-right-toggler-example';
-import './examples/navbar-external-content-example';
+import './examples/navbar-all-components-example.js';
+import './examples/navbar-brand-example.js';
+import './examples/navbar-brand-images-example.js';
+import './examples/navbar-nav-example.js';
+import './examples/navbar-nav-dropdown-example.js';
+import './examples/navbar-form-example.js';
+import './examples/navbar-form-brand-example.js';
+import './examples/navbar-form-input-group-example.js';
+import './examples/navbar-form-buttons-example.js';
+import './examples/navbar-text-inline-example.js';
+import './examples/navbar-text-mix-elements-example.js';
+import './examples/navbar-color-scheme-example.js';
+import './examples/navbar-outer-container-example.js';
+import './examples/navbar-inner-container-example.js';
+import './examples/navbar-default-placement-example.js';
+import './examples/navbar-fixed-top-example.js';
+import './examples/navbar-fixed-bottom-example.js';
+import './examples/navbar-sticky-top-example.js';
+import './examples/navbar-hidden-brand-example.js';
+import './examples/navbar-left-toggler-example.js';
+import './examples/navbar-right-toggler-example.js';
+import './examples/navbar-external-content-example.js';
 
 class NavbarView extends BaseViewMixin(LitElement) {
     

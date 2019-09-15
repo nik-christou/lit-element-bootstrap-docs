@@ -1,15 +1,15 @@
 
 import { LitElement, html } from 'lit-element';
-import { TableOfContentMixin } from '../../../../component/toc/table-of-content-mixin';
-import { BsDocsContentCss } from '../../../../component/content/bs-docs-content-css';
+import { TableOfContentMixin } from '../../../../component/toc/table-of-content-mixin.js';
+import { BsDocsContentCss } from '../../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
 import 'lit-element-bootstrap/layout';
 import 'lit-element-bootstrap/components/navs';
 
-import '../../../../component/toc/table-of-content';
-import '../../../../component/toc/table-of-content-item';
-import '../../../../component/example/bs-highlight';
+import '../../../../component/toc/table-of-content.js';
+import '../../../../component/toc/table-of-content-item.js';
+import '../../../../component/example/bs-highlight.js';
 
 class BsAlertsView extends TableOfContentMixin(LitElement) {
     

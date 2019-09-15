@@ -5,15 +5,15 @@ import { BaseViewMixin } from '../../base-view.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import './examples/button-styles-example';
-import './examples/button-tags-example';
-import './examples/button-outlines-example';
-import './examples/button-sizes-example';
-import './examples/button-blocks-example';
-import './examples/button-active-state-example';
-import './examples/button-disabled-state-example';
-import './examples/button-link-disabled-state-example';
-import './examples/button-toggle-example';
+import './examples/button-styles-example.js';
+import './examples/button-tags-example.js';
+import './examples/button-outlines-example.js';
+import './examples/button-sizes-example.js';
+import './examples/button-blocks-example.js';
+import './examples/button-active-state-example.js';
+import './examples/button-disabled-state-example.js';
+import './examples/button-link-disabled-state-example.js';
+import './examples/button-toggle-example.js';
 
 class ButtonsView extends BaseViewMixin(LitElement) {
 

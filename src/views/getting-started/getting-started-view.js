@@ -3,8 +3,8 @@ import { LitElement, html,css } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BaseViewMixin } from '../base-view.js';
 import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
-import { BsDocsContentCss } from '../../component/content/bs-docs-content-css';
-import { BsFlexOrderCss } from 'lit-element-bootstrap/utilities/flex/bs-flex-order-css';
+import { BsDocsContentCss } from '../../component/content/bs-docs-content-css.js';
+import { BsFlexOrderCss } from 'lit-element-bootstrap/utilities';
 
 import 'lit-element-bootstrap/layout';
 import 'lit-element-bootstrap/components/navs';

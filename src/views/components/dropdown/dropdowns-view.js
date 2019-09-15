@@ -2,28 +2,28 @@
 import { LitElement, html, css } from 'lit-element';
 import { BaseViewMixin } from '../../base-view.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
-import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
+import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import '../../../component/callout/bs-callout';
-import './examples/single-btn-dropdown-example';
-import './examples/single-link-dropdown-example';
-import './examples/button-variant-dropdown-example';
-import './examples/split-button-dropdown-example';
-import './examples/sizing-dropdown-example';
-import './examples/dropup-example';
-import './examples/dropright-example';
-import './examples/dropleft-example';
-import './examples/menu-items-example';
-import './examples/dropdown-text-item-example';
-import './examples/dropdown-active-item-example';
-import './examples/dropdown-disabled-item-example';
-import './examples/right-aligned-menu-example';
-import './examples/dropdown-header-example';
-import './examples/dividers-example';
-import './examples/dropdown-menu-text-example';
-import './examples/form-in-dropdown-menu-example';
-import './examples/offset-menu-example';
+import '../../../component/callout/bs-callout.js';
+import './examples/single-btn-dropdown-example.js';
+import './examples/single-link-dropdown-example.js';
+import './examples/button-variant-dropdown-example.js';
+import './examples/split-button-dropdown-example.js';
+import './examples/sizing-dropdown-example.js';
+import './examples/dropup-example.js';
+import './examples/dropright-example.js';
+import './examples/dropleft-example.js';
+import './examples/menu-items-example.js';
+import './examples/dropdown-text-item-example.js';
+import './examples/dropdown-active-item-example.js';
+import './examples/dropdown-disabled-item-example.js';
+import './examples/right-aligned-menu-example.js';
+import './examples/dropdown-header-example.js';
+import './examples/dividers-example.js';
+import './examples/dropdown-menu-text-example.js';
+import './examples/form-in-dropdown-menu-example.js';
+import './examples/offset-menu-example.js';
 
 class DropdownsView extends BaseViewMixin(LitElement) {
     

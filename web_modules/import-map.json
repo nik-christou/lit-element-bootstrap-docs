@@ -1,0 +1,31 @@
+{
+  "imports": {
+    "lit-html/directives/unsafe-html": "./lit-html/directives/unsafe-html.js",
+    "lit-element": "./lit-element.js",
+    "lit-element-bootstrap/theme": "./lit-element-bootstrap/theme.js",
+    "lit-element-bootstrap/content": "./lit-element-bootstrap/content.js",
+    "lit-element-bootstrap/utilities": "./lit-element-bootstrap/utilities.js",
+    "lit-element-bootstrap/layout": "./lit-element-bootstrap/layout.js",
+    "lit-element-bootstrap/behaviour/collapse": "./lit-element-bootstrap/behaviour/collapse.js",
+    "lit-element-bootstrap/components/alert": "./lit-element-bootstrap/components/alert.js",
+    "lit-element-bootstrap/components/badge": "./lit-element-bootstrap/components/badge.js",
+    "lit-element-bootstrap/components/breadcrumb": "./lit-element-bootstrap/components/breadcrumb.js",
+    "lit-element-bootstrap/components/button": "./lit-element-bootstrap/components/button.js",
+    "lit-element-bootstrap/components/button-group": "./lit-element-bootstrap/components/button-group.js",
+    "lit-element-bootstrap/components/card": "./lit-element-bootstrap/components/card.js",
+    "lit-element-bootstrap/components/carousel": "./lit-element-bootstrap/components/carousel.js",
+    "lit-element-bootstrap/components/dropdown": "./lit-element-bootstrap/components/dropdown.js",
+    "lit-element-bootstrap/components/form": "./lit-element-bootstrap/components/form.js",
+    "lit-element-bootstrap/components/input-group": "./lit-element-bootstrap/components/input-group.js",
+    "lit-element-bootstrap/components/jumbotron": "./lit-element-bootstrap/components/jumbotron.js",
+    "lit-element-bootstrap/components/list-group": "./lit-element-bootstrap/components/list-group.js",
+    "lit-element-bootstrap/components/media-object": "./lit-element-bootstrap/components/media-object.js",
+    "lit-element-bootstrap/components/modal": "./lit-element-bootstrap/components/modal.js",
+    "lit-element-bootstrap/components/navbar": "./lit-element-bootstrap/components/navbar.js",
+    "lit-element-bootstrap/components/navs": "./lit-element-bootstrap/components/navs.js",
+    "lit-element-bootstrap/components/pagination": "./lit-element-bootstrap/components/pagination.js",
+    "lit-element-bootstrap/components/progress": "./lit-element-bootstrap/components/progress.js",
+    "pwa-helpers/router": "./pwa-helpers/router.js",
+    "pwa-helpers/media-query": "./pwa-helpers/media-query.js"
+  }
+}

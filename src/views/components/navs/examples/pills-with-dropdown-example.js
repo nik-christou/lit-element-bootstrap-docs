@@ -1,6 +1,6 @@
 
 import { LitElement } from 'lit-element';
-import { BsExampleMixin } from '../../../../component/example/bs-example-mixin';
+import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
 import 'lit-element-bootstrap/components/navs';
 import 'lit-element-bootstrap/components/button';

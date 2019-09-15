@@ -2,14 +2,14 @@
 import { LitElement, html } from 'lit-element';
 import { BaseViewMixin } from '../../base-view.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
-import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css';
+import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import './examples/slides-only-example';
-import './examples/slides-with-controls-example';
-import './examples/slides-with-indicators-example';
-import './examples/slides-with-captions-example';
-import './examples/slide-with-crossfade-example';
+import './examples/slides-only-example.js';
+import './examples/slides-with-controls-example.js';
+import './examples/slides-with-indicators-example.js';
+import './examples/slides-with-captions-example.js';
+import './examples/slide-with-crossfade-example.js';
 
 class CarouselView extends BaseViewMixin(LitElement) {
     

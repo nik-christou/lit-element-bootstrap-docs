@@ -5,18 +5,18 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import '../../../component/callout/bs-callout';
-import './examples/base-nav-example';
-import './examples/horizontal-center-nav-example';
-import './examples/horizontal-right-nav-example';
-import './examples/vertical-nav-example';
-import './examples/tabs-nav-example';
-import './examples/pills-nav-example';
-import './examples/fill-pills-nav-example';
-import './examples/justified-pills-nav-example';
-import './examples/flex-utilities-nav-example';
-import './examples/tabs-with-dropdown-example';
-import './examples/pills-with-dropdown-example';
+import '../../../component/callout/bs-callout.js';
+import './examples/base-nav-example.js';
+import './examples/horizontal-center-nav-example.js';
+import './examples/horizontal-right-nav-example.js';
+import './examples/vertical-nav-example.js';
+import './examples/tabs-nav-example.js';
+import './examples/pills-nav-example.js';
+import './examples/fill-pills-nav-example.js';
+import './examples/justified-pills-nav-example.js';
+import './examples/flex-utilities-nav-example.js';
+import './examples/tabs-with-dropdown-example.js';
+import './examples/pills-with-dropdown-example.js';
 
 class NavsView extends BaseViewMixin(LitElement) {
     

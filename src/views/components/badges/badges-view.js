@@ -5,13 +5,13 @@ import { BaseViewMixin } from '../../base-view.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
 import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
 
-import '../../../component/callout/bs-callout';
-import './examples/badge-scales-example';
-import './examples/button-badge-example';
-import './examples/button-badge-context-example';
-import './examples/badge-contextual-example';
-import './examples/pill-badges-example';
-import './examples/badge-links-example';
+import '../../../component/callout/bs-callout.js';
+import './examples/badge-scales-example.js';
+import './examples/button-badge-example.js';
+import './examples/button-badge-context-example.js';
+import './examples/badge-contextual-example.js';
+import './examples/pill-badges-example.js';
+import './examples/badge-links-example.js';
 
 class BadgesView extends BaseViewMixin(LitElement) {
     
