@@ -114,14 +114,15 @@
         <script type="text/javascript" src="./web_modules/prismjs/components/prism-javascript.min.js"></script>
         <script type="text/javascript" src="./web_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
         
-        <script src="./src/app-docs.js" type="module-shim"></script>
-        
+        <script type="module-shim" src="./src/app-docs.js"></script>
+        <script type="module-shim" src="./service-worker-reg.js"></script>
+
         <script>
             // comment out the registration of service worker in local dev
-            // or just generate one and copy it in the root directory
+            // // or just generate one and copy it in the root directory
             // if ('serviceWorker' in navigator) {
-            //     window.addEventListener('load', function() {
-            //         navigator.serviceWorker.register('service-worker.js');
+            //     window.addEventListener('load', () => {
+            //         navigator.serviceWorker.register('/service-worker.js');
             //     });
             // }
         </script>

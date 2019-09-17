@@ -6,7 +6,7 @@
     "license": "MIT",
     "scripts": {
         "pika:install": "pika install",
-        "serve": "es-dev-server --compatibility all --app-index index.html"
+        "serve": "es-dev-server --app-index index.html"
     },
     "devDependencies": {
         "@pika/web": "^0.6.1",
@@ -14,41 +14,44 @@
     },
     "dependencies": {
         "es-module-shims": "^0.4.4",
-        "lit-html": "^1.1.2",
         "lit-element": "2.2.0",
         "lit-element-bootstrap": "^1.0.0-alpha.24",
+        "lit-html": "^1.1.2",
         "prismjs": "^1.17.1",
-        "pwa-helpers": "^0.9.1"
+        "pwa-helpers": "^0.9.1",
+        "workbox-sw": "^4.3.1",
+        "workbox-window": "^4.3.1"
     },
     "@pika/web": {
         "webDependencies": [
-          "lit-html/directives/unsafe-html.js",
-          "lit-element",
-          "lit-element-bootstrap/theme",
-          "lit-element-bootstrap/content",
-          "lit-element-bootstrap/utilities",
-          "lit-element-bootstrap/layout",
-          "lit-element-bootstrap/behaviour/collapse",
-          "lit-element-bootstrap/components/alert",
-          "lit-element-bootstrap/components/badge",
-          "lit-element-bootstrap/components/breadcrumb",
-          "lit-element-bootstrap/components/button",
-          "lit-element-bootstrap/components/button-group",
-          "lit-element-bootstrap/components/card",
-          "lit-element-bootstrap/components/carousel",
-          "lit-element-bootstrap/components/dropdown",
-          "lit-element-bootstrap/components/form",
-          "lit-element-bootstrap/components/input-group",
-          "lit-element-bootstrap/components/jumbotron",
-          "lit-element-bootstrap/components/list-group",
-          "lit-element-bootstrap/components/media-object",
-          "lit-element-bootstrap/components/modal",
-          "lit-element-bootstrap/components/navbar",
-          "lit-element-bootstrap/components/navs",
-          "lit-element-bootstrap/components/pagination",
-          "lit-element-bootstrap/components/progress",
-          "pwa-helpers/router.js",
-          "pwa-helpers/media-query.js"
+            "workbox-window/Workbox.mjs",
+            "lit-html/directives/unsafe-html.js",
+            "lit-element",
+            "lit-element-bootstrap/theme",
+            "lit-element-bootstrap/content",
+            "lit-element-bootstrap/utilities",
+            "lit-element-bootstrap/layout",
+            "lit-element-bootstrap/behaviour/collapse",
+            "lit-element-bootstrap/components/alert",
+            "lit-element-bootstrap/components/badge",
+            "lit-element-bootstrap/components/breadcrumb",
+            "lit-element-bootstrap/components/button",
+            "lit-element-bootstrap/components/button-group",
+            "lit-element-bootstrap/components/card",
+            "lit-element-bootstrap/components/carousel",
+            "lit-element-bootstrap/components/dropdown",
+            "lit-element-bootstrap/components/form",
+            "lit-element-bootstrap/components/input-group",
+            "lit-element-bootstrap/components/jumbotron",
+            "lit-element-bootstrap/components/list-group",
+            "lit-element-bootstrap/components/media-object",
+            "lit-element-bootstrap/components/modal",
+            "lit-element-bootstrap/components/navbar",
+            "lit-element-bootstrap/components/navs",
+            "lit-element-bootstrap/components/pagination",
+            "lit-element-bootstrap/components/progress",
+            "pwa-helpers/router.js",
+            "pwa-helpers/media-query.js"
         ]
     }
 }
