@@ -24,7 +24,6 @@
     },
     "@pika/web": {
         "webDependencies": [
-            "workbox-window/Workbox.mjs",
             "lit-html/directives/unsafe-html.js",
             "lit-element",
             "lit-element-bootstrap/theme",

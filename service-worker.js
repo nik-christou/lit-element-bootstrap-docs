@@ -1,5 +1,5 @@
 
-importScripts('./web_modules/workbox-sw.js');
+importScripts('./web_modules/workbox-sw/workbox-sw.js');
 
 if (workbox) {
     console.log(`Yay! Workbox is loaded 🎉`);
