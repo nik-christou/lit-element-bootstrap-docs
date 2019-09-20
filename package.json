@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "es-module-shims": "^0.4.5",
+        "@webcomponents/webcomponentsjs": "^2.3.0",
         "lit-element": "2.2.0",
         "lit-element-bootstrap": "^1.0.0-alpha.24",
         "lit-html": "^1.1.2",

@@ -33,7 +33,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "199904388518bdd2cda05f5117a929fd"
+    "revision": "7bbd37e99dff1a7f6ec691ee6538c681"
   },
   {
     "url": "src/app-docs.js",
@@ -1166,6 +1166,42 @@ self.__precacheManifest = [
   {
     "url": "web_assets/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js",
     "revision": "5b4fd18a160a93f64393be98c2f4d362"
+  },
+  {
+    "url": "web_assets/webcomponentsjs-v2.3.0/bundles/webcomponents-ce.js",
+    "revision": "cff241b8f2601833c36778d3bbd18be4"
+  },
+  {
+    "url": "web_assets/webcomponentsjs-v2.3.0/bundles/webcomponents-ce.js.map",
+    "revision": "5d6eb9d68fb9854f6cd49abae2a13b51"
+  },
+  {
+    "url": "web_assets/webcomponentsjs-v2.3.0/bundles/webcomponents-sd-ce-pf.js",
+    "revision": "83d0c438ef7ac828ca4fc9f506e5d369"
+  },
+  {
+    "url": "web_assets/webcomponentsjs-v2.3.0/bundles/webcomponents-sd-ce-pf.js.map",
+    "revision": "03419c5cb5f072bb4d505f7f98cbffa1"
+  },
+  {
+    "url": "web_assets/webcomponentsjs-v2.3.0/bundles/webcomponents-sd-ce.js",
+    "revision": "fb48251bc41bd12c02fdc987ff3e169e"
+  },
+  {
+    "url": "web_assets/webcomponentsjs-v2.3.0/bundles/webcomponents-sd-ce.js.map",
+    "revision": "4a83dd1a4fce17ad3b4d27b7af08f394"
+  },
+  {
+    "url": "web_assets/webcomponentsjs-v2.3.0/bundles/webcomponents-sd.js",
+    "revision": "2993c7e74214ea291d19ae14673ab4b3"
+  },
+  {
+    "url": "web_assets/webcomponentsjs-v2.3.0/bundles/webcomponents-sd.js.map",
+    "revision": "0d088d22452ae4a8394eae045945c7f3"
+  },
+  {
+    "url": "web_assets/webcomponentsjs-v2.3.0/webcomponents-loader.js",
+    "revision": "e044a63e034bf10304dad73138b8c74b"
   },
   {
     "url": "web_assets/workbox-v4.3.1/workbox-background-sync.dev.js",

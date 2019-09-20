@@ -801,7 +801,7 @@
   dependencies:
     "@types/node" "*"
 
-"@webcomponents/webcomponentsjs@^2.2.10":
+"@webcomponents/webcomponentsjs@^2.2.10", "@webcomponents/webcomponentsjs@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.3.0.tgz#d17c67e9602d46f5a6c425bc00613bba83dcd0e2"
   integrity sha512-sR6FOrNnnncRuoJDqq9QxtRsJMbIvASw4vnJwIYKVlKO3AMc+NAr/bIQNnUiTTE9pBDTJkFpVaUdjJaRdsjmyA==

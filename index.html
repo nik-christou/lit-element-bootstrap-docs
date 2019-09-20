@@ -105,6 +105,9 @@
 
         </app-docs>
 
+        <!-- Load polyfills; note that "loader" will load these async -->
+        <script defer src="./web_assets/webcomponentsjs-v2.3.0/webcomponents-loader.js"></script>
+
         <script src="./web_assets/import-map.json" type="importmap-shim"></script>
         <script defer src="./web_assets/es-module-shims.min.js"></script>
 
@@ -114,7 +117,11 @@
         <script type="text/javascript" src="./web_assets/prismjs/components/prism-javascript.min.js"></script>
         <script type="text/javascript" src="./web_assets/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
         
-        <script type="module-shim" src="./src/app-docs.js"></script>
+        <script type="module-shim">
+            WebComponents.waitFor(() => {
+                return import('./src/app-docs.js');
+            });
+        </script>
 
     </body>
 </html>
