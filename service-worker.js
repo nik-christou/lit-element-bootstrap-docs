@@ -997,7 +997,7 @@ self.__precacheManifest = [
   },
   {
     "url": "src/views/home/home-view.js",
-    "revision": "01ab07ca99f05ea4fcf504143a16a0e4"
+    "revision": "45a7210c5a646347c12351f75fcd240d"
   },
   {
     "url": "src/views/layout/container/container-view.js",
