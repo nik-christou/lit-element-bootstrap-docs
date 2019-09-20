@@ -1109,7 +1109,7 @@ self.__precacheManifest = [
   },
   {
     "url": "web_assets/es-module-shims.min.js",
-    "revision": "8555671273e8bc9bc90e85ef0e2df9c9"
+    "revision": "267c10f1e575fbaf91c2b2974a415fe6"
   },
   {
     "url": "web_assets/icons/favicon.ico",

@@ -1694,7 +1694,7 @@ es-module-shims@^0.2.13:
   resolved "https://registry.yarnpkg.com/es-module-shims/-/es-module-shims-0.2.15.tgz#6a03a86eded7e27913efd75b6235b91950721c3d"
   integrity sha512-KJt8AdAIauSa9DDY442VqfiMHtFd2bG2cUtKuqycQUR7/0q2Uw+iM7ckQuma6j82u64Hz1wIG0eH+4m8l+mliA==
 
-es-module-shims@^0.4.4:
+es-module-shims@^0.4.5:
   version "0.4.5"
   resolved "https://registry.yarnpkg.com/es-module-shims/-/es-module-shims-0.4.5.tgz#75b1768791d4f8acf897845755dcbd77be15b714"
   integrity sha512-ZswOhFAZug93sma2ck7/YnqsfxV7SWLhXY7Rsw5reU12LTPuKmLkXzH8i6LXeP/lCj2yow70Sm3Po1n5TueOxQ==
