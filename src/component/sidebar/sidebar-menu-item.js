@@ -77,13 +77,7 @@ class SidebarMenuItem extends LitElement {
     
     firstUpdated() {
         const linkElement = this.shadowRoot.querySelector('a');
-        linkElement.addEventListener('click', () => this._handleItemSelected());
-    }
-    
-    disconnectedCallback() {
-        const linkElement = this.shadowRoot.querySelector('a');
-        linkElement.removeEventListener('click', () => this._handleItemSelected());
-        super.disconnectedCallback();
+        linkElement.addEventListener('click', _ => this._handleItemSelected());
     }
     
     activate() {

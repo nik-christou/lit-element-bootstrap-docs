@@ -1,9 +1,12 @@
 
-import { LitElement, html } from 'lit-element';
+import { LitElement, html, css } from 'lit-element';
 import { installRouter } from 'pwa-helpers/router';
 import { BsContentRebootCss } from 'lit-element-bootstrap/content';
 import { DefaultThemeCss } from 'lit-element-bootstrap/theme';
 import { getTemplateToLoad, getViewCustomElementName,  getViewCustomElementPath } from './app-routing.js';
+
+import { Workbox } from 'workbox-window';
+import 'lit-element-bootstrap/components/alert';
 
 import './component/drawer/drawer-layout.js';
 import './component/drawer/drawer-sidebar.js';
@@ -14,14 +17,28 @@ export class AppDocs extends LitElement {
     
     static get properties() {
         return {
-            _page: String
+            _page: String,
+            _workbox: Object
         };
     }
     
     static get styles() {
         return [
             BsContentRebootCss,
-            DefaultThemeCss
+            DefaultThemeCss,
+            css`
+                bs-alert {
+                    position: fixed;
+                    right: 20px;
+                    bottom: 0;
+                    left: 20px;
+                    z-index: 1030;
+                }
+
+                bs-alert-link {
+                    margin-left: 10px;
+                }
+            `
         ];
     }
 
@@ -35,19 +52,31 @@ export class AppDocs extends LitElement {
                 
                 ${getTemplateToLoad(this._page)}
                 
+                <br />
+
+                <bs-alert primary dismissable fade>
+                    <div slot="message">
+                        New version available <bs-alert-link id="refresh" primary>Refresh</bs-alert-link>
+                    </div>
+                    <bs-alert-dismiss slot="dismiss"></bs-alert-dismiss>
+                </bs-alert>
+                
             </drawer-layout>
-            
         `;
     }
     
     constructor() {
         super();
         this._page = 'home';
+        this._registerServiceWorker();
     }
     
     firstUpdated() {
         const drawerLayoutElement = this.shadowRoot.querySelector('drawer-layout');
         installRouter((location) => this._locationChanged(location, drawerLayoutElement));
+
+        const refreshSWElement = this.shadowRoot.querySelector('#refresh');
+        refreshSWElement.addEventListener('click', event => this._handleRefreshEvent(event));
     }
     
     _locationChanged(location, drawerLayoutElement) {
@@ -96,6 +125,43 @@ export class AppDocs extends LitElement {
                 drawerLayoutElement.openDrawer();
             });
         }
+    }
+
+    _handleRefreshEvent(event) {
+
+        event.preventDefault();
+
+        // set up a listener that will reload the page as soon 
+        // as the previously waiting service worker has taken control
+        this._workbox.addEventListener('controlling', (event) => {
+            window.location.reload();
+        });
+
+        // Send a message telling the service worker to skip waiting.
+        // This will trigger the `controlling` event handler above
+        this._workbox.messageSW({type: 'SKIP_WAITING'});
+    }
+
+    _registerServiceWorker() {
+
+        if (!'serviceWorker' in navigator) {
+            return;
+        }
+
+        this._workbox = new Workbox('/service-worker.js');
+    
+        // Add an event listener to detect when the registered
+        // service worker has installed but is waiting to activate.
+        this._workbox.addEventListener('waiting', _ => {
+            
+            // alert component should provide a show/hide functions
+            // to avoid the need to react on attributes changes
+            const refreshAlertElement = this.shadowRoot.querySelector('bs-alert');
+            refreshAlertElement.setAttribute('show', true);
+        });
+    
+        // Register the service worker after event listeners have been added.
+        this._workbox.register();
     }
 };
 
