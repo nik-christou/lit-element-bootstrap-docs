@@ -148,6 +148,7 @@ export class AppDocs extends LitElement {
             return;
         }
 
+        // path from baseUrl
         this._workbox = new Workbox('/service-worker.js');
     
         // Add an event listener to detect when the registered

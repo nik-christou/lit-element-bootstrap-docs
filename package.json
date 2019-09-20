@@ -7,12 +7,12 @@
     "scripts": {
         "pika:install": "pika install",
         "serve": "es-dev-server --app-index index.html",
-        "gen:sw": "workbox generateSW workbox-config.js"
+        "sw:gen": "workbox generateSW workbox-config.js",
+        "sw:copy-libs": "workbox copyLibraries ./web_assets"
     },
     "devDependencies": {
         "@pika/web": "^0.6.1",
         "es-dev-server": "^1.18.0",
-        "workbox-build": "^4.3.1",
         "workbox-cli": "^4.3.1"
     },
     "dependencies": {

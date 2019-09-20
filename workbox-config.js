@@ -9,7 +9,8 @@ module.exports = {
     './web_assets/**/*',
     './web_modules/**/*'
   ],
-  importWorkboxFrom: 'cdn', // change this to local
+  importWorkboxFrom: 'disabled',
+  importScripts: ['./web_assets/workbox-v4.3.1/workbox-sw.js'],
   cacheId: 'lit-element-bootstrap-docs',
   offlineGoogleAnalytics: false,
   cleanupOutdatedCaches: true,
