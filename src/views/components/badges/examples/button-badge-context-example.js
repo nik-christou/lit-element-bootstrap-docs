@@ -1,10 +1,10 @@
 
 import { LitElement } from 'lit-element';
-import { BsScreenreaderCss } from 'lit-element-bootstrap/utilities';
+import { BsScreenreaderCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/badge';
-import 'lit-element-bootstrap/components/button';
+import '@lit-element-bootstrap/badge';
+import '@lit-element-bootstrap/button';
 
 class ButtonBadgeContextExample extends BsExampleMixin(LitElement) {
     

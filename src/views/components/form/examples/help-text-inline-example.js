@@ -1,9 +1,9 @@
 
 import { LitElement, html } from 'lit-element';
-import { BsSpacingCss } from 'lit-element-bootstrap/utilities';
+import { BsSpacingCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/form';
+import '@lit-element-bootstrap/form';
 
 class HelpTextInlineExample extends BsExampleMixin(LitElement) {
     

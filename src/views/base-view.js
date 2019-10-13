@@ -1,6 +1,6 @@
 
 import '../component/example/bs-highlight.js';
-import { PrismDefaultCss } from '../component/example/prism-default-css.js';
+import { PrismDefaultCss } from '../component/example/prism-default.css.js';
 
 const BaseViewMixin = (superClass) => class extends superClass {
 

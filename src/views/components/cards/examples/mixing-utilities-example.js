@@ -1,9 +1,9 @@
 
 import { LitElement, css } from 'lit-element';
-import { BsBordersCss, BsTextColorCss, BsSpacingCss, BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
+import { BsBordersCss, BsTextColorCss, BsSpacingCss, BsBackgroundColorsCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/card';
+import '@lit-element-bootstrap/card';
 
 class MixingUtilitiesExample extends BsExampleMixin(LitElement) {
     

@@ -2,8 +2,8 @@
 import { LitElement, css } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/button';
-import 'lit-element-bootstrap/components/button-group';
+import '@lit-element-bootstrap/button';
+import '@lit-element-bootstrap/button-group';
 
 class SizingButtonGroupExample extends BsExampleMixin(LitElement) {
     

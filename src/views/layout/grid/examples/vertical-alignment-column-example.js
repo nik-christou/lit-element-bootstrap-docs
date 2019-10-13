@@ -1,9 +1,9 @@
 
 import { LitElement, css } from 'lit-element';
-import { BsFlexAlignSelfCss } from 'lit-element-bootstrap/utilities';
+import { BsFlexAlignSelfCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/layout';
+import '@lit-element-bootstrap/layout';
 
 class VerticalAlignmentColumnExample extends BsExampleMixin(LitElement) {
     

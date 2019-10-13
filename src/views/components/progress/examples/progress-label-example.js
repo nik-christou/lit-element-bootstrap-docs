@@ -2,7 +2,7 @@
 import { LitElement } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/progress';
+import '@lit-element-bootstrap/progress';
 
 class ProgressLabelExample extends BsExampleMixin(LitElement) {
     

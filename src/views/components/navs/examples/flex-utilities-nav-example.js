@@ -2,9 +2,9 @@
 import { LitElement } from 'lit-element';
 import { BsTextCss } from 'lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
-import { BsFlexWrapCss, BsFlexDirectionCss } from 'lit-element-bootstrap/utilities';
+import { BsFlexWrapCss, BsFlexDirectionCss } from '@lit-element-bootstrap/utilities';
 
-import 'lit-element-bootstrap/components/navs';
+import '@lit-element-bootstrap/navs';
 
 class FlexUtilitiesNavExample extends BsExampleMixin(LitElement) {
     

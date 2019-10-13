@@ -1,7 +1,7 @@
 
 import { LitElement, html, css } from 'lit-element';
-import { BsContentRebootCss } from 'lit-element-bootstrap/content';
-import { BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
+import { BsContentRebootCss } from '@lit-element-bootstrap/content';
+import { BsBackgroundColorsCss } from '@lit-element-bootstrap/utilities';
 
 import '../sidebar/sidebar-menu.js';
 import '../sidebar/sidebar-submenu.js';

@@ -1,9 +1,9 @@
 
 import { LitElement } from 'lit-element';
-import { BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
+import { BsBackgroundColorsCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/navbar';
+import '@lit-element-bootstrap/navbar';
 
 class NavbarTextInlineExample extends BsExampleMixin(LitElement) {
     

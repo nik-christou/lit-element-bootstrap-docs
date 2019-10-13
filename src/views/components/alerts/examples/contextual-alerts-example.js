@@ -2,7 +2,7 @@
 import { LitElement } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/alert';
+import '@lit-element-bootstrap/alert';
 
 class ContextualAlertsExample extends BsExampleMixin(LitElement) {
     

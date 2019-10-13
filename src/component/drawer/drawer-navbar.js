@@ -1,12 +1,11 @@
 
 import { LitElement, html, css } from 'lit-element';
-import { BsFlexJustifyCss } from 'lit-element-bootstrap/utilities';
-import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
-import { BsPositionCss, BsSpacingCss, BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
+import { BsContentRebootCss, BsContentTypographyCss } from '@lit-element-bootstrap/content';
+import { BsPositionCss, BsSpacingCss, BsBackgroundColorsCss, BsFlexJustifyCss } from '@lit-element-bootstrap/utilities';
 
 import '../icons/bars-icon.js';
-import 'lit-element-bootstrap/components/navs';
-import 'lit-element-bootstrap/components/navbar';
+import '@lit-element-bootstrap/navs';
+import '@lit-element-bootstrap/navbar';
 
 class DrawerNavbar extends LitElement {
     

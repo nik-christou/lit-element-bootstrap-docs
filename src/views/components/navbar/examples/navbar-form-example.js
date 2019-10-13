@@ -1,11 +1,11 @@
 
 import { LitElement } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
-import { BsSpacingCss, BsBackgroundColorsCss } from 'lit-element-bootstrap/utilities';
+import { BsSpacingCss, BsBackgroundColorsCss } from '@lit-element-bootstrap/utilities';
 
-import 'lit-element-bootstrap/components/form';
-import 'lit-element-bootstrap/components/navbar';
-import 'lit-element-bootstrap/components/button';
+import '@lit-element-bootstrap/form';
+import '@lit-element-bootstrap/navbar';
+import '@lit-element-bootstrap/button';
 
 class NavbarFormExample extends BsExampleMixin(LitElement) {
     

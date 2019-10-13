@@ -1,9 +1,9 @@
 
 import { LitElement } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
-import { BsSpacingCss, BsScreenreaderCss } from 'lit-element-bootstrap/utilities';
+import { BsSpacingCss, BsScreenreaderCss } from '@lit-element-bootstrap/utilities';
 
-import 'lit-element-bootstrap/components/button';
+import '@lit-element-bootstrap/button';
 
 class ReadonlyInlineExample extends BsExampleMixin(LitElement) {
     

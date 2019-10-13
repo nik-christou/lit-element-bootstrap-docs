@@ -1,9 +1,9 @@
 
 import { LitElement, html, css } from 'lit-element';
 import { installMediaQueryWatcher } from 'pwa-helpers/media-query';
-import { BsContentRebootCss } from 'lit-element-bootstrap/content';
+import { BsContentRebootCss } from '@lit-element-bootstrap/content';
 
-import 'lit-element-bootstrap/layout';
+import '@lit-element-bootstrap/layout';
 
 class DrawerLayout extends LitElement {
 
@@ -26,13 +26,6 @@ class DrawerLayout extends LitElement {
                     /* left: 0px; */
                     transform: translateX(220px);
                 }
-
-                /*
-                div.drawer-content-inner {
-                    padding-left: 15px;
-                    padding-right: 15px;
-                }
-                */
 
                 div.drawer-sidebar-wrapper {
                     top: 0;

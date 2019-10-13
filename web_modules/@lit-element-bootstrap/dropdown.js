@@ -1,6 +1,44 @@
-import { h as html } from '../../common/lit-html-9b6153da.js';
-import { css, LitElement } from '../../lit-element.js';
-import { B as BsContentRebootCss } from '../../common/bs-content-reboot-css-ebf48278.js';
+import { h as html } from '../common/lit-html-9b6153da.js';
+import { css, LitElement } from '../lit-element.js';
+import { B as BsContentRebootCss } from '../common/bs-content-reboot.css-c5865ddd.js';
+
+const BsDropdownNavCss = css`
+    
+    :host ::slotted(bs-button[dropdown-nav-link]),
+    :host ::slotted(bs-link-button[dropdown-nav-link]),
+    :host ::slotted(bs-input-button[dropdown-nav-link]) {
+        
+        --bs-button-display: block;
+        --bs-button-border: 1px solid transparent;
+        --bs-button-border-top-left-radius: 0.25rem;
+        --bs-button-border-top-right-radius: 0.25rem;
+        --bs-button-padding-bottom: var(--dropdown-nav-link-padding-bottom);
+        --bs-button-padding-left: var(--dropdown-nav-link-padding-left);
+        --bs-button-padding-right: var(--dropdown-nav-link-padding-right);
+        --bs-button-border-bottom-right-radius: var(--nav-link-active-border-bottom-right-radius, 0);
+        --bs-button-border-bottom-left-radius: var(--nav-link-active-border-bottom-left-radius, 0);
+        --bs-button-color: var(--dropdown-nav-link-color, #007bff);
+        
+        --bs-button-background-color: var(--dropdown-nav-link-background-color);
+        --bs-button-color-hover: var(--dropdown-nav-link-hover-color);
+        --bs-button-color-focus: var(--dropdown-nav-link-hover-color);
+        --bs-button-box-shadow-hover: none;
+        --bs-button-box-shadow-focus: none;
+        
+        --bs-button-border-color-hover: var(--dropdown-nav-link-hover-border-color, #e9ecef #e9ecef #dee2e6);
+        --bs-button-border-color-focus: var(--dropdown-nav-link-hover-border-color, #e9ecef #e9ecef #dee2e6);
+    }
+
+    :host ::slotted(bs-button[dropdown-nav-link][active]),
+    :host ::slotted(bs-link-button[dropdown-nav-link][active]),
+    :host ::slotted(bs-input-button[dropdown-nav-link][active]) {
+        
+        --bs-button-color: var(--dropdown-nav-link-active-color);
+        --bs-button-color-hover: var(--dropdown-nav-link-active-hover-color);
+        --bs-button-color-focus: var(--dropdown-nav-link-active-focus-color);
+        --bs-button-background-color: var(--dropdown-nav-link-active-background-color);
+    }
+`;
 
 const BsDropdownSplitCss = css`
     
@@ -110,44 +148,6 @@ const BsDropdownToggleCss = css`
         --bs-button-before-border-top: 0.3em solid transparent;
         --bs-button-before-border-right: 0.3em solid;
         --bs-button-before-border-bottom: 0.3em solid transparent;
-    }
-`;
-
-const BsDropdownNavCss = css`
-    
-    :host ::slotted(bs-button[dropdown-nav-link]),
-    :host ::slotted(bs-link-button[dropdown-nav-link]),
-    :host ::slotted(bs-input-button[dropdown-nav-link]) {
-        
-        --bs-button-display: block;
-        --bs-button-border: 1px solid transparent;
-        --bs-button-border-top-left-radius: 0.25rem;
-        --bs-button-border-top-right-radius: 0.25rem;
-        --bs-button-padding-bottom: var(--dropdown-nav-link-padding-bottom);
-        --bs-button-padding-left: var(--dropdown-nav-link-padding-left);
-        --bs-button-padding-right: var(--dropdown-nav-link-padding-right);
-        --bs-button-border-bottom-right-radius: var(--nav-link-active-border-bottom-right-radius, 0);
-        --bs-button-border-bottom-left-radius: var(--nav-link-active-border-bottom-left-radius, 0);
-        --bs-button-color: var(--dropdown-nav-link-color, #007bff);
-        
-        --bs-button-background-color: var(--dropdown-nav-link-background-color);
-        --bs-button-color-hover: var(--dropdown-nav-link-hover-color);
-        --bs-button-color-focus: var(--dropdown-nav-link-hover-color);
-        --bs-button-box-shadow-hover: none;
-        --bs-button-box-shadow-focus: none;
-        
-        --bs-button-border-color-hover: var(--dropdown-nav-link-hover-border-color, #e9ecef #e9ecef #dee2e6);
-        --bs-button-border-color-focus: var(--dropdown-nav-link-hover-border-color, #e9ecef #e9ecef #dee2e6);
-    }
-
-    :host ::slotted(bs-button[dropdown-nav-link][active]),
-    :host ::slotted(bs-link-button[dropdown-nav-link][active]),
-    :host ::slotted(bs-input-button[dropdown-nav-link][active]) {
-        
-        --bs-button-color: var(--dropdown-nav-link-active-color);
-        --bs-button-color-hover: var(--dropdown-nav-link-active-hover-color);
-        --bs-button-color-focus: var(--dropdown-nav-link-active-focus-color);
-        --bs-button-background-color: var(--dropdown-nav-link-active-background-color);
     }
 `;
 
@@ -2754,546 +2754,539 @@ Popper.placements = placements;
 Popper.Defaults = Defaults;
 
 class BsDropdown extends LitElement {
+  static get properties() {
+    return {
+      _popper: Popper,
+      offset: String,
+      split: {
+        type: Boolean,
+        reflect: true
+      },
+      ariasHasPopup: {
+        type: String,
+        reflect: true,
+        attribute: 'aria-haspopup'
+      }
+    };
+  }
 
-    static get properties() {
-        return {
-            _popper: Popper,
-            offset: String,
-            split: {type: Boolean, reflect: true},
-            ariasHasPopup: {type: String, reflect: true, attribute: 'aria-haspopup'}
-        };
-    } 
-    
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            BsDropdownNavCss,
-            BsDropdownToggleCss,
-            BsDropdownSplitCss,
-            css`
+  static get styles() {
+    return [BsContentRebootCss, BsDropdownNavCss, BsDropdownToggleCss, BsDropdownSplitCss, css`
                 :host {
                     position: relative;
                     display: var(--dropdown-display, flex);
                 }
-            `
-        ];
-    }
-    
-    render() {
-        return html`
+            `];
+  }
+
+  render() {
+    return html`
             <slot></slot>
         `;
-    }
-    
-    constructor() {
-        super();
-        this._popper = null;
-        this.offset = '';
-        this.split = false;
-        this.ariasHasPopup = 'true';
-    }
-    
-    firstUpdated() {
-        
-        const slotElement = this.shadowRoot.querySelector('slot');
-        const slotNodes = slotElement.assignedNodes();
-        
-        const dropdownMenuElement = this._findDropdownMenuElement(slotNodes);
-        this.addEventListener('bs-button-click', event => this._handleBtnClicked(event, dropdownMenuElement));
-        this.addEventListener('bs-button-focusout', _ => this._handleBtnFocusOut(dropdownMenuElement));
-        
-        // if the dropdown is part of a navbar, don't add popper.js
-        if(!this._isParentElementNavItem()) {
-            const dropdownButtonElement = this._findDropdownButtonElement(slotNodes);
-            this._configurePopper(dropdownButtonElement, dropdownMenuElement);
-        }
-    }
-    
-    _configurePopper(dropdownButtonElement, dropdownMenuElement) {
-        
-        const dropdDownMenuPlacement = dropdownMenuElement.getAttribute('x-placement');
-        const referenceElement = this._findReferenceElement(dropdownButtonElement);
+  }
 
-        const config = this._createPopperConfig(dropdDownMenuPlacement);
-        this._popper = new Popper(referenceElement, dropdownMenuElement, config);
-    }
-    
-    _createPopperConfig(dropdDownMenuPlacement) {
-        
-        if(this.offset) {
-            
-            return {
-                placement: dropdDownMenuPlacement,
-                modifiers: {
-                    flip: {
-                        enabled: true
-                    },
-                    offset: {
-                        enabled: true,
-                        offset: this.offset
-                    },
-                    keepTogether: { 
-                        enabled: true 
-                    }
-                }
-            };
-        }
-        
-        return {
-            placement: dropdDownMenuPlacement,
-            modifiers: {
-                flip: {
-                    enabled: true
-                },
-                keepTogether: { 
-                    enabled: true 
-                }
-            }
-        };
-    }
-    
-    _handleBtnClicked(event, dropdownMenuElement) {
+  constructor() {
+    super();
+    this._popper = null;
+    this.offset = '';
+    this.split = false;
+    this.ariasHasPopup = 'true';
+  }
 
-        // check if event was fired from a dropdown button
-        if(!event.detail.dropdown) {
-            return;
-        }
+  firstUpdated() {
+    const slotElement = this.shadowRoot.querySelector('slot');
+    const slotNodes = slotElement.assignedNodes();
 
-        dropdownMenuElement.toggleMenu();
-        this.active = !this.active;
-    }
-    
-    _handleBtnFocusOut(dropdownMenuElement) {
-        dropdownMenuElement.closeMenu();
-        this.active = false;
-    }
-    
-    _findReferenceElement(dropdownButtonElement) {
+    const dropdownMenuElement = this._findDropdownMenuElement(slotNodes);
 
-        if(this.split) {
-            return dropdownButtonElement;
-        } 
-        
-        return this.shadowRoot.host;
-    }
-    
-    _findDropdownButtonElement(slotNodes) {
-        
-        for (let index = 0; index < slotNodes.length; index++) {
-            
-            const slotItem = slotNodes[index];
-            
-            if (this._isDropdownButtonElement(slotItem) && 
-                this._isDropdownButtonToggle(slotItem)) {
-                
-                return slotItem;
-            }
-        }
-    }
-    
-    _findDropdownMenuElement(slotNodes) {
-        
-        for (let index = 0; index < slotNodes.length; index++) {
-            
-            const slotItem = slotNodes[index];
+    this.addEventListener('bs-button-click', event => this._handleBtnClicked(event, dropdownMenuElement));
+    this.addEventListener('bs-button-focusout', _ => this._handleBtnFocusOut(dropdownMenuElement)); // if the dropdown is part of a navbar, don't add popper.js
 
-            if (this._isDropdownMenuElement(slotItem)) {
-                return slotItem;
-            }
+    if (!this._isParentElementNavItem()) {
+      const dropdownButtonElement = this._findDropdownButtonElement(slotNodes);
+
+      this._configurePopper(dropdownButtonElement, dropdownMenuElement);
+    }
+  }
+
+  _configurePopper(dropdownButtonElement, dropdownMenuElement) {
+    const dropdDownMenuPlacement = dropdownMenuElement.getAttribute('x-placement');
+
+    const referenceElement = this._findReferenceElement(dropdownButtonElement);
+
+    const config = this._createPopperConfig(dropdDownMenuPlacement);
+
+    this._popper = new Popper(referenceElement, dropdownMenuElement, config);
+  }
+
+  _createPopperConfig(dropdDownMenuPlacement) {
+    if (this.offset) {
+      return {
+        placement: dropdDownMenuPlacement,
+        modifiers: {
+          flip: {
+            enabled: true
+          },
+          offset: {
+            enabled: true,
+            offset: this.offset
+          },
+          keepTogether: {
+            enabled: true
+          }
         }
+      };
     }
-    
-    _isDropdownButtonToggle(element) {
-        return element.hasAttribute('dropdown-toggle');
+
+    return {
+      placement: dropdDownMenuPlacement,
+      modifiers: {
+        flip: {
+          enabled: true
+        },
+        keepTogether: {
+          enabled: true
+        }
+      }
+    };
+  }
+
+  _handleBtnClicked(event, dropdownMenuElement) {
+    // check if event was fired from a dropdown button
+    if (!event.detail.dropdown) {
+      return;
     }
-    
-    _isDropdownMenuElement(element) {
-        return element.nodeType === Node.ELEMENT_NODE 
-                && (element.localName === 'bs-dropdown-menu');
+
+    dropdownMenuElement.toggleMenu();
+    this.active = !this.active;
+  }
+
+  _handleBtnFocusOut(dropdownMenuElement) {
+    dropdownMenuElement.closeMenu();
+    this.active = false;
+  }
+
+  _findReferenceElement(dropdownButtonElement) {
+    if (this.split) {
+      return dropdownButtonElement;
     }
-    
-    _isDropdownButtonElement(element) {
-        return element.nodeType === Node.ELEMENT_NODE && 
-                (element.localName === 'bs-button' || 
-                 element.localName === 'bs-link-button' || 
-                 element.localName === 'bs-input-button');
+
+    return this.shadowRoot.host;
+  }
+
+  _findDropdownButtonElement(slotNodes) {
+    for (let index = 0; index < slotNodes.length; index++) {
+      const slotItem = slotNodes[index];
+
+      if (this._isDropdownButtonElement(slotItem) && this._isDropdownButtonToggle(slotItem)) {
+        return slotItem;
+      }
     }
-    
-    _isParentElementNavItem() {
-        const parentElement = this.parentElement;
-        return parentElement.nodeType === Node.ELEMENT_NODE 
-                && parentElement.localName === 'bs-nav-item';
+  }
+
+  _findDropdownMenuElement(slotNodes) {
+    for (let index = 0; index < slotNodes.length; index++) {
+      const slotItem = slotNodes[index];
+
+      if (this._isDropdownMenuElement(slotItem)) {
+        return slotItem;
+      }
     }
+  }
+
+  _isDropdownButtonToggle(element) {
+    return element.hasAttribute('dropdown-toggle');
+  }
+
+  _isDropdownMenuElement(element) {
+    return element.nodeType === Node.ELEMENT_NODE && element.localName === 'bs-dropdown-menu';
+  }
+
+  _isDropdownButtonElement(element) {
+    return element.nodeType === Node.ELEMENT_NODE && (element.localName === 'bs-button' || element.localName === 'bs-link-button' || element.localName === 'bs-input-button');
+  }
+
+  _isParentElementNavItem() {
+    const parentElement = this.parentElement;
+    return parentElement.nodeType === Node.ELEMENT_NODE && parentElement.localName === 'bs-nav-item';
+  }
+
 }
-if (!window.customElements.get("bs-dropdown")) 
-    window.customElements.define('bs-dropdown', BsDropdown);
+if (!window.customElements.get("bs-dropdown")) window.customElements.define('bs-dropdown', BsDropdown);
+
+const BsDropdownCss = css`
+
+    :host {
+        position: relative;
+        display: var(--dropdown-display, flex);
+    }
+`;
+
+const BsDropdownMenuCss = css`
+
+    :host {
+        position: var(--dropdown-menu-position, absolute);
+        left: 0;
+        z-index: 1000;
+        display: var(--dropdown-menu-display, none);
+        visibility: hidden !important;
+        float: var(--dropdown-menu-float, left);
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-top-left-radius: var(--dropdown-menu-border-top-left-radius, 0.25rem);
+        border-top-right-radius: var(--dropdown-menu-border-top-right-radius, 0.25rem);
+        border-bottom-right-radius: var(--dropdown-menu-border-bottom-right-radius, 0.25rem);
+        border-bottom-left-radius: var(--dropdown-menu-border-bottom-left-radius, 0.25rem);
+    }
+
+    :host([static]) {
+        position: static;
+    }
+
+    :host([down]) {
+        top: 100%;
+        margin-top: var(--dropdown-menu-down-margin-top, 0.125rem);
+        margin-bottom: 0;
+    }
+
+    :host([up]) {
+        top: auto;
+        bottom: 100%;
+        margin-top: var(--dropdown-menu-up-margin-top, 0);
+        margin-bottom: 0.125rem;
+    }
+
+    :host([right]) {
+        top: 0;
+        right: auto;
+        left: 100%;
+        margin-top: var(--dropdown-menu-right-margin-top, 0);
+        margin-left: 0.125rem;
+    }
+
+    :host([left]) {
+        top: 0;
+        right: 100%;
+        left: auto;
+        margin-top: var(--dropdown-menu-left-margin-top, 0);
+        margin-right: 0.125rem;
+    }
+
+    :host([align-right]) {
+        right: 0;
+        left: auto;
+    }
+
+    :host([show]) {
+        visibility: visible !important;
+    }
+
+    :host([x-placement^="top"]), 
+    :host([x-placement^="right"]), 
+    :host([x-placement^="bottom"]), 
+    :host([x-placement^="left"]) {
+        right: auto;
+        bottom: auto;
+    }
+`;
 
 const Direction = {
-    UP: 'up',
-    DOWN: 'down'
+  UP: 'up',
+  DOWN: 'down'
 };
-
 class BsDropdownMenu extends LitElement {
+  static get properties() {
+    return {
+      show: {
+        type: Boolean,
+        reflect: true
+      },
+      static: {
+        type: Boolean,
+        reflect: true
+      },
+      ariaExpanded: {
+        type: String,
+        reflect: true,
+        attribute: 'aria-expanded'
+      },
+      ariaLabelledBy: {
+        type: String,
+        reflect: true,
+        attribute: 'aria-labelledby'
+      }
+    };
+  }
 
-    static get properties() {
-        return {
-            show: {type: Boolean, reflect: true},
-            static: {type: Boolean, reflect: true},
-            ariaExpanded: {type: String, reflect: true, attribute:'aria-expanded'},
-            ariaLabelledBy: {type: String, reflect: true, attribute:'aria-labelledby'}
-        };
-    }
-    
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            css`
-                :host {
-                    position: var(--dropdown-menu-position, absolute);
-                    left: 0;
-                    z-index: 1000;
-                    display: var(--dropdown-menu-display, none);
-                    visibility: hidden !important;
-                    float: var(--dropdown-menu-float, left);
-                    min-width: 10rem;
-                    padding: 0.5rem 0;
-                    margin-left: 0;
-                    margin-right: 0;
-                    font-size: 1rem;
-                    color: #212529;
-                    text-align: left;
-                    list-style: none;
-                    background-color: #fff;
-                    background-clip: padding-box;
-                    border: 1px solid rgba(0, 0, 0, 0.15);
-                    border-top-left-radius: var(--dropdown-menu-border-top-left-radius, 0.25rem);
-                    border-top-right-radius: var(--dropdown-menu-border-top-right-radius, 0.25rem);
-                    border-bottom-right-radius: var(--dropdown-menu-border-bottom-right-radius, 0.25rem);
-                    border-bottom-left-radius: var(--dropdown-menu-border-bottom-left-radius, 0.25rem);
-                }
-        
-                :host([static]) {
-                    position: static;
-                }
-        
-                :host([down]) {
-                    top: 100%;
-                    margin-top: var(--dropdown-menu-down-margin-top, 0.125rem);
-                    margin-bottom: 0;
-                }
-                
-                :host([up]) {
-                    top: auto;
-                    bottom: 100%;
-                    margin-top: var(--dropdown-menu-up-margin-top, 0);
-                    margin-bottom: 0.125rem;
-                }
-        
-                :host([right]) {
-                    top: 0;
-                    right: auto;
-                    left: 100%;
-                    margin-top: var(--dropdown-menu-right-margin-top, 0);
-                    margin-left: 0.125rem;
-                }
-                
-                :host([left]) {
-                    top: 0;
-                    right: 100%;
-                    left: auto;
-                    margin-top: var(--dropdown-menu-left-margin-top, 0);
-                    margin-right: 0.125rem;
-                }
-                
-                :host([align-right]) {
-                    right: 0;
-                    left: auto;
-                }
-                
-                :host([show]) {
-                    visibility: visible !important;
-                }
-                
-                :host([x-placement^="top"]), 
-                :host([x-placement^="right"]), 
-                :host([x-placement^="bottom"]), 
-                :host([x-placement^="left"]) {
-                    right: auto;
-                    bottom: auto;
-                }
-            `
-        ];
-    }
-    
-    render() {
-        return html`
+  static get styles() {
+    return [BsContentRebootCss, BsDropdownMenuCss];
+  }
+
+  render() {
+    return html`
             <slot></slot>
         `;
-    }
-    
-    constructor() {
-        super();
-        this.show = false;
-        this.static = false;
-        this.ariaExpanded = 'false';
-        this.ariaLabelledBy = 'dropdownMenuButton';
-    }
+  }
 
-    connectedCallback() {
-        super.connectedCallback();
-        window.document.addEventListener('keydown', event => this._handleKeydownKey(event));
-    }
+  constructor() {
+    super();
+    this.show = false;
+    this.static = false;
+    this.ariaExpanded = 'false';
+    this.ariaLabelledBy = 'dropdownMenuButton';
+  }
 
-    disconnectedCallback() {
-        window.document.removeEventListener('keydown', event => this._handleKeydownKey(event));
-        super.disconnectedCallback();
-    }
+  connectedCallback() {
+    super.connectedCallback();
+    window.document.addEventListener('keydown', event => this._handleKeydownKey(event));
+  }
 
-    firstUpdated() {
-        this._displayIfStatic();
-    }
-    
-    toggleMenu() {
-        this.show = !this.show;
-        this._updateAriaExpanded();
-        this._changeDisplayValueInCollapsedNavbar();
-    }
-    
-    openMenu() {
-        this.show = true;
-        this._updateAriaExpanded();
-        this.shadowRoot.host.focus();
-    }
-    
-    closeMenu() {
-        this.show = false;
-        this._updateAriaExpanded();
-        this._removeHoverStateFromItems();
-    }
+  disconnectedCallback() {
+    window.document.removeEventListener('keydown', event => this._handleKeydownKey(event));
+    super.disconnectedCallback();
+  }
 
-    _updateAriaExpanded() {
-        this.ariaExpanded = `${this.show}`;
-    }
+  firstUpdated() {
+    this._displayIfStatic();
+  }
 
-    _changeDisplayValueInCollapsedNavbar() {
-        
-        const compStyles = window.getComputedStyle(this.shadowRoot.host);
-        const displayValue = compStyles.getPropertyValue('display');
-        
-        if(this.show && displayValue === 'none') {
-            this.shadowRoot.host.style.display = 'block';
-        }
-        
-        if(!this.show && displayValue === 'block') {
-            this.shadowRoot.host.style.display = 'none';
-        }
-    }
+  toggleMenu() {
+    this.show = !this.show;
 
-    _displayIfStatic() {
+    this._updateAriaExpanded();
 
-        if(this.static) {
-            this.shadowRoot.host.style.setProperty('--dropdown-menu-display', 'block');
-        }
+    this._changeDisplayValueInCollapsedNavbar();
+  }
+
+  openMenu() {
+    this.show = true;
+
+    this._updateAriaExpanded();
+
+    this.shadowRoot.host.focus();
+  }
+
+  closeMenu() {
+    this.show = false;
+
+    this._updateAriaExpanded();
+
+    this._removeHoverStateFromItems();
+  }
+
+  _updateAriaExpanded() {
+    this.ariaExpanded = `${this.show}`;
+  }
+
+  _changeDisplayValueInCollapsedNavbar() {
+    const compStyles = window.getComputedStyle(this.shadowRoot.host);
+    const displayValue = compStyles.getPropertyValue('display');
+
+    if (this.show && displayValue === 'none') {
+      this.shadowRoot.host.style.display = 'block';
     }
 
-    // keydown events are document wide
-    // which means that this function will
-    // be executed by all be-dropdown-menu
-    // elements in the document
-    _handleKeydownKey(event) {
+    if (!this.show && displayValue === 'block') {
+      this.shadowRoot.host.style.display = 'none';
+    }
+  }
 
-        // static bs-dropdown-menu elements
-        // are not reactive to keydown events
-        if(this.static) {
-            return;
-        }
+  _displayIfStatic() {
+    if (this.static) {
+      this.shadowRoot.host.style.setProperty('--dropdown-menu-display', 'block');
+    }
+  } // keydown events are document wide
+  // which means that this function will
+  // be executed by all be-dropdown-menu
+  // elements in the document
 
-        // menu must be visible to continue
-        if(!this.show) {
-            return;
-        }
 
-        // if ESC key was pressed
-        if(event.keyCode === 27) {
-            this.closeMenu();
-        }
+  _handleKeydownKey(event) {
+    // static bs-dropdown-menu elements
+    // are not reactive to keydown events
+    if (this.static) {
+      return;
+    } // menu must be visible to continue
 
-        // if UP key was pressed
-        if(event.keyCode === 38) {
-            this._updatedActivatedDropdownItem(Direction.UP);
-            event.preventDefault();
-        }
 
-        // if DOWN key was pressed
-        if(event.keyCode === 40) {
-            this._updatedActivatedDropdownItem(Direction.DOWN);
-            event.preventDefault();
-        }
+    if (!this.show) {
+      return;
+    } // if ESC key was pressed
+
+
+    if (event.keyCode === 27) {
+      this.closeMenu();
+    } // if UP key was pressed
+
+
+    if (event.keyCode === 38) {
+      this._updatedActivatedDropdownItem(Direction.UP);
+
+      event.preventDefault();
+    } // if DOWN key was pressed
+
+
+    if (event.keyCode === 40) {
+      this._updatedActivatedDropdownItem(Direction.DOWN);
+
+      event.preventDefault();
+    }
+  }
+
+  _removeHoverStateFromItems() {
+    const slotElement = this.shadowRoot.querySelector('slot');
+    const assignedNodes = slotElement.assignedNodes();
+
+    const dropdownItemElements = this._extractDropdownItemElements(assignedNodes);
+
+    for (let index = 0; index < dropdownItemElements.length; ++index) {
+      const dropdownItem = dropdownItemElements[index];
+
+      if (this._isDropdownItemElementHover(dropdownItem)) {
+        dropdownItem.toggleHover();
+      }
+    }
+  }
+
+  _updatedActivatedDropdownItem(direction) {
+    const slotElement = this.shadowRoot.querySelector('slot');
+    const assignedNodes = slotElement.assignedNodes();
+
+    const dropdownItemElements = this._extractDropdownItemElements(assignedNodes);
+
+    const numberOfDropdownItems = dropdownItemElements.length;
+
+    const activeDropdownItemElement = this._findActivatedDropdownItem(dropdownItemElements);
+
+    const activeDropdownItemElementIndex = this._findActiveDropdownItemIndex(activeDropdownItemElement, direction, numberOfDropdownItems);
+
+    const newDropdownItemElementIndex = this._calculateNewDropdownItemIndex(activeDropdownItemElementIndex, direction, numberOfDropdownItems);
+
+    const newActiveDropdownItemElement = dropdownItemElements[newDropdownItemElementIndex];
+
+    if (activeDropdownItemElement) {
+      activeDropdownItemElement.toggleHover();
     }
 
-    _removeHoverStateFromItems() {
+    if (newActiveDropdownItemElement) {
+      newActiveDropdownItemElement.toggleHover();
+    }
+  }
 
-        const slotElement = this.shadowRoot.querySelector('slot');
-        const assignedNodes = slotElement.assignedNodes();
-        const dropdownItemElements = this._extractDropdownItemElements(assignedNodes);
+  _calculateNewDropdownItemIndex(previousIndex, direction, numberOfDropdownItems) {
+    const delta = direction === Direction.UP ? -1 : 1;
+    const newDropdownItemIndex = previousIndex + delta; // UP was fired && first item was active
+    // return to first item
 
-        for (let index = 0; index < dropdownItemElements.length; ++index) {
+    if (newDropdownItemIndex === -1) {
+      return 0;
+    } // DOWN was fired && last item was active
+    // return to last item
 
-            const dropdownItem = dropdownItemElements[index];
 
-            if(this._isDropdownItemElementHover(dropdownItem)) {
-                dropdownItem.toggleHover();
-            }
-        }
+    if (newDropdownItemIndex === numberOfDropdownItems) {
+      return new Number(numberOfDropdownItems - 1);
     }
 
-    _updatedActivatedDropdownItem(direction) {
+    return newDropdownItemIndex;
+  }
 
-        const slotElement = this.shadowRoot.querySelector('slot');
-        const assignedNodes = slotElement.assignedNodes();
-        const dropdownItemElements = this._extractDropdownItemElements(assignedNodes);
-        const numberOfDropdownItems = dropdownItemElements.length;
+  _findActiveDropdownItemIndex(activeDropdownItemElement, direction, lastDropdownItemElementIndex) {
+    if (activeDropdownItemElement) {
+      return new Number(activeDropdownItemElement.index);
+    } // if nothing was activated before and DOWN direction set 
+    // -1 as the previously activated index in order to select
+    // the first element at index position 0;
 
-        const activeDropdownItemElement = this._findActivatedDropdownItem(dropdownItemElements);
 
-        const activeDropdownItemElementIndex = this._findActiveDropdownItemIndex(
-            activeDropdownItemElement, 
-            direction,
-            numberOfDropdownItems);
+    if (!activeDropdownItemElement && direction === Direction.DOWN) {
+      return -1;
+    } // if nothing was activated before and UP direction set 
+    // to number of items + 1 as the previously activated index 
+    // in order to select for the last element at index position of last item;
 
-        const newDropdownItemElementIndex = this._calculateNewDropdownItemIndex(
-            activeDropdownItemElementIndex, 
-            direction,
-            numberOfDropdownItems);
 
-        const newActiveDropdownItemElement = dropdownItemElements[newDropdownItemElementIndex];
-        
-        if(activeDropdownItemElement) {
-            activeDropdownItemElement.toggleHover();
-        }
+    if (!activeDropdownItemElement && direction === Direction.UP) {
+      return new Number(lastDropdownItemElementIndex);
+    }
+  }
 
-        if(newActiveDropdownItemElement) {
-            newActiveDropdownItemElement.toggleHover();
-        }
+  _findActivatedDropdownItem(dropdownItemElements) {
+    for (let index = 0; index < dropdownItemElements.length; ++index) {
+      const dropdownItem = dropdownItemElements[index];
+
+      if (this._isDropdownItemElementHover(dropdownItem)) {
+        return dropdownItem;
+      }
+    }
+  }
+
+  _extractDropdownItemElements(slotNodes) {
+    const elementNodes = [];
+
+    for (let index = 0; index < slotNodes.length; ++index) {
+      let slotItem = slotNodes[index];
+
+      if (this._isDropdownItemLinkElement(slotItem) || this._isDropdownItemButtonElement(slotItem)) {
+        elementNodes.push(slotItem);
+      }
     }
 
-    _calculateNewDropdownItemIndex(previousIndex, direction, numberOfDropdownItems) {
+    return elementNodes;
+  }
 
-        const delta = direction === Direction.UP ? -1 : 1;
-        const newDropdownItemIndex = previousIndex + delta;
+  _isDropdownItemElementHover(dropdownItemElement) {
+    return dropdownItemElement.isHover();
+  }
 
-        // UP was fired && first item was active
-        // return to first item
-        if(newDropdownItemIndex === -1) {
-            return 0;
-        }
+  _isDropdownItemLinkElement(element) {
+    return element.nodeType === Node.ELEMENT_NODE && element.localName === 'bs-dropdown-item-link';
+  }
 
-        // DOWN was fired && last item was active
-        // return to last item
-        if (newDropdownItemIndex === numberOfDropdownItems) {
-            return new Number(numberOfDropdownItems - 1);
-        }
+  _isDropdownItemButtonElement(element) {
+    return element.nodeType === Node.ELEMENT_NODE && element.localName === 'bs-dropdown-item-button';
+  }
 
-        return newDropdownItemIndex;
-    }
-
-    _findActiveDropdownItemIndex(activeDropdownItemElement, direction, lastDropdownItemElementIndex) {
-
-        if(activeDropdownItemElement) {
-            return new Number(activeDropdownItemElement.index);
-        }
-
-        // if nothing was activated before and DOWN direction set 
-        // -1 as the previously activated index in order to select
-        // the first element at index position 0;
-        if(!activeDropdownItemElement && direction === Direction.DOWN) {
-            return -1;
-        }
-
-        // if nothing was activated before and UP direction set 
-        // to number of items + 1 as the previously activated index 
-        // in order to select for the last element at index position of last item;
-        if(!activeDropdownItemElement && direction === Direction.UP) {
-            return new Number(lastDropdownItemElementIndex);
-        }
-    }
-
-    _findActivatedDropdownItem(dropdownItemElements) {
-
-        for (let index = 0; index < dropdownItemElements.length; ++index) {
-
-            const dropdownItem = dropdownItemElements[index];
-
-            if(this._isDropdownItemElementHover(dropdownItem)) {
-                return dropdownItem;
-            }
-        }        
-    }
-
-    _extractDropdownItemElements(slotNodes) {
-
-        const elementNodes = [];
-    
-        for (let index = 0; index < slotNodes.length; ++index) {
-            
-            let slotItem = slotNodes[index];
-
-            if (this._isDropdownItemLinkElement(slotItem) || 
-                this._isDropdownItemButtonElement(slotItem)) {
-
-                elementNodes.push(slotItem);
-            }
-        }
-    
-        return elementNodes;
-    }
-
-    _isDropdownItemElementHover(dropdownItemElement) {
-        return dropdownItemElement.isHover();
-    }
-
-    _isDropdownItemLinkElement(element) {
-        return element.nodeType === Node.ELEMENT_NODE 
-                && (element.localName === 'bs-dropdown-item-link');
-    }   
-
-    _isDropdownItemButtonElement(element) {
-        return element.nodeType === Node.ELEMENT_NODE 
-                && (element.localName === 'bs-dropdown-item-button');
-    }
 }
-if (!window.customElements.get("bs-dropdown-menu")) 
-    window.customElements.define('bs-dropdown-menu', BsDropdownMenu);
+if (!window.customElements.get("bs-dropdown-menu")) window.customElements.define('bs-dropdown-menu', BsDropdownMenu);
+
+const BsDropdownItemTextCss = css`
+
+    :host {
+        display: block;
+    }
+
+    .dropdown-item-text {
+        display: block;
+        padding: 0.25rem 1.5rem;
+        color: #212529;
+    }
+`;
 
 class BsDropdownItemText extends LitElement {
-    
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            css`
-                :host {
-                    display: block;
-                }
-                
-                .dropdown-item-text {
-                    display: block;
-                    padding: 0.25rem 1.5rem;
-                    color: #212529;
-                }
-            `
-        ];
-    }
-    
-    render() {
-        return html`
+  static get styles() {
+    return [BsContentRebootCss, BsDropdownItemTextCss];
+  }
+
+  render() {
+    return html`
             <span class="dropdown-item-text">
                 <slot></slot>
             </span>
         `;
-    }
+  }
+
 }
-if (!window.customElements.get("bs-dropdown-item-text")) 
-    window.customElements.define('bs-dropdown-item-text', BsDropdownItemText);
+if (!window.customElements.get("bs-dropdown-item-text")) window.customElements.define('bs-dropdown-item-text', BsDropdownItemText);
 
 const BsDropdownItemCss = css`
 
@@ -3341,183 +3334,180 @@ const BsDropdownItemCss = css`
     }
 `;
 
-const BsDropdownItemMixin = (superClass) => class extends superClass {
-    
-    static get properties() {
-        return {
-            title: String,
-            index: Number,
-            active: {type: Boolean, reflect: true},
-            disabled: {type: Boolean, reflect: true}
-        };
-    }
-    
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            BsDropdownItemCss
-        ];
-    }
-    
-    constructor() {
-        super();
-        this.index = 0;
-        this.title = '';
-        this.active = false;
-        this.disabled = false;
-    }
-    
-    firstUpdated() {
-        const buttonElement = this._retrieveButtonElement();
-        buttonElement.addEventListener('mousedown', _ => this._handleButtonClick());
-    }
-    
-    toggleHover() {
-        const buttonElement = this._retrieveButtonElement();
-        buttonElement.classList.toggle('hover');
+const BsDropdownItemMixin = superClass => class extends superClass {
+  static get properties() {
+    return {
+      title: String,
+      index: Number,
+      active: {
+        type: Boolean,
+        reflect: true
+      },
+      disabled: {
+        type: Boolean,
+        reflect: true
+      }
+    };
+  }
+
+  static get styles() {
+    return [BsContentRebootCss, BsDropdownItemCss];
+  }
+
+  constructor() {
+    super();
+    this.index = 0;
+    this.title = '';
+    this.active = false;
+    this.disabled = false;
+  }
+
+  firstUpdated() {
+    const buttonElement = this._retrieveButtonElement();
+
+    buttonElement.addEventListener('mousedown', _ => this._handleButtonClick());
+  }
+
+  toggleHover() {
+    const buttonElement = this._retrieveButtonElement();
+
+    buttonElement.classList.toggle('hover');
+  }
+
+  isHover() {
+    const buttonElement = this._retrieveButtonElement();
+
+    return buttonElement.classList.contains('hover');
+  }
+
+  _retrieveButtonElement() {
+    const linkElement = this.shadowRoot.querySelector('a.dropdown-item');
+    const buttonElement = this.shadowRoot.querySelector('button.dropdown-item');
+
+    if (linkElement) {
+      return linkElement;
     }
 
-    isHover() {
-        const buttonElement = this._retrieveButtonElement();
-        return buttonElement.classList.contains('hover');
+    if (buttonElement) {
+      return buttonElement;
+    }
+  }
+
+  _applyButtonActivateState(btnElement) {
+    if (this.disabled && !this.active) {
+      btnElement.classList.toggle('disabled');
     }
 
-    _retrieveButtonElement() {
-        
-        const linkElement = this.shadowRoot.querySelector('a.dropdown-item');
-        const buttonElement = this.shadowRoot.querySelector('button.dropdown-item');
-        
-        if(linkElement) {
-            return linkElement;
-        }
-        
-        if(buttonElement) {
-            return buttonElement;
-        }
+    if (!this.disabled && this.active) {
+      btnElement.classList.toggle('active');
     }
-    
-    _applyButtonActivateState(btnElement) {
-        
-        if(this.disabled && !this.active) {
-            btnElement.classList.toggle('disabled');
-        }
+  }
 
-        if(!this.disabled && this.active) {
-            btnElement.classList.toggle('active');
+  _handleButtonClick() {
+    if (!this.disabled) {
+      const btnClickedEvent = new CustomEvent('bs-dropdown-item-click', {
+        bubbles: true,
+        composed: true,
+        detail: {
+          index: this.index
         }
+      });
+      this.dispatchEvent(btnClickedEvent);
     }
-    
-    _handleButtonClick() {
-        
-        if(!this.disabled) {
-            
-            const btnClickedEvent = new CustomEvent('bs-dropdown-item-click', {
-                bubbles: true, 
-                composed: true,
-                detail: {
-                    index: this.index
-                }
-            });
-            
-            this.dispatchEvent(btnClickedEvent);
-        }
-    }
+  }
+
 };
 
 class BsDropdownItemLink extends BsDropdownItemMixin(LitElement) {
-    
-    static get properties() {
-        return {
-            href: String,
-            target: String
-        };
-    }
-    
-    static get styles() {
-        return [super.styles];
-    }
-    
-    render() {
-        return html`
+  static get properties() {
+    return {
+      href: String,
+      target: String
+    };
+  }
+
+  static get styles() {
+    return [super.styles];
+  }
+
+  render() {
+    return html`
             <a href="${this.href}" .target="${this.target}" class="dropdown-item">${this.title}</a>
         `;
-    }
-    
-    constructor() {
-        super();
-        this.href = '';
-        this.target = '_self';
-    }
+  }
+
+  constructor() {
+    super();
+    this.href = '';
+    this.target = '_self';
+  }
+
 }
-if (!window.customElements.get("bs-dropdown-item-link"))
-    window.customElements.define('bs-dropdown-item-link', BsDropdownItemLink);
+if (!window.customElements.get("bs-dropdown-item-link")) window.customElements.define('bs-dropdown-item-link', BsDropdownItemLink);
 
 class BsDropdownItemButton extends BsDropdownItemMixin(LitElement) {
-    
-    static get styles() {
-        return [super.styles];
-    }
-    
-    render() {
-        return html`
+  static get styles() {
+    return [super.styles];
+  }
+
+  render() {
+    return html`
             <button class="dropdown-item" type="button">${this.title}</button>
         `;
-    }
+  }
+
 }
-if (!window.customElements.get("bs-dropdown-item-button"))  
-    window.customElements.define('bs-dropdown-item-button', BsDropdownItemButton);
+if (!window.customElements.get("bs-dropdown-item-button")) window.customElements.define('bs-dropdown-item-button', BsDropdownItemButton);
+
+const BsDropdownHeaderCss = css`
+
+    :host {
+        display: block;
+        padding: 0.5rem 1.5rem;
+        margin-bottom: 0;
+        font-size: 0.875rem;
+        color: #6c757d;
+        white-space: nowrap;
+    }
+`;
 
 class BsDropdownHeader extends LitElement {
-    
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            css`
-                :host {
-                    display: block;
-                    padding: 0.5rem 1.5rem;
-                    margin-bottom: 0;
-                    font-size: 0.875rem;
-                    color: #6c757d;
-                    white-space: nowrap;
-                }
-            `
-        ];
-    }
-    
-    render() {
-        return html`
+  static get styles() {
+    return [BsContentRebootCss, BsDropdownHeaderCss];
+  }
+
+  render() {
+    return html`
             <slot></slot>
         `;
-    }
+  }
+
 }
-if (!window.customElements.get("bs-dropdown-header"))   
-    window.customElements.define('bs-dropdown-header', BsDropdownHeader);
+if (!window.customElements.get("bs-dropdown-header")) window.customElements.define('bs-dropdown-header', BsDropdownHeader);
+
+const BsDropdownDividerCss = css`
+
+    :host {
+        display: block;
+        height: 0;
+        margin: 0.5rem 0;
+        overflow: hidden;
+        border-top: 1px solid #e9ecef;
+    }
+`;
 
 class BsDropdownDivider extends LitElement {
-    
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            css`
-                :host {
-                    display: block;
-                    height: 0;
-                    margin: 0.5rem 0;
-                    overflow: hidden;
-                    border-top: 1px solid #e9ecef;
-                }
-            `
-        ];
-    }
-    
-    render() {
-        return html`
+  static get styles() {
+    return [BsContentRebootCss, BsDropdownDividerCss];
+  }
+
+  render() {
+    return html`
             <slot></slot>
         `;
-    }
-}
-if (!window.customElements.get("bs-dropdown-divider"))  
-    window.customElements.define('bs-dropdown-divider', BsDropdownDivider);
+  }
 
-export { BsDropdown, BsDropdownDivider, BsDropdownHeader, BsDropdownItemButton, BsDropdownItemLink, BsDropdownItemMixin, BsDropdownItemText, BsDropdownMenu };
+}
+if (!window.customElements.get("bs-dropdown-divider")) window.customElements.define('bs-dropdown-divider', BsDropdownDivider);
+
+export { BsDropdown, BsDropdownCss, BsDropdownDivider, BsDropdownDividerCss, BsDropdownHeader, BsDropdownHeaderCss, BsDropdownItemButton, BsDropdownItemLink, BsDropdownItemMixin, BsDropdownItemText, BsDropdownItemTextCss, BsDropdownMenu, BsDropdownMenuCss };

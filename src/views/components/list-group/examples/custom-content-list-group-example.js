@@ -1,10 +1,15 @@
 
 import { LitElement } from 'lit-element';
-import { BsSizingCss, BsSpacingCss } from 'lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
-import { BsFlexDisplayCss, BsFlexJustifyCss, BsFlexAlignItemsCss, BsFlexDirectionCss } from 'lit-element-bootstrap/utilities'; 
+import { BsSizingCss, 
+    BsSpacingCss, 
+    BsFlexDisplayCss, 
+    BsFlexJustifyCss, 
+    BsFlexAlignItemsCss, 
+    BsFlexDirectionCss } from '@lit-element-bootstrap/utilities';
 
-import 'lit-element-bootstrap/components/list-group';
+
+import '@lit-element-bootstrap/list-group';
 
 class CustomContentListGroupExample extends BsExampleMixin(LitElement) {
     

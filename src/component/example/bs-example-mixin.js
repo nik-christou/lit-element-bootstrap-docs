@@ -1,8 +1,8 @@
 
 import { html, css } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
-import { PrismDefaultCss } from './prism-default-css.js';
+import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from '@lit-element-bootstrap/content';
+import { PrismDefaultCss } from './prism-default.css.js';
 
 import './bs-example.js';
 import './bs-highlight.js';

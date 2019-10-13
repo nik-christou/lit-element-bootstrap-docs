@@ -1,10 +1,10 @@
 
 import { LitElement } from 'lit-element';
-import { BsSpacingCss } from 'lit-element-bootstrap/utilities';
+import { BsSpacingCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/button';
-import 'lit-element-bootstrap/components/button-group';
+import '@lit-element-bootstrap/button';
+import '@lit-element-bootstrap/button-group';
 
 class ButtonToolbarExample extends BsExampleMixin(LitElement) {
     

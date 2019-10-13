@@ -1,6 +1,6 @@
 
 import { LitElement, html, css } from 'lit-element';
-import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BsContentRebootCss, BsContentTypographyCss } from '@lit-element-bootstrap/content';
 
 import '../../component/icons/loading-spinner.js';
 

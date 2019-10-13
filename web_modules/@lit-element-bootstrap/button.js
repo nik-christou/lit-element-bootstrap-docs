@@ -1,246 +1,238 @@
-import { h as html } from '../../common/lit-html-9b6153da.js';
-import { css, LitElement } from '../../lit-element.js';
-import { B as BsContentTypographyCss } from '../../common/index-603f562a.js';
-import { B as BsContentRebootCss } from '../../common/bs-content-reboot-css-ebf48278.js';
+import { h as html } from '../common/lit-html-9b6153da.js';
+import { css, LitElement } from '../lit-element.js';
+import { B as BsContentRebootCss } from '../common/bs-content-reboot.css-c5865ddd.js';
+import { B as BsContentTypographyCss } from '../common/bs-content-typography.css-0b50b318.js';
+export { B as BsCloseButton } from '../common/bs-close-button-9021156f.js';
 
-const defaultThemeColors = new Map([
-    ['primary', '#007bff'],
-    ['secondary', '#6c757d'],
-    ['success', '#28a745'],
-    ['info', '#17a2b8'],
-    ['warning', '#ffc107'],
-    ['danger', '#dc3545'],
-    ['light', '#f8f9fa'],
-    ['dark', '#343a40']
-]);
+const defaultThemeColors = new Map([['primary', '#007bff'], ['secondary', '#6c757d'], ['success', '#28a745'], ['info', '#17a2b8'], ['warning', '#ffc107'], ['danger', '#dc3545'], ['light', '#f8f9fa'], ['dark', '#343a40']]);
 
-const BsButtonMixin = (superClass) => class extends superClass {
-    
-    static get properties() {
-        return {
-            action: String,
-            toggle: {type: Boolean, reflect: true},
-            active: {type: Boolean, reflect: true},
-            disabled: {type: Boolean, reflect: true},
-            dropdownToggle: {type: Boolean, reflect: true, attribute: 'dropdown-toggle'}
-        };
+const BsButtonMixin = superClass => class extends superClass {
+  static get properties() {
+    return {
+      action: String,
+      toggle: {
+        type: Boolean,
+        reflect: true
+      },
+      active: {
+        type: Boolean,
+        reflect: true
+      },
+      disabled: {
+        type: Boolean,
+        reflect: true
+      },
+      dropdownToggle: {
+        type: Boolean,
+        reflect: true,
+        attribute: 'dropdown-toggle'
+      }
+    };
+  }
+
+  constructor() {
+    super();
+    this.active = false;
+    this.toggle = false;
+    this.action = 'button';
+    this.disabled = false;
+    this.dropdownToggle = false;
+  }
+
+  firstUpdated() {
+    const btnElement = this._retrieveButtonElement();
+
+    this._applyButtonActivateState(btnElement);
+
+    this._applyButtonTypeIfApplicable();
+
+    btnElement.addEventListener('click', event => this._handleButtonClick(event));
+    btnElement.addEventListener('focusout', event => this._handleFocusOut(event));
+
+    this._setupDefaultThemeColors();
+  }
+
+  updated(changedProperties) {
+    super.updated();
+
+    if (changedProperties.has('disabled')) {
+      this._disabledChanged();
     }
-    
-    constructor() {
-        super();
-        this.active = false;
-        this.toggle = false;
-        this.action = 'button';
-        this.disabled = false;
-        this.dropdownToggle = false;
+  }
+
+  _setupDefaultThemeColors() {
+    const hostElement = this.shadowRoot.host;
+
+    for (let [key, value] of defaultThemeColors) {
+      if (hostElement.hasAttribute(key)) {
+        this._updateCssProperty(hostElement, key, value);
+      }
     }
-    
-    firstUpdated() {
-        
-        const btnElement = this._retrieveButtonElement();
-        this._applyButtonActivateState(btnElement);
-        this._applyButtonTypeIfApplicable();
-        
-        btnElement.addEventListener('click', event => this._handleButtonClick(event));
-        btnElement.addEventListener('focusout', event => this._handleFocusOut(event));
+  }
 
-        this._setupDefaultThemeColors();
+  _updateCssProperty(hostElement, cssPropName, cssPropValue) {
+    const cssVarName = '--' + cssPropName;
+
+    if (!getComputedStyle(hostElement).getPropertyValue(cssVarName)) {
+      hostElement.style.setProperty(cssVarName, cssPropValue);
     }
-    
-    updated(changedProperties) {
-        
-        super.updated();
-        
-        if (changedProperties.has('disabled')) {
-            this._disabledChanged();
-        }
+  }
+
+  _disabledChanged() {
+    const buttonElement = this._retrieveButtonElement();
+
+    if (this.disabled) {
+      buttonElement.classList.add('disabled');
+      buttonElement.setAttribute('disabled', '');
+    } else {
+      buttonElement.classList.remove('disabled');
+      buttonElement.removeAttribute('disabled');
     }
+  }
 
-    _setupDefaultThemeColors() {
-
-        const hostElement = this.shadowRoot.host;
-
-        for (let [key, value] of defaultThemeColors) {
-            
-            if(hostElement.hasAttribute(key)) {
-                this._updateCssProperty(hostElement, key, value);
-            }
-        }
-    }
-
-    _updateCssProperty(hostElement, cssPropName, cssPropValue) {
-        
-        const cssVarName = '--'+cssPropName;
-
-        if(!getComputedStyle(hostElement).getPropertyValue(cssVarName)) {
-            hostElement.style.setProperty(cssVarName, cssPropValue);
-        }
-    }
-    
-    _disabledChanged() {
-        const buttonElement = this._retrieveButtonElement();
-        
-        if(this.disabled) {
-            
-            buttonElement.classList.add('disabled');
-            buttonElement.setAttribute('disabled', '');
-        } else {
-            buttonElement.classList.remove('disabled');
-            buttonElement.removeAttribute('disabled');
-        }
-    }
-    
-    _handleFocusOut(event) {
-        
-        if(this.disabled) {
-            return;
-        }
-        
-        if(this.active && !this.toggle) {
-            this._updateToggleState();
-        }
-        
-        const btnFocusOutEvent = new CustomEvent('bs-button-focusout', {
-            bubbles: true, 
-            composed: true
-        });
-
-        this.dispatchEvent(btnFocusOutEvent);
-    }
-    
-    _handleButtonClick(event) {
-        
-        if(this._blockDefaultEvent()) {
-            event.preventDefault();
-        }
-        if(this.disabled) {
-            return;
-        }
-        
-        this._updateButtonFocus();
-        this._updateToggleState();
-        
-        const btnClickedEvent = new CustomEvent('bs-button-click', {
-            bubbles: true, 
-            composed: true,
-            detail: {
-                active: this.active,
-                action: this.action,
-                toggle: this.toggle,
-                dropdown: this.dropdownToggle
-            }
-        });
-
-        this.dispatchEvent(btnClickedEvent);
+  _handleFocusOut(event) {
+    if (this.disabled) {
+      return;
     }
 
-    _updateToggleState() {
-        
-        const buttonElement = this._retrieveButtonElement();
-        
-        // added the this.dropdownToggle to enable "active"
-        // look and feel during the dropdown menu opened
-        if(this.toggle || this.dropdownToggle) {
-            
-            if(this.active) {
-                buttonElement.classList.remove('active');
-                buttonElement.removeAttribute('active');
-            } else {
-                buttonElement.classList.add('active');
-                buttonElement.setAttribute('active', '');
-            }
-            
-            this.active = !this.active;
-        }
-    }
-    
-    _blockDefaultEvent() {
-
-        const linkButtonElement = this.shadowRoot.querySelector('a');
-
-        if(linkButtonElement && this.href) {
-            return false;
-        }
-
-        return true;
+    if (this.active && !this.toggle) {
+      this._updateToggleState();
     }
 
-    _retrieveButtonElement() {
-        
-        const buttonElement = this.shadowRoot.querySelector('button');
-        const inputElement = this.shadowRoot.querySelector('input');
-        const hrefElement = this.shadowRoot.querySelector('a');
-        
-        if(buttonElement) {
-            return buttonElement;
-        } 
-        
-        if(inputElement) {
-            return inputElement;
-        }
-        
-        if(hrefElement) {
-            return hrefElement;
-        }
+    const btnFocusOutEvent = new CustomEvent('bs-button-focusout', {
+      bubbles: true,
+      composed: true
+    });
+    this.dispatchEvent(btnFocusOutEvent);
+  }
+
+  _handleButtonClick(event) {
+    if (this._blockDefaultEvent()) {
+      event.preventDefault();
     }
 
-    _updateButtonFocus() {
-        
-        const buttonElement = this.shadowRoot.querySelector('button');
-        const inputElement = this.shadowRoot.querySelector('input');
-        const hrefElement = this.shadowRoot.querySelector('a');
-        
-        if(buttonElement) {
-            buttonElement.focus();
-        }
-
-        if(inputElement) {
-            inputElement.focus();
-        }
-
-        if(hrefElement) {
-            hrefElement.focus();
-        }
+    if (this.disabled) {
+      return;
     }
-    
-    _applyButtonActivateState(btnElement) {
-        
-        if(this.disabled && !this.active) {
-            btnElement.classList.toggle('disabled');
-        }
 
-        if(!this.disabled && this.active) {
-            btnElement.classList.toggle('active');
-        }
+    this._updateButtonFocus();
+
+    this._updateToggleState();
+
+    const btnClickedEvent = new CustomEvent('bs-button-click', {
+      bubbles: true,
+      composed: true,
+      detail: {
+        active: this.active,
+        action: this.action,
+        toggle: this.toggle,
+        dropdown: this.dropdownToggle
+      }
+    });
+    this.dispatchEvent(btnClickedEvent);
+  }
+
+  _updateToggleState() {
+    const buttonElement = this._retrieveButtonElement(); // added the this.dropdownToggle to enable "active"
+    // look and feel during the dropdown menu opened
+
+
+    if (this.toggle || this.dropdownToggle) {
+      if (this.active) {
+        buttonElement.classList.remove('active');
+        buttonElement.removeAttribute('active');
+      } else {
+        buttonElement.classList.add('active');
+        buttonElement.setAttribute('active', '');
+      }
+
+      this.active = !this.active;
     }
-    
-    _applyButtonTypeIfApplicable() {
-        
-        const buttonElement = this.shadowRoot.querySelector('button');
-        const inputElement = this.shadowRoot.querySelector('input');
-        
-        if(buttonElement) {
-            this._applyButtonType(buttonElement);
-        }
+  }
 
-        if(inputElement) {
-            this._applyButtonType(inputElement);
-        }
+  _blockDefaultEvent() {
+    const linkButtonElement = this.shadowRoot.querySelector('a');
+
+    if (linkButtonElement && this.href) {
+      return false;
     }
-    
-    _applyButtonType(btnElement) {
-        if(this.action === 'button') {
-            btnElement.setAttribute('type', 'button');
-        }
 
-        if(this.action === 'reset') {
-            btnElement.setAttribute('type', 'reset');
-        }
+    return true;
+  }
 
-        if(this.action === 'submit') {
-            btnElement.setAttribute('type', 'submit');
-        }
+  _retrieveButtonElement() {
+    const buttonElement = this.shadowRoot.querySelector('button');
+    const inputElement = this.shadowRoot.querySelector('input');
+    const hrefElement = this.shadowRoot.querySelector('a');
+
+    if (buttonElement) {
+      return buttonElement;
     }
+
+    if (inputElement) {
+      return inputElement;
+    }
+
+    if (hrefElement) {
+      return hrefElement;
+    }
+  }
+
+  _updateButtonFocus() {
+    const buttonElement = this.shadowRoot.querySelector('button');
+    const inputElement = this.shadowRoot.querySelector('input');
+    const hrefElement = this.shadowRoot.querySelector('a');
+
+    if (buttonElement) {
+      buttonElement.focus();
+    }
+
+    if (inputElement) {
+      inputElement.focus();
+    }
+
+    if (hrefElement) {
+      hrefElement.focus();
+    }
+  }
+
+  _applyButtonActivateState(btnElement) {
+    if (this.disabled && !this.active) {
+      btnElement.classList.toggle('disabled');
+    }
+
+    if (!this.disabled && this.active) {
+      btnElement.classList.toggle('active');
+    }
+  }
+
+  _applyButtonTypeIfApplicable() {
+    const buttonElement = this.shadowRoot.querySelector('button');
+    const inputElement = this.shadowRoot.querySelector('input');
+
+    if (buttonElement) {
+      this._applyButtonType(buttonElement);
+    }
+
+    if (inputElement) {
+      this._applyButtonType(inputElement);
+    }
+  }
+
+  _applyButtonType(btnElement) {
+    if (this.action === 'button') {
+      btnElement.setAttribute('type', 'button');
+    }
+
+    if (this.action === 'reset') {
+      btnElement.setAttribute('type', 'reset');
+    }
+
+    if (this.action === 'submit') {
+      btnElement.setAttribute('type', 'submit');
+    }
+  }
+
 };
 
 const BsButtonsCommonCss = css`
@@ -1083,208 +1075,74 @@ const BsButtonSmallCss = css`
 `;
 
 class BsButton extends BsButtonMixin(LitElement) {
-    
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsButtonsCommonCss,
-            BsButtonPrimaryCss,
-            BsButtonSecondaryCss,
-            BsButtonSuccessCss,
-            BsButtonInfoCss,
-            BsButtonWarningCss,
-            BsButtonDangerCss,
-            BsButtonLightCss,
-            BsButtonDarkCss,
-            BsButtonPrimaryOutlineCss,
-            BsButtonSecondaryOutlineCss,
-            BsButtonSuccessOutlineCss,
-            BsButtonInfoOutlineCss,
-            BsButtonWarningOutlineCss,
-            BsButtonDangerOutlineCss,
-            BsButtonLightOutlineCss,
-            BsButtonDarkOutlineCss,
-            BsButtonLinkCss,
-            BsButtonBlockCss,
-            BsButtonLargeCss,
-            BsButtonSmallCss
-        ];
-    }
-    
-    render() {
-        return html`
+  static get styles() {
+    return [BsContentRebootCss, BsContentTypographyCss, BsButtonsCommonCss, BsButtonPrimaryCss, BsButtonSecondaryCss, BsButtonSuccessCss, BsButtonInfoCss, BsButtonWarningCss, BsButtonDangerCss, BsButtonLightCss, BsButtonDarkCss, BsButtonPrimaryOutlineCss, BsButtonSecondaryOutlineCss, BsButtonSuccessOutlineCss, BsButtonInfoOutlineCss, BsButtonWarningOutlineCss, BsButtonDangerOutlineCss, BsButtonLightOutlineCss, BsButtonDarkOutlineCss, BsButtonLinkCss, BsButtonBlockCss, BsButtonLargeCss, BsButtonSmallCss];
+  }
+
+  render() {
+    return html`
             <button class="btn">
                 <slot></slot>
             </button>
         `;
-    }
+  }
+
 }
-if (!window.customElements.get("bs-button")) 
-    window.customElements.define('bs-button', BsButton);
+if (!window.customElements.get("bs-button")) window.customElements.define('bs-button', BsButton);
 
 class BsLinkButton extends BsButtonMixin(LitElement) {
-        
-    static get properties() {
-        return {
-            href: String,
-            target: String
-        };
-    }
-    
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsButtonsCommonCss,
-            BsButtonPrimaryCss,
-            BsButtonSecondaryCss,
-            BsButtonSuccessCss,
-            BsButtonInfoCss,
-            BsButtonWarningCss,
-            BsButtonDangerCss,
-            BsButtonLightCss,
-            BsButtonDarkCss,
-            BsButtonPrimaryOutlineCss,
-            BsButtonSecondaryOutlineCss,
-            BsButtonSuccessOutlineCss,
-            BsButtonInfoOutlineCss,
-            BsButtonWarningOutlineCss,
-            BsButtonDangerOutlineCss,
-            BsButtonLightOutlineCss,
-            BsButtonDarkOutlineCss,
-            BsButtonLinkCss,
-            BsButtonBlockCss,
-            BsButtonLargeCss,
-            BsButtonSmallCss
-        ];
-    }
-    
-    render() {
-        return html`
+  static get properties() {
+    return {
+      href: String,
+      target: String
+    };
+  }
+
+  static get styles() {
+    return [BsContentRebootCss, BsContentTypographyCss, BsButtonsCommonCss, BsButtonPrimaryCss, BsButtonSecondaryCss, BsButtonSuccessCss, BsButtonInfoCss, BsButtonWarningCss, BsButtonDangerCss, BsButtonLightCss, BsButtonDarkCss, BsButtonPrimaryOutlineCss, BsButtonSecondaryOutlineCss, BsButtonSuccessOutlineCss, BsButtonInfoOutlineCss, BsButtonWarningOutlineCss, BsButtonDangerOutlineCss, BsButtonLightOutlineCss, BsButtonDarkOutlineCss, BsButtonLinkCss, BsButtonBlockCss, BsButtonLargeCss, BsButtonSmallCss];
+  }
+
+  render() {
+    return html`
             <a href="${this.href}" .target="${this.target}" class="btn">
                 <slot></slot>
             </a>
         `;
-    }
-    
-    constructor() {
-        super();
-        this.href = '';
-        this.target = '_self';
-    }
+  }
+
+  constructor() {
+    super();
+    this.href = '';
+    this.target = '_self';
+  }
+
 }
-if (!window.customElements.get("bs-link-button")) 
-    window.customElements.define('bs-link-button', BsLinkButton);
+if (!window.customElements.get("bs-link-button")) window.customElements.define('bs-link-button', BsLinkButton);
 
 class BsInputButton extends BsButtonMixin(LitElement) {
-    
-    static get properties() {
-        return {
-            label: String
-        };
-    }
-    
-    static get styles() {
-        return [
-            BsContentRebootCss,
-            BsContentTypographyCss,
-            BsButtonsCommonCss,
-            BsButtonPrimaryCss,
-            BsButtonSecondaryCss,
-            BsButtonSuccessCss,
-            BsButtonInfoCss,
-            BsButtonWarningCss,
-            BsButtonDangerCss,
-            BsButtonLightCss,
-            BsButtonDarkCss,
-            BsButtonPrimaryOutlineCss,
-            BsButtonSecondaryOutlineCss,
-            BsButtonSuccessOutlineCss,
-            BsButtonInfoOutlineCss,
-            BsButtonWarningOutlineCss,
-            BsButtonDangerOutlineCss,
-            BsButtonLightOutlineCss,
-            BsButtonDarkOutlineCss,
-            BsButtonLinkCss,
-            BsButtonBlockCss,
-            BsButtonLargeCss,
-            BsButtonSmallCss
-        ];
-    }
-    
-    render() {
-        return html`
+  static get properties() {
+    return {
+      label: String
+    };
+  }
+
+  static get styles() {
+    return [BsContentRebootCss, BsContentTypographyCss, BsButtonsCommonCss, BsButtonPrimaryCss, BsButtonSecondaryCss, BsButtonSuccessCss, BsButtonInfoCss, BsButtonWarningCss, BsButtonDangerCss, BsButtonLightCss, BsButtonDarkCss, BsButtonPrimaryOutlineCss, BsButtonSecondaryOutlineCss, BsButtonSuccessOutlineCss, BsButtonInfoOutlineCss, BsButtonWarningOutlineCss, BsButtonDangerOutlineCss, BsButtonLightOutlineCss, BsButtonDarkOutlineCss, BsButtonLinkCss, BsButtonBlockCss, BsButtonLargeCss, BsButtonSmallCss];
+  }
+
+  render() {
+    return html`
             <input class="btn" value="${this.label}" />
         `;
-    }
-    
-    constructor() {
-        super();
-        this.label = '';
-    }
+  }
+
+  constructor() {
+    super();
+    this.label = '';
+  }
+
 }
-if (!window.customElements.get("bs-input-button"))  
-    window.customElements.define('bs-input-button', BsInputButton);
-
-class BsCloseButton extends LitElement {
-    
-    static get styles() {
-        return css`
-            
-            .close {
-                border: 0;
-                float: right;
-                font-size: 1.5rem;
-                font-weight: 700;
-                line-height: 1;
-                color: #000;
-                text-shadow: 0 1px 0 #fff;
-                opacity: 0.5;
-                margin: var(--bs-close-button-margin);
-                padding: var(--bs-close-button-padding, 0);
-                background-color: transparent;
-                -webkit-appearance: none;
-            }
-
-            .close:not(:disabled):not(.disabled):hover, 
-            .close:not(:disabled):not(.disabled):focus {
-                color: #000;
-                text-decoration: none;
-                opacity: 0.75;
-                cursor: pointer;
-            }
-        `;
-    }
-    
-    render() {
-        return html`
-            <button type="button" class="close" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            
-        `;
-    }
-    
-    firstUpdated() {
-        const buttonElement = this.shadowRoot.querySelector('button');
-        buttonElement.addEventListener('click', () => this._handleClick());
-    }
-
-    _handleClick() {
-        
-        const alertCloseEvent = new CustomEvent('close-button-click', {
-            bubbles: true, 
-            composed: true
-        });
-        
-        this.dispatchEvent(alertCloseEvent);
-    }
-}
-if (!window.customElements.get("bs-close-button")) 
-    window.customElements.define('bs-close-button', BsCloseButton);
-
-// TODO: Delete this file if not used elsewhere
+if (!window.customElements.get("bs-input-button")) window.customElements.define('bs-input-button', BsInputButton);
 
 const BsDropdownButtonNavLinkCss = css`
     
@@ -1324,4 +1182,4 @@ const BsDropdownButtonNavLinkCss = css`
     }
 `;
 
-export { BsButton, BsButtonBlockCss, BsButtonDangerCss, BsButtonDangerOutlineCss, BsButtonDarkCss, BsButtonDarkOutlineCss, BsButtonInfoCss, BsButtonInfoOutlineCss, BsButtonLargeCss, BsButtonLightCss, BsButtonLightOutlineCss, BsButtonLinkCss, BsButtonMixin, BsButtonPrimaryCss, BsButtonPrimaryOutlineCss, BsButtonSecondaryCss, BsButtonSecondaryOutlineCss, BsButtonSmallCss, BsButtonSuccessCss, BsButtonSuccessOutlineCss, BsButtonWarningCss, BsButtonWarningOutlineCss, BsButtonsCommonCss, BsCloseButton, BsDropdownButtonNavLinkCss, BsInputButton, BsLinkButton };
+export { BsButton, BsButtonBlockCss, BsButtonDangerCss, BsButtonDangerOutlineCss, BsButtonDarkCss, BsButtonDarkOutlineCss, BsButtonInfoCss, BsButtonInfoOutlineCss, BsButtonLargeCss, BsButtonLightCss, BsButtonLightOutlineCss, BsButtonLinkCss, BsButtonMixin, BsButtonPrimaryCss, BsButtonPrimaryOutlineCss, BsButtonSecondaryCss, BsButtonSecondaryOutlineCss, BsButtonSmallCss, BsButtonSuccessCss, BsButtonSuccessOutlineCss, BsButtonWarningCss, BsButtonWarningOutlineCss, BsButtonsCommonCss, BsDropdownButtonNavLinkCss, BsInputButton, BsLinkButton };

@@ -2,9 +2,9 @@
 import { LitElement } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/button';
-import 'lit-element-bootstrap/layout';
-import 'lit-element-bootstrap/components/card';
+import '@lit-element-bootstrap/button';
+import '@lit-element-bootstrap/layout';
+import '@lit-element-bootstrap/card';
 
 class SizingGridMarkupExample extends BsExampleMixin(LitElement) {
 

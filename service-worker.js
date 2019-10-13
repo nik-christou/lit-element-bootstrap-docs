@@ -37,54 +37,58 @@ self.__precacheManifest = [
   },
   {
     "url": "src/app-docs.js",
-    "revision": "eb353f03e36c0b7a6f58608d612d1e24"
+    "revision": "458af5b1b239f01220145a51c14731fa"
   },
   {
     "url": "src/app-routing.js",
     "revision": "9e1d841e000d11ae14baffef85bb5964"
   },
   {
-    "url": "src/component/callout/bs-callout.js",
-    "revision": "f8518ec252dba930221d47eb9019c520"
+    "url": "src/component/callout/bs-callout.css.js",
+    "revision": "76473f91fc92775a4bacf78c8f2f2117"
   },
   {
-    "url": "src/component/content/bs-docs-content-css.js",
+    "url": "src/component/callout/bs-callout.js",
+    "revision": "bff5bec4a5e9cc43ade1c06f4af3f9a7"
+  },
+  {
+    "url": "src/component/content/bs-docs-content.css.js",
     "revision": "4b4c23ffc15a99bc1153cac8e281b887"
   },
   {
     "url": "src/component/drawer/drawer-layout.js",
-    "revision": "eafb3cb5b5a675f6f2dba912e4f78d4a"
+    "revision": "ef970afc5c438f1a1362818bfd860c1c"
   },
   {
     "url": "src/component/drawer/drawer-navbar.js",
-    "revision": "e83a5a03915555d8cb7aa6ae0c8601f3"
+    "revision": "8309f7d73b9f384b48a089dae0ef3465"
   },
   {
     "url": "src/component/drawer/drawer-sidebar.js",
-    "revision": "6f22159bc957ea320483301698d20e40"
+    "revision": "54d3308c57f2a8fff9072ed32dd35675"
   },
   {
-    "url": "src/component/example/bs-code-syntax-css.js",
+    "url": "src/component/example/bs-code-syntax.css.js",
     "revision": "c18a424f9d615acb8ff34b7353ca416e"
   },
   {
     "url": "src/component/example/bs-example-mixin.js",
-    "revision": "e1824ae1e4cf6745c2d536052e8f6866"
+    "revision": "c3223e32d07007356096bbdc58431aae"
   },
   {
     "url": "src/component/example/bs-example.js",
-    "revision": "0fda330bd8ad53a1deac3bd64646b72e"
+    "revision": "6cd6aa35e7d75f326d28f70505842c96"
   },
   {
     "url": "src/component/example/bs-highlight.js",
-    "revision": "ca45f729c79dd2bb40ef8489c27cf0d8"
+    "revision": "acf937debbc1c4a09d724a8fa5593114"
   },
   {
     "url": "src/component/example/index.js",
     "revision": "58a7035c137b2be11c7910faeca950ce"
   },
   {
-    "url": "src/component/example/prism-default-css.js",
+    "url": "src/component/example/prism-default.css.js",
     "revision": "02e63dae0fdbd8dab88b8365eef0ca82"
   },
   {
@@ -125,7 +129,7 @@ self.__precacheManifest = [
   },
   {
     "url": "src/component/toc/table-of-content-item.js",
-    "revision": "cc786c17a84fa9968e8a13146383667a"
+    "revision": "f29c9569a49698b1b636b7a387121252"
   },
   {
     "url": "src/component/toc/table-of-content-mixin.js",
@@ -133,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "src/component/toc/table-of-content.js",
-    "revision": "2b2d4a899d6c340bfb868bb7db0066f7"
+    "revision": "f416f7bebd52e26ff07312405ef4c9a8"
   },
   {
     "url": "src/img/bootstrap-solid.svg",
@@ -149,179 +153,179 @@ self.__precacheManifest = [
   },
   {
     "url": "src/views/base-view.js",
-    "revision": "4361d2a472cea7fe332c239dae244544"
+    "revision": "3d1efa5ce3098084d2d88a70741a7232"
   },
   {
     "url": "src/views/behaviour/collapse/collapse-view.js",
-    "revision": "ec5ac6f14ed14623578df2ada446d308"
+    "revision": "a04df73eb5cf7790c9575bf6f9d5f1c4"
   },
   {
     "url": "src/views/behaviour/collapse/examples/collapse-accordion-example.js",
-    "revision": "010568b21de044b42eb1a6fdb0870de1"
+    "revision": "3e524b29db4caeb09d7688481bff9071"
   },
   {
     "url": "src/views/behaviour/collapse/examples/collapse-multi-target-example.js",
-    "revision": "ab2d81d1e8a206552f87a0915bc93dcd"
+    "revision": "aaae3b6093b252acc3711d1c555d4e2c"
   },
   {
     "url": "src/views/behaviour/collapse/examples/collapse-single-target-example.js",
-    "revision": "44e8807748b733659482360413c32b20"
+    "revision": "8ea561eacf15d8552d126fef1b42c90e"
   },
   {
     "url": "src/views/components/alerts/alerts-view.js",
-    "revision": "c51658dfeedaf6e89060a313880ddcb1"
+    "revision": "6ee6c6cad4e3bae509a98e709be9b266"
   },
   {
     "url": "src/views/components/alerts/bs-alert/bs-alert-view.js",
-    "revision": "6d76d3e116b8c67d4400ab8911071b9f"
+    "revision": "4ee756629b19cd769d1cf7720efbac37"
   },
   {
     "url": "src/views/components/alerts/examples/additional-content-example.js",
-    "revision": "f76d4950b3d091628b6701f7b4948afd"
+    "revision": "2569c55f97905fdc7d0123a54e531347"
   },
   {
     "url": "src/views/components/alerts/examples/contextual-alerts-example.js",
-    "revision": "01c19f45b798eccc3a70a645401c66d8"
+    "revision": "f26312ab177f3f28913cf76bc89d25b9"
   },
   {
     "url": "src/views/components/alerts/examples/dismissing-alert-example.js",
-    "revision": "4d7cac722c7556be3b1e7e637f1a2a0c"
+    "revision": "32561dc0efd2ee2f9376bbec80cdc658"
   },
   {
     "url": "src/views/components/alerts/examples/link-color-example.js",
-    "revision": "44cd24f3c7471b5ab9ff0b843c7d6e95"
+    "revision": "e6e3ea503f5d2dfa75a58dd41c33c254"
   },
   {
     "url": "src/views/components/badges/badges-view.js",
-    "revision": "2b5dde70056a09e83a6fa2aaba66b387"
+    "revision": "b809067291d200692bd1a45daef4523a"
   },
   {
     "url": "src/views/components/badges/examples/badge-contextual-example.js",
-    "revision": "a30434b8f681751233f0239285b39d7c"
+    "revision": "78fbab2fc592a9a1cf30bf8258ee3503"
   },
   {
     "url": "src/views/components/badges/examples/badge-links-example.js",
-    "revision": "d20c1c578120f3548de9cd381eb082f0"
+    "revision": "7490a01bbaa8bc94fa672ce659529b5b"
   },
   {
     "url": "src/views/components/badges/examples/badge-scales-example.js",
-    "revision": "a60c7ea2173e690f86985409daaaf861"
+    "revision": "dc3ae1994442b6d8bc7def9aa38a1e7f"
   },
   {
     "url": "src/views/components/badges/examples/button-badge-context-example.js",
-    "revision": "1ccf6c1a8ebe272911d6bde5b0f3de66"
+    "revision": "a530fb71eef592daef6951401325330f"
   },
   {
     "url": "src/views/components/badges/examples/button-badge-example.js",
-    "revision": "605507856e252399818b4dcde4495ea2"
+    "revision": "b3368ada427cf1b701a0a09532ba7a72"
   },
   {
     "url": "src/views/components/badges/examples/pill-badges-example.js",
-    "revision": "164ca94a95e984bf12ece5c9b5fb0bb8"
+    "revision": "de1abebcf14b422a163372c2c25f0bce"
   },
   {
     "url": "src/views/components/breadcrumb/breadcrumbs-view.js",
-    "revision": "c2743407ae8f4e49779cb59486594445"
+    "revision": "b4a171d4eabf5b694002cd3b68350103"
   },
   {
     "url": "src/views/components/breadcrumb/examples/breadcrumbs-example.js",
-    "revision": "72009962d8a89cfea181e1fb7f8f43bd"
+    "revision": "5d5714d151d9fa369391d4acb7377f20"
   },
   {
     "url": "src/views/components/breadcrumb/examples/breadcrumbs-separator-example.js",
-    "revision": "20d99260c4f571ec6f6facd032e7fc68"
+    "revision": "867f0892d90928572435867dabad12f8"
   },
   {
     "url": "src/views/components/button-group/buttons-group-view.js",
-    "revision": "5f1118a97026ae61ecc1d8c06bd7361c"
+    "revision": "f8cf43f405ea5060a276f17c7e18779f"
   },
   {
     "url": "src/views/components/button-group/examples/basic-button-group-example.js",
-    "revision": "d11d1baa949c35ecb7f8d18a6de5d553"
+    "revision": "418258aba68d92a231ca9a71c7fe27ef"
   },
   {
     "url": "src/views/components/button-group/examples/button-toolbar-example.js",
-    "revision": "c98bcc847afb02e98e31c2d5235e2e0d"
+    "revision": "d7efafba588d95d21c8ef1ce9ae45433"
   },
   {
     "url": "src/views/components/button-group/examples/button-toolbar-input-groups-example.js",
-    "revision": "c4582dcc82afd60fbfc00a2147b62f22"
+    "revision": "b228888c8e47ccdfc8edc93134e1e3a2"
   },
   {
     "url": "src/views/components/button-group/examples/nesting-button-group-example.js",
-    "revision": "7c349b097e2b8cc4f201d914d5a94444"
+    "revision": "413b7f606da4019585a60ee37497dae5"
   },
   {
     "url": "src/views/components/button-group/examples/sizing-button-group-example.js",
-    "revision": "f1c302bbd624812f29225fc2c5d13f88"
+    "revision": "e5b03c8d0c1f7386dd648a64ecf89838"
   },
   {
     "url": "src/views/components/button-group/examples/vertical-button-group-example.js",
-    "revision": "58c3deec73de963308ebdcfbc9d7ab8b"
+    "revision": "a67ed2e762156af6c6680a525a7a09e6"
   },
   {
     "url": "src/views/components/button-group/examples/vertical-dropdown-group-example.js",
-    "revision": "c8149411c9d6a90e155693d8bfb83df7"
+    "revision": "5bb1fbcc58234a00faadc5be4172170b"
   },
   {
     "url": "src/views/components/button/buttons-view.js",
-    "revision": "e9c374a09dd5230a7f969a77a8d4e389"
+    "revision": "729f77d091e588b26e819b2714b4aa54"
   },
   {
     "url": "src/views/components/button/examples/button-active-state-example.js",
-    "revision": "d4d92b73a86cf6fa6e453a203bb7eb41"
+    "revision": "438aba480d7e9c65252d0f20cf9c71e0"
   },
   {
     "url": "src/views/components/button/examples/button-blocks-example.js",
-    "revision": "ad9e799591fddb7402e93ff3ad007a0c"
+    "revision": "f5b3ab38ef64454396e35103559e52f4"
   },
   {
     "url": "src/views/components/button/examples/button-disabled-state-example.js",
-    "revision": "3cc25d48a2a239a8ec86d8bce71a22fb"
+    "revision": "c123420d70b3a8d93d56a7e5f385e4f2"
   },
   {
     "url": "src/views/components/button/examples/button-link-disabled-state-example.js",
-    "revision": "7eeb7dd3bfac34091ac579af883f5f8a"
+    "revision": "4eaffbdaaca6f70c9c95a3b7137b0c06"
   },
   {
     "url": "src/views/components/button/examples/button-outlines-example.js",
-    "revision": "895947eda70c4fe16a21abaa8ce83d41"
+    "revision": "eb8ee3788dff1accac44e741cd0c6975"
   },
   {
     "url": "src/views/components/button/examples/button-sizes-example.js",
-    "revision": "28f5ba873477ba3278b049b213ab3922"
+    "revision": "4d8d7f6d8f95de319c6455cc29a8fd08"
   },
   {
     "url": "src/views/components/button/examples/button-styles-example.js",
-    "revision": "7e35f82af582a1866a5ff2a920406a1c"
+    "revision": "e523d9522a249bf0d72c203b7ed2753f"
   },
   {
     "url": "src/views/components/button/examples/button-tags-example.js",
-    "revision": "7bd7a3e71b263e5357f4bc731f162a16"
+    "revision": "c984f3ef495928b44dca2981efbfc66f"
   },
   {
     "url": "src/views/components/button/examples/button-toggle-example.js",
-    "revision": "1fbd30d87eaa3cce673d3caa98c67e87"
+    "revision": "56116913096b6d39bae42d71c8e035eb"
   },
   {
     "url": "src/views/components/cards/cards-view.js",
-    "revision": "adf5910983e811ab75af3271bfcadc05"
+    "revision": "eef258e77c630b8b7b383ed5e4a576e1"
   },
   {
     "url": "src/views/components/cards/examples/background-and-color-example.js",
-    "revision": "9c410561bdae5f01d807902620d77969"
+    "revision": "ec46c9cc5b6917107fb1131c86b59c9e"
   },
   {
     "url": "src/views/components/cards/examples/basic-card-example.js",
-    "revision": "260325faa1bce4dff5f8fa031dae65ac"
+    "revision": "398b944eb39a9e5af95067f0a17d47d3"
   },
   {
     "url": "src/views/components/cards/examples/border-and-text-color-example.js",
-    "revision": "84b7757fd2f36897d673b65e88347f1d"
+    "revision": "f6f51b627f9009da5cd46f7d63e3accc"
   },
   {
     "url": "src/views/components/cards/examples/card-body-example.js",
-    "revision": "9fd636b9587bdf4ef4d524a080e28536"
+    "revision": "0cc15fb2a372ffd121742b010891cc26"
   },
   {
     "url": "src/views/components/cards/examples/card-columns-count-example.js",
@@ -329,683 +333,683 @@ self.__precacheManifest = [
   },
   {
     "url": "src/views/components/cards/examples/card-columns-example.js",
-    "revision": "a8a3a12780f1d5ed0e4e11d6ab3bb328"
+    "revision": "286e7232b90ecbacf016321b54aeca99"
   },
   {
     "url": "src/views/components/cards/examples/card-deck-example.js",
-    "revision": "089bd33435efcb0a4765140e7bd17131"
+    "revision": "7d06827c450d948867bec0f5eb7e5d78"
   },
   {
     "url": "src/views/components/cards/examples/card-deck-footer-example.js",
-    "revision": "6d4db481fd018f46ec574f1cca1db610"
+    "revision": "beb7832fb520a4505187cd7e9314d85e"
   },
   {
     "url": "src/views/components/cards/examples/card-group-example.js",
-    "revision": "24c2c40d749588b7e5467fc1c5fcc261"
+    "revision": "4158dc6fb19996b94879c25cd3a036dd"
   },
   {
     "url": "src/views/components/cards/examples/card-group-footer-example.js",
-    "revision": "08146ac92c4f2f245a0f048b5ac61e74"
+    "revision": "60e9224e73f829e056c7f37c3cf6f17a"
   },
   {
     "url": "src/views/components/cards/examples/card-list-group-example.js",
-    "revision": "b03809aad66865156881d63e5397317c"
+    "revision": "efe44227948393d1d983aba0a6cdbec9"
   },
   {
     "url": "src/views/components/cards/examples/card-list-group-featured-example.js",
-    "revision": "c7453d73065a4410a1bc07e840725ecd"
+    "revision": "184fe66d1db93ae72fff8beff5153b82"
   },
   {
     "url": "src/views/components/cards/examples/card-navigation-pills-example.js",
-    "revision": "5caae372d52d61f80a8cc568ecd4c684"
+    "revision": "667b0d6b2ac65739a838263fdabd8204"
   },
   {
     "url": "src/views/components/cards/examples/card-navigation-tabs-example.js",
-    "revision": "5def27313ea77d66d2c08cce1c523bb0"
+    "revision": "30442d6bee081e3be6c0e27fb4ce3ad4"
   },
   {
     "url": "src/views/components/cards/examples/header-and-footer-example.js",
-    "revision": "2e58f50c39ad139d74488fa77a676fa2"
+    "revision": "91b507a7885c5020c701bf1f4571a867"
   },
   {
     "url": "src/views/components/cards/examples/header-and-footer-featured-example.js",
-    "revision": "898392b9c6aca919949c515534f1f785"
+    "revision": "3d0c2c033081849863e351b28c17212e"
   },
   {
     "url": "src/views/components/cards/examples/header-and-footer-quote-example.js",
-    "revision": "d5099d0dcb02bddbdb92112fff82134e"
+    "revision": "901dcdddab12d34a1d041dc95576acff"
   },
   {
     "url": "src/views/components/cards/examples/image-overlay-example.js",
-    "revision": "ee838a799e39b293b594110638358158"
+    "revision": "bbd4a279b2a0d4eccaffe9a949713e35"
   },
   {
     "url": "src/views/components/cards/examples/image-top-card-example.js",
-    "revision": "973f55285d6bb80eda5e63de2c816147"
+    "revision": "af3163aa50615fa3a0e245cfa0afe71c"
   },
   {
     "url": "src/views/components/cards/examples/images-caps-example.js",
-    "revision": "5a67a67f5a470dd0eea23aec056d1d8f"
+    "revision": "f49e745c73379df33c3697f3e30394c7"
   },
   {
     "url": "src/views/components/cards/examples/kitchen-sink-example.js",
-    "revision": "690265078c434021375859d912b11c56"
+    "revision": "47f97e7b75df4fec2c22e0f2c6328548"
   },
   {
     "url": "src/views/components/cards/examples/mixing-utilities-example.js",
-    "revision": "3d977160b61a59eabedc37b9f1bf587b"
+    "revision": "3a76ca952a7f25b52196ed155f644f8f"
   },
   {
     "url": "src/views/components/cards/examples/sizing-custom-css-example.js",
-    "revision": "72bf29ca79a3ecad91e19dd7cac1d0ef"
+    "revision": "02ed21a46524830007c188d000fef551"
   },
   {
     "url": "src/views/components/cards/examples/sizing-grid-markup-example.js",
-    "revision": "da2e42af2c6cc3feabd4c7f631dc2792"
+    "revision": "a1ae3292394cc7cfd2bc05ed3ce205a4"
   },
   {
     "url": "src/views/components/cards/examples/sizing-utilities-example.js",
-    "revision": "a5a4eb4f7b20d874508e259ec038e896"
+    "revision": "6f0b6280695020ac26e39e7dd4fc53d2"
   },
   {
     "url": "src/views/components/cards/examples/text-alignment-example.js",
-    "revision": "1888d7a7508a89915b259a74eef280c6"
+    "revision": "c714caa8f6b260c0ed47c5f16329fbf2"
   },
   {
     "url": "src/views/components/cards/examples/title-text-links-example.js",
-    "revision": "89cc47eacc33c8add5fed149711a4fde"
+    "revision": "39188d3396a0e6e7306386aaa30484f0"
   },
   {
     "url": "src/views/components/carousel/carousel-view.js",
-    "revision": "19662dea854f78a0c97d404223e0d4eb"
+    "revision": "fe6dad201c7ce23bd70d2d3c70556e2f"
   },
   {
     "url": "src/views/components/carousel/examples/slide-with-crossfade-example.js",
-    "revision": "6f6771b44186bcc839925fea9fd4f924"
+    "revision": "967e4499623687bcb8c1348c1579d840"
   },
   {
     "url": "src/views/components/carousel/examples/slides-only-example.js",
-    "revision": "d28f1559a8d57f4fdeeff7604ed15e55"
+    "revision": "b4503f367821070b872e48c6aa613166"
   },
   {
     "url": "src/views/components/carousel/examples/slides-with-captions-example.js",
-    "revision": "2a37c27c90e0466d4d22848ccc556d0c"
+    "revision": "eea2ec85db058c6704ab0581618cd36d"
   },
   {
     "url": "src/views/components/carousel/examples/slides-with-controls-example.js",
-    "revision": "01f2651b6ad3264fa1634d5132ee67d5"
+    "revision": "734cd315bf1e3e20cf596fb8dffd3abd"
   },
   {
     "url": "src/views/components/carousel/examples/slides-with-indicators-example.js",
-    "revision": "d61fc1cc2f68a808fa662f96ab706aac"
+    "revision": "52e9c35b575763a815f4e8947d4eb05e"
   },
   {
     "url": "src/views/components/dropdown/dropdowns-view.js",
-    "revision": "a619c5fdf4da85c3cbfc7df8bfafc6cb"
+    "revision": "bbb2c75dbc421399e136414d7bd72609"
   },
   {
     "url": "src/views/components/dropdown/examples/button-variant-dropdown-example.js",
-    "revision": "057042852916dbead4cf868ad46800cd"
+    "revision": "8d5da9d1a2b15f9c044425f8b28acb31"
   },
   {
     "url": "src/views/components/dropdown/examples/dividers-example.js",
-    "revision": "32ee7faf6abcaeb238c9d5861e461215"
+    "revision": "2a21269b830d8865574e1091ba9593d1"
   },
   {
     "url": "src/views/components/dropdown/examples/dropdown-active-item-example.js",
-    "revision": "af2bc3f152ebbb926710e931ac82dfaa"
+    "revision": "b0256f422dfc02ff73cf5cd689b74e1e"
   },
   {
     "url": "src/views/components/dropdown/examples/dropdown-disabled-item-example.js",
-    "revision": "e3b03febc5891e673736388e07bf3c1e"
+    "revision": "45fb867ccec77f551236945c11945093"
   },
   {
     "url": "src/views/components/dropdown/examples/dropdown-header-example.js",
-    "revision": "472cd1011bb798f1c3c036ed648b01be"
+    "revision": "bad6d6f24d95c52a23056759c3b71ea8"
   },
   {
     "url": "src/views/components/dropdown/examples/dropdown-menu-text-example.js",
-    "revision": "4d0b9ca62587f8e93ea98cb119300acf"
+    "revision": "875358f441a56581c33ef05f43cbfbc0"
   },
   {
     "url": "src/views/components/dropdown/examples/dropdown-text-item-example.js",
-    "revision": "caae53c321e04f1c1358b496f865b1eb"
+    "revision": "e9ee6aaae3f117c4d4bf826a53d5ee91"
   },
   {
     "url": "src/views/components/dropdown/examples/dropleft-example.js",
-    "revision": "ef2e8f37219215855d84c5b929a9008f"
+    "revision": "362319c228d173fbdfa38b8ca7e69853"
   },
   {
     "url": "src/views/components/dropdown/examples/dropright-example.js",
-    "revision": "2215aed82d381e73d87d81cc65a576ee"
+    "revision": "0d55450d8501e5a414bf20c57569c570"
   },
   {
     "url": "src/views/components/dropdown/examples/dropup-example.js",
-    "revision": "23fd36e9c30ec82b15543cf9daeec145"
+    "revision": "3923a5c7ced0111199f2b0f5a0fcf5f3"
   },
   {
     "url": "src/views/components/dropdown/examples/form-in-dropdown-menu-example.js",
-    "revision": "22825a63632255144a65a0fbe6dee8e9"
+    "revision": "5fd9b2df2456e0ae740ef3c7a94935b5"
   },
   {
     "url": "src/views/components/dropdown/examples/menu-items-example.js",
-    "revision": "07bb962f6f61fd4d85fa48bf142dd3c9"
+    "revision": "56cd3d7a8a9187d4b015e40a09034866"
   },
   {
     "url": "src/views/components/dropdown/examples/offset-menu-example.js",
-    "revision": "1c8ba6f29a7d7c6263619b1ba52baea5"
+    "revision": "3b5d333c0e64b4c43bdfaff4b4517cfe"
   },
   {
     "url": "src/views/components/dropdown/examples/right-aligned-menu-example.js",
-    "revision": "1a6b0c4769e1be23386639fc56c3ed53"
+    "revision": "d7a8352c4611a40a6e6835672947be79"
   },
   {
     "url": "src/views/components/dropdown/examples/single-btn-dropdown-example.js",
-    "revision": "a6f9c7de0676a3eebd2736b1dce69d83"
+    "revision": "1fe89bc5605ea525b1904dc964258829"
   },
   {
     "url": "src/views/components/dropdown/examples/single-link-dropdown-example.js",
-    "revision": "1a69872fe2c45b43c03d71b19079536b"
+    "revision": "0759c7985e24633d5b72801e3e82ca8e"
   },
   {
     "url": "src/views/components/dropdown/examples/sizing-dropdown-example.js",
-    "revision": "d21d46e74b3014c5f21fc0158024fbfb"
+    "revision": "d33d9905cb759b4a71af2df33d227f56"
   },
   {
     "url": "src/views/components/dropdown/examples/split-button-dropdown-example.js",
-    "revision": "fa77b60c0cd9cd393fd25d4f4f543df4"
+    "revision": "74cb90ce97e7dc57160c6aad582b3718"
   },
   {
     "url": "src/views/components/form/examples/check-inline-example.js",
-    "revision": "534c74e412ddd29e4bd6a11ce420c94f"
+    "revision": "fc705d78a7d55d0983e186b39b7f3ef4"
   },
   {
     "url": "src/views/components/form/examples/check-radio-static-example.js",
-    "revision": "1f3cb4c53e9bae8253d26f1820af04eb"
+    "revision": "e3df463c4b0d58e55f52517b53621efe"
   },
   {
     "url": "src/views/components/form/examples/check-stacked-example.js",
-    "revision": "0482bd01cc32ade0c9cbd10733f4ec1b"
+    "revision": "5842f636feecc77ffbb54c01c09bd147"
   },
   {
     "url": "src/views/components/form/examples/column-auto-sizing-example.js",
-    "revision": "3779e469d2f7221c559524e6fa9d4a51"
+    "revision": "6f9b3ef51d32e55f1ef1449484896b6e"
   },
   {
     "url": "src/views/components/form/examples/column-sizing-example.js",
-    "revision": "4691d6c99077d6b94adf497d779f18c2"
+    "revision": "c638a8c5007f80d12b79ad24e15bc5af"
   },
   {
     "url": "src/views/components/form/examples/disabled-forms-example.js",
-    "revision": "12ec05bcef2a7279394192bb1d678f68"
+    "revision": "ba9ab99b0a83e460c63ed72e8d09d9d6"
   },
   {
     "url": "src/views/components/form/examples/file-input-example.js",
-    "revision": "5e92a7e92884a28e6f9d4f4ca814d2a9"
+    "revision": "04277d181b06ec8919eb1fedc7c59b31"
   },
   {
     "url": "src/views/components/form/examples/form-controls-example.js",
-    "revision": "57be813882a1def6bb12180e4b9400c3"
+    "revision": "310e0591afbe8e34c6859bc6512c4b7d"
   },
   {
     "url": "src/views/components/form/examples/form-grid-complex-example.js",
-    "revision": "bfc5df1936f1958d60a1fc6864675860"
+    "revision": "c60ea1b5226732ce83dccffe0bd33a99"
   },
   {
     "url": "src/views/components/form/examples/form-grid-example.js",
-    "revision": "9245f9b8a79c9f128d10eb77b606c2d5"
+    "revision": "248bbc2097c64e79ce0934e2ec0e21dc"
   },
   {
     "url": "src/views/components/form/examples/form-groups-example.js",
-    "revision": "bfffda82bffacf5dc95dc73bc98cb8d6"
+    "revision": "117eef97f583a5a541837b6e6e846b18"
   },
   {
     "url": "src/views/components/form/examples/form-row-example.js",
-    "revision": "79d68cd96e623ab29b0fc311e9ec9920"
+    "revision": "5d1dbcd2277c8fb48293c33dd38606f0"
   },
   {
     "url": "src/views/components/form/examples/help-text-example.js",
-    "revision": "280a3772c380bfd3a3da16029ae8493c"
+    "revision": "105e9e35701c1e026815d24061e8bc99"
   },
   {
     "url": "src/views/components/form/examples/help-text-inline-example.js",
-    "revision": "0302f720dfb397bca2688cb6163cf2d3"
+    "revision": "cc1dc2ca437edf4e9599df309b04504d"
   },
   {
     "url": "src/views/components/form/examples/horizontal-form-example.js",
-    "revision": "3b25eccfe48647693a4a66e63cee4d93"
+    "revision": "b8e054fdf2fedf1a4dfd965ff541b2dd"
   },
   {
     "url": "src/views/components/form/examples/horizontal-form-sizing-example.js",
-    "revision": "bf060acd7cbe5b423fc9749c061ccdd1"
+    "revision": "8061be8845cf52f9c80419a6560ae4fd"
   },
   {
     "url": "src/views/components/form/examples/inline-form-example.js",
-    "revision": "843bcd276b27e37ba36e01367b7dd281"
+    "revision": "5aee2e2da6e580506c8616b0bb74418f"
   },
   {
     "url": "src/views/components/form/examples/overview-example.js",
-    "revision": "c3ac965eac3a2b6716c720a3f282244e"
+    "revision": "a08eb92a3288fd39d19b6c8dc61ac64f"
   },
   {
     "url": "src/views/components/form/examples/radio-inline-example.js",
-    "revision": "fc8bb71d35267c9e0567df2299aac384"
+    "revision": "fac61a4ce6cdab67d6891504ce222932"
   },
   {
     "url": "src/views/components/form/examples/radio-stacked-example.js",
-    "revision": "5724f5cebf472c913e00eddc253371fb"
+    "revision": "5c5d441fece0113860b9d49dbb0c74cd"
   },
   {
     "url": "src/views/components/form/examples/range-input-example.js",
-    "revision": "c25b40bcc7e8196ada7a6b885df4ef74"
+    "revision": "e0351cd7252cd74ce48131feb0306cb6"
   },
   {
     "url": "src/views/components/form/examples/readonly-form-control-example.js",
-    "revision": "28864efa72e110af81f8fe2c5afe2f9a"
+    "revision": "b47b05293160be7d93623d5b02de3a3d"
   },
   {
     "url": "src/views/components/form/examples/readonly-inline-example.js",
-    "revision": "7b67a203214467bd5eb9dbb03e6bfa63"
+    "revision": "eb67f74dc3c61358adc87aae7dcf8041"
   },
   {
     "url": "src/views/components/form/examples/readonly-plaintext-example.js",
-    "revision": "efb35d61ca94b7bb63ddb46e5914d20f"
+    "revision": "3316ff498bf2befa9f4e2ce7c4ca764b"
   },
   {
     "url": "src/views/components/form/examples/sizing-form-control-example.js",
-    "revision": "c4e52e00ec624be31003d72ea24f042d"
+    "revision": "1d2b018994bd3ffc2a7e458a0e936480"
   },
   {
     "url": "src/views/components/form/examples/sizing-select-control-example.js",
-    "revision": "927b7fe681ebe3ac65e6e60d697c1538"
+    "revision": "7d38200ecf27f93b371987813425e7b4"
   },
   {
     "url": "src/views/components/form/forms-view.js",
-    "revision": "620cb2e9189b395bd0cef44b77fd197f"
+    "revision": "a81a5a8f833cb538e66c492869ff2258"
   },
   {
     "url": "src/views/components/input-group/examples/input-group-basic-example.js",
-    "revision": "04fc077f8b31209fef56e35a3415af41"
+    "revision": "83448711a0bc4167e299fd23958cbd4e"
   },
   {
     "url": "src/views/components/input-group/examples/input-group-button-addons-example.js",
-    "revision": "f6fb848ba8294d79e923253fe8fc37ed"
+    "revision": "85d9101158ae8ed19a4e74cf19224cdc"
   },
   {
     "url": "src/views/components/input-group/examples/input-group-checkbox-radio-example.js",
-    "revision": "201781f659c2b6a2d905edf2c5e01895"
+    "revision": "b442b3bde6bc2d234680484308f6c3cf"
   },
   {
     "url": "src/views/components/input-group/examples/input-group-dropdowns-example.js",
-    "revision": "0d700e0cd580ad9743e1812f1a460b76"
+    "revision": "76dcf28f365ce42345b0807edc888d4d"
   },
   {
     "url": "src/views/components/input-group/examples/input-group-multiple-addons-example.js",
-    "revision": "90878d85148da5362c4f862b535e6554"
+    "revision": "33cf7b19b8f552b3e8524c8840b9954c"
   },
   {
     "url": "src/views/components/input-group/examples/input-group-multiple-buttons-example.js",
-    "revision": "36b22fa28f3dc60d6475400d8443cc2f"
+    "revision": "3a8981906148296126c74fc1026f644e"
   },
   {
     "url": "src/views/components/input-group/examples/input-group-multiple-inputs-example.js",
-    "revision": "6af104b65fbfa373da9075d8416a9085"
+    "revision": "e127c74d3e5a4f37899bc6dd33303c5d"
   },
   {
     "url": "src/views/components/input-group/examples/input-group-segmented-buttons-example.js",
-    "revision": "99e4124449c9b02d4771d5df13bbec53"
+    "revision": "41f4f876c544ba0328680518f1582012"
   },
   {
     "url": "src/views/components/input-group/examples/input-group-sizing-example.js",
-    "revision": "c72f0d552b51f7baa820f950f16f233a"
+    "revision": "42fb1ecf20fb46cb998f0e2b6d2d8084"
   },
   {
     "url": "src/views/components/input-group/input-group-view.js",
-    "revision": "7bcf60fe3fa137556a501ef72f7c84c3"
+    "revision": "0167594a3b9c5658933e6a5c2de2d555"
   },
   {
     "url": "src/views/components/jumbotron/examples/jumbotron-example.js",
-    "revision": "8795d9cd2bc2f15c6586ba246f63c08b"
+    "revision": "124611ec08f63f561790022dff6ee019"
   },
   {
     "url": "src/views/components/jumbotron/examples/jumbotron-fluid-example.js",
-    "revision": "8eff8d4c50181536f1c46c1dd9f77df9"
+    "revision": "e9b7962aa227cc9d9f12590eb73d8be1"
   },
   {
     "url": "src/views/components/jumbotron/jumbotron-view.js",
-    "revision": "e9155af5f29b9f267a890c9d0d53f7f5"
+    "revision": "c03b1af7f48485a6d3d4e109b991560d"
   },
   {
     "url": "src/views/components/list-group/examples/active-list-group-items-example.js",
-    "revision": "a546d306529a7b96a6a0e93993aaf8c4"
+    "revision": "ccf5ce97d947d3427fc2a0a62343acac"
   },
   {
     "url": "src/views/components/list-group/examples/badges-list-group-example.js",
-    "revision": "dda4a6aa08073c41383123d0a2763a27"
+    "revision": "af0d0c237fb1be037d255999008100a9"
   },
   {
     "url": "src/views/components/list-group/examples/basic-list-group-example.js",
-    "revision": "e95346c016ef4e245fee7344303fc58b"
+    "revision": "d221672c8f5d8de0ea26ebfd91f9a4c0"
   },
   {
     "url": "src/views/components/list-group/examples/buttons-list-group-example.js",
-    "revision": "dfa9fdd52c7941b882aa4b35f302befc"
+    "revision": "b1b671ece79b0dca7f6112f68add1c6c"
   },
   {
     "url": "src/views/components/list-group/examples/contextual-links-list-group-example.js",
-    "revision": "0c22c932980c1228a6459f98a2b009dd"
+    "revision": "8b08d6829d144550370eeb1e98908702"
   },
   {
     "url": "src/views/components/list-group/examples/contextual-list-group-example.js",
-    "revision": "e613c2ee44d9ac1a4631248be4fb5fda"
+    "revision": "108826f72f13bb529fc5c61e8ddfb806"
   },
   {
     "url": "src/views/components/list-group/examples/custom-content-list-group-example.js",
-    "revision": "f176ec2b19db43277457e6c886af21a6"
+    "revision": "1ad453bf83991c425f40d6fd505f3ca0"
   },
   {
     "url": "src/views/components/list-group/examples/disabled-list-group-items-example.js",
-    "revision": "b01d7a63dfc51d3ede9122d9e09b902b"
+    "revision": "6a872a1b99678c16766ebf8666b3ffed"
   },
   {
     "url": "src/views/components/list-group/examples/flush-list-group-example.js",
-    "revision": "1ff85fcd374c95402e64afa4114f9567"
+    "revision": "26576e30cb93d6b472bf9d4eadecb1b2"
   },
   {
     "url": "src/views/components/list-group/examples/links-list-group-example.js",
-    "revision": "87d76b8818dcfa4afe301c55d41f8e07"
+    "revision": "6be20d6aef370f653494d5bbd77cda5b"
   },
   {
     "url": "src/views/components/list-group/list-groups-view.js",
-    "revision": "1ce2abccaf2e5c40555f8c07ed20a294"
+    "revision": "3ab99000bd920fec20e4502106f0862a"
   },
   {
     "url": "src/views/components/media-object/examples/bottom-alignment-media-example.js",
-    "revision": "19e7d4abc719a9cd75a94eb4687f1924"
+    "revision": "632b6479f3e19587e8f1442de71f6a45"
   },
   {
     "url": "src/views/components/media-object/examples/center-alignment-media-example.js",
-    "revision": "48ae5eae7177dbe7060cb403a16b1570"
+    "revision": "33307147b6094c8fcf375878d404b76e"
   },
   {
     "url": "src/views/components/media-object/examples/media-list-example.js",
-    "revision": "2c9a66319394a78fd25cd962844505e5"
+    "revision": "14e1de3b2131da7da51081f39488e6e4"
   },
   {
     "url": "src/views/components/media-object/examples/nested-media-example.js",
-    "revision": "019ec5f9e2af9e7c5e90c5be59fc9b90"
+    "revision": "53c89dc6b11f868ad24bd284a2152d04"
   },
   {
     "url": "src/views/components/media-object/examples/order-placement-media-example.js",
-    "revision": "aff790afe36862a9e81a28190b9b2359"
+    "revision": "74e598413563aa5aded7acd938ac1414"
   },
   {
     "url": "src/views/components/media-object/examples/single-media-example.js",
-    "revision": "1ab5761fb59ab5b9f4a2d128d535541d"
+    "revision": "267094782bed1f494b6328347af430b1"
   },
   {
     "url": "src/views/components/media-object/examples/top-alignment-media-example.js",
-    "revision": "8e99872b83710fc7af84e2ce80df9be7"
+    "revision": "a308eed44b48ac2d0e15c6d7a770afb8"
   },
   {
     "url": "src/views/components/media-object/media-object-view.js",
-    "revision": "8f221be65e6117d1d092309a5a3d030a"
+    "revision": "c9f244b913b35074674c50f6670cf608"
   },
   {
     "url": "src/views/components/modal/examples/modal-centered-example.js",
-    "revision": "1d47c276a14575b6f4e40bdd49941929"
+    "revision": "d3b3b66a0572ed9faafccc53fbbe3a55"
   },
   {
     "url": "src/views/components/modal/examples/modal-grid-example.js",
-    "revision": "f06fdd22b3cfc12b813c5dd89e2bdf21"
+    "revision": "d3036ec5dc03356d2b9c80ee7be4f1a8"
   },
   {
     "url": "src/views/components/modal/examples/modal-long-content-example.js",
-    "revision": "c405a170a6c67617b115b6f5c142c4b1"
+    "revision": "a88c6e1e700da8e5519e3494aa01b916"
   },
   {
     "url": "src/views/components/modal/examples/modal-no-animation-example.js",
-    "revision": "48cd1e5fe40bb4efb28102bb4195275f"
+    "revision": "58246f5edcf366f4e73e26ab9bf01b7c"
   },
   {
     "url": "src/views/components/modal/examples/modal-sizes-example.js",
-    "revision": "928260f157aeee55a40facab20ea9e71"
+    "revision": "ef35cf2aa7aac08be59f1889ad743cd4"
   },
   {
     "url": "src/views/components/modal/examples/modal-varying-content-example.js",
-    "revision": "abbc9e3942645f2430720f71104dd12e"
+    "revision": "7a67d3013f9fcb4fc87ed5dee3c4695d"
   },
   {
     "url": "src/views/components/modal/examples/static-modal-example.js",
-    "revision": "adbe45f15de9e63e771eb6a12b39e269"
+    "revision": "94b92399793427150185ffb55c232ed2"
   },
   {
     "url": "src/views/components/modal/examples/working-modal-demo-example.js",
-    "revision": "176a0417105f03717536fa8d606bed95"
+    "revision": "b1d1789e605c9d73c5933267aa7854ba"
   },
   {
     "url": "src/views/components/modal/modal-view.js",
-    "revision": "cd17704285f3f941a887a732faff9b04"
+    "revision": "e0646fa3996709f07e09249b285a62b5"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-all-components-example.js",
-    "revision": "3053979de5391a1dfbe9b56da0630c94"
+    "revision": "692d3d2d845117bd3318ac0d26346fa3"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-brand-example.js",
-    "revision": "a3dcfec903c962b668f910abb9024111"
+    "revision": "8691348129fe35c198c07ddf7bbbf098"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-brand-images-example.js",
-    "revision": "893cd3f92afdaa8920d39f7b2f12366a"
+    "revision": "9eb6f7a342a304c856d1860bdcd5883c"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-color-scheme-example.js",
-    "revision": "064bf964b6b2051527d3e8e79fafcf24"
+    "revision": "75876f2f5a65dcf0eebead713be78975"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-default-placement-example.js",
-    "revision": "b4ec9032a56929f1b6826cee3d3fb625"
+    "revision": "5c2bf949f13b0169c50cbbf28e69b0c8"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-external-content-example.js",
-    "revision": "85af4d2339349b01628f85f1613fdaf1"
+    "revision": "2f3e278e8b2a27a870afec227e4c695d"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-fixed-bottom-example.js",
-    "revision": "004fb47c4fabcbab6dcd6ecb6581a50c"
+    "revision": "7251dec09621f736a94b8bfb7a1b9627"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-fixed-top-example.js",
-    "revision": "749c81dce77fdf38845ec692f779e00b"
+    "revision": "df942651028fccd8bc358efca321f842"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-form-brand-example.js",
-    "revision": "c71477f307be4bf4fbd7ab5ba5858562"
+    "revision": "b1941f8442af8af5246bb501035ad6d7"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-form-buttons-example.js",
-    "revision": "1205bf88b23b23a9265f6af17e0573ce"
+    "revision": "d9fcdd7253065fde0f8b93cc9bba59ee"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-form-example.js",
-    "revision": "c05191da94a72ca74910fe1bb6af0997"
+    "revision": "43bd89ce0cf26ff34a2cbf687d4cc19b"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-form-input-group-example.js",
-    "revision": "86b9764796e443258ef346488f057312"
+    "revision": "ab7c7324d655fab7bc1acaf799e9d9fb"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-hidden-brand-example.js",
-    "revision": "a53d53a7828f217a1285731efb0055ca"
+    "revision": "ddc49279faca0a970503ab8627c50c43"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-inner-container-example.js",
-    "revision": "fe2305232d5704af7a71f09d6f115b0c"
+    "revision": "ea4a23cd1b3d0c4c44069a0680d6d453"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-left-toggler-example.js",
-    "revision": "9d9f379f65ebf1a4f49e40ba82af577e"
+    "revision": "a9f747ff0f72cd38392dbed168330361"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-nav-dropdown-example.js",
-    "revision": "27e88cbe51317c6eb8b7e5c5fe550499"
+    "revision": "17153f1b7c6c9e180f0b7abf92c600f5"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-nav-example.js",
-    "revision": "5622b6a5d20afcf25c827e1865522ce9"
+    "revision": "ef19f724164dd3d9c82be6e2b9b2c445"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-outer-container-example.js",
-    "revision": "af6f900c1a2e99ac2f6b8e041bb1e708"
+    "revision": "227f0d6f9e2d3fa23c802e141cacd6fd"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-right-toggler-example.js",
-    "revision": "72fc1e1f60484f095f31a8101b18be60"
+    "revision": "1e9ab429f72860548936261b102bb047"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-sticky-top-example.js",
-    "revision": "5842b55c584ed70c18afd1f8e8e073cc"
+    "revision": "c1f0770d1576e8df6fea844bd918f177"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-text-inline-example.js",
-    "revision": "3d51dba8625369e5515bcd616796bfd7"
+    "revision": "868ede46346e1a3297919b37ff302df0"
   },
   {
     "url": "src/views/components/navbar/examples/navbar-text-mix-elements-example.js",
-    "revision": "6bcf98334d8041a4bcfe0c6649c78532"
+    "revision": "409ea544844306e7a6e4c446271c84a8"
   },
   {
     "url": "src/views/components/navbar/navbar-view.js",
-    "revision": "80afac008c234d28fd9947de8bac87a9"
+    "revision": "13c849e56a70707ac78056e27d3c38cb"
   },
   {
     "url": "src/views/components/navs/examples/base-nav-example.js",
-    "revision": "87ca96a5b75a451819227db42ccae94b"
+    "revision": "9d45c60dada57c842ea0764f2925bdb9"
   },
   {
     "url": "src/views/components/navs/examples/fill-pills-nav-example.js",
-    "revision": "0189bc8b4b51fc8434ef08c499771286"
+    "revision": "e0fc3e72942c857f33b3e5a355abd143"
   },
   {
     "url": "src/views/components/navs/examples/flex-utilities-nav-example.js",
-    "revision": "358f9a66a2ec611a064679bab6089e19"
+    "revision": "4309bd5395a18f999ea8cc2993141d2f"
   },
   {
     "url": "src/views/components/navs/examples/horizontal-center-nav-example.js",
-    "revision": "c347a2f585a9c82522978eec5c45aa78"
+    "revision": "89129c7dc5602d98a7b468d3c9cc6bdc"
   },
   {
     "url": "src/views/components/navs/examples/horizontal-right-nav-example.js",
-    "revision": "27fb0a90046b7624f9c118fbd09cdf75"
+    "revision": "7fe0e59ec9b8675a0f266294e85ff43a"
   },
   {
     "url": "src/views/components/navs/examples/justified-pills-nav-example.js",
-    "revision": "69fd51e7ec56522294d28c68fe822b2d"
+    "revision": "88570a70363bbae6addce772f63dd51e"
   },
   {
     "url": "src/views/components/navs/examples/pills-nav-example.js",
-    "revision": "a8770a8da621bf4b9d4cb4b4e94b3aa2"
+    "revision": "ff045881787984869662f3afa6bd0b00"
   },
   {
     "url": "src/views/components/navs/examples/pills-with-dropdown-example.js",
-    "revision": "f7588630ca0d9d6679ed640c34cf132a"
+    "revision": "e93dbd5216a345e3406a197ac97578bc"
   },
   {
     "url": "src/views/components/navs/examples/tabs-nav-example.js",
-    "revision": "6c0a9e2c6cf0a2ed50998aa9f22e2518"
+    "revision": "69303b2f21f9fef10342422323467d1e"
   },
   {
     "url": "src/views/components/navs/examples/tabs-with-dropdown-example.js",
-    "revision": "be7e2ce250ff8304a38c92543efa8d18"
+    "revision": "68b88ef6721cb03c5921ddd2b1510be8"
   },
   {
     "url": "src/views/components/navs/examples/vertical-nav-example.js",
-    "revision": "b142161def3d6f4b96c227ad923363ff"
+    "revision": "6716a6142c965f2d2d4053511313b257"
   },
   {
     "url": "src/views/components/navs/navs-view.js",
-    "revision": "db1aee1cfe1523cd2097a966c14e73b6"
+    "revision": "b7c110416d90a956d8d24b1a26fb53b9"
   },
   {
     "url": "src/views/components/pagination/examples/pagination-center-alignment-example.js",
-    "revision": "a78ae4e4748fa9bfcefbe2496cd7a7fd"
+    "revision": "dd1b2c7da93d53635b28ad516e5c8de3"
   },
   {
     "url": "src/views/components/pagination/examples/pagination-icons-example.js",
-    "revision": "a90619a2f111c8c73a32a09e2c6fa673"
+    "revision": "ff318dfc212a90470775b8019915e0f6"
   },
   {
     "url": "src/views/components/pagination/examples/pagination-large-size-example.js",
-    "revision": "1d156c5c5a54fd65524cb1d499e90366"
+    "revision": "a9a3384425325b6ca60e515cebf7f938"
   },
   {
     "url": "src/views/components/pagination/examples/pagination-overview-example.js",
-    "revision": "4cd0d788e031ec0e9bfb413b3ab2d6f1"
+    "revision": "cd2a14b590e367def8c0c5da7adf984a"
   },
   {
     "url": "src/views/components/pagination/examples/pagination-right-alignment-example.js",
-    "revision": "ce66c022c57e4c1982535e2e2655f295"
+    "revision": "fe66e211bd2898b056af40a5db43292e"
   },
   {
     "url": "src/views/components/pagination/examples/pagination-small-size-example.js",
-    "revision": "825b8a75ad5bc55fad0462290e5417a5"
+    "revision": "d612d656a4e0b0d83de2dc933465f2ba"
   },
   {
     "url": "src/views/components/pagination/examples/pagination-states-example.js",
-    "revision": "76554ea6c62e98a0497c1ae427e6c4e4"
+    "revision": "2272c5d376ebbde59187288196bf1dfa"
   },
   {
     "url": "src/views/components/pagination/pagination-view.js",
-    "revision": "da0d0d748e41695bca5833824f67f867"
+    "revision": "5f32fae43f84712247f73302ed23c6f9"
   },
   {
     "url": "src/views/components/progress/examples/progress-animated-stripes-example.js",
-    "revision": "2fc9ff04f4e94e96385b479f48867f92"
+    "revision": "e3c967cc285049b59f7b8895e28a1925"
   },
   {
     "url": "src/views/components/progress/examples/progress-backgrounds-example.js",
-    "revision": "e607337ae9f0eb59f59062db46e7688c"
+    "revision": "99e2b16eddc673d20f8b8ad2e421e161"
   },
   {
     "url": "src/views/components/progress/examples/progress-height-example.js",
-    "revision": "d8e06cc78b15a32a8391dcab43da6ba5"
+    "revision": "0b2cbc823633219a327e9ee3b6f61848"
   },
   {
     "url": "src/views/components/progress/examples/progress-label-example.js",
-    "revision": "1abe252d6e21d2ed0a5d46e825a01b5c"
+    "revision": "9406b8fc7d960334df67cf1779536252"
   },
   {
     "url": "src/views/components/progress/examples/progress-multiple-bars-example.js",
-    "revision": "03b42b32d1a41af597f2a31885a90b2c"
+    "revision": "ee1eba5dc10801340a478aa169337718"
   },
   {
     "url": "src/views/components/progress/examples/progress-striped-example.js",
-    "revision": "2dbfedb0b843df95e8d3f7d16af0ecd2"
+    "revision": "6414efc582fa140b3fe8b8e1eed8fbb9"
   },
   {
     "url": "src/views/components/progress/examples/progress-width-example.js",
-    "revision": "ea0f7d839304ee84d7a124f3cd5b68f8"
+    "revision": "15fd7f80db619865c5df03c641333574"
   },
   {
     "url": "src/views/components/progress/progress-view.js",
-    "revision": "a0b227d51eef297420b22aa367dbe750"
+    "revision": "700f6da1f40ddb598de1a4d65beacccf"
   },
   {
     "url": "src/views/getting-started/getting-started-view.js",
-    "revision": "6eb7977b53e1cda086bd5f8ef32da2c7"
+    "revision": "6f77dde2b4e03c1418e8361c5c4a13dd"
   },
   {
     "url": "src/views/home/home-view.js",
-    "revision": "01ab07ca99f05ea4fcf504143a16a0e4"
+    "revision": "bb760725702b2d2baa8e52bb26443382"
   },
   {
     "url": "src/views/layout/container/container-view.js",
-    "revision": "fa18392c99650bb150d0cc4343e84e90"
+    "revision": "ef1f3cb063310e4a493c0ea465933955"
   },
   {
     "url": "src/views/layout/container/examples/container-example.js",
-    "revision": "59b14b10acd0047fd80dd82c908de691"
+    "revision": "b4d4c059a00720614486764f0e8de69a"
   },
   {
     "url": "src/views/layout/container/examples/container-fluid-example.js",
@@ -1013,99 +1017,99 @@ self.__precacheManifest = [
   },
   {
     "url": "src/views/layout/grid/examples/all-breakpoints-example.js",
-    "revision": "534cc5dc8fba11badf86f93621927330"
+    "revision": "cbe477826609e855483f5b8399bec8f9"
   },
   {
     "url": "src/views/layout/grid/examples/column-break-example.js",
-    "revision": "83d86993f3ec9bd8e9e4f32109b7f569"
+    "revision": "abb108f2c282e6859575322107dda8ce"
   },
   {
     "url": "src/views/layout/grid/examples/column-break-with-utilities-example.js",
-    "revision": "4c579bc27218e3bcae5358db7419e1a8"
+    "revision": "bdd99c6f648f497d4d0e4d63328a2e4e"
   },
   {
     "url": "src/views/layout/grid/examples/column-wrapping-example.js",
-    "revision": "644136523275071891e8a54b3fc211c6"
+    "revision": "cc87e93950f6d0882e001a9bba156924"
   },
   {
     "url": "src/views/layout/grid/examples/equal-width-columns-example.js",
-    "revision": "7dfbff377c108de7176da53693697ee1"
+    "revision": "9a79f9c9ee45c0b5cfcea488355a72f4"
   },
   {
     "url": "src/views/layout/grid/examples/equal-width-example.js",
-    "revision": "db6c048485b8993d13bcb82eb2d7454b"
+    "revision": "b61d615eb7c64283fa5ee5f736003517"
   },
   {
     "url": "src/views/layout/grid/examples/equal-width-multi-row-example.js",
-    "revision": "9b47fd1645974bd7033bf68dd0ffe836"
+    "revision": "c241ff7d4b208ea0eb1fb3c23e6d4fb4"
   },
   {
     "url": "src/views/layout/grid/examples/equal-width-multiline-example.js",
-    "revision": "b3b1db60e65244d5ba9eb3984731e06e"
+    "revision": "ac3865a80b3f11a0b474a5bee4d65998"
   },
   {
     "url": "src/views/layout/grid/examples/horizontal-alignment-example.js",
-    "revision": "73e13bb609a818489865651ea3f2f29f"
+    "revision": "ab89fc5d51b4a5c11e24c7149b5772f1"
   },
   {
     "url": "src/views/layout/grid/examples/margin-utilities-example.js",
-    "revision": "9970aa02f5b8ea752141b902bc6bd19a"
+    "revision": "41dc18dd59dfef32b3598eae5039847b"
   },
   {
     "url": "src/views/layout/grid/examples/mix-and-match-example.js",
-    "revision": "9aa1e47ef6ca6896b5884d158c4243f8"
+    "revision": "521be3240798153ca2a2eaf4552da349"
   },
   {
     "url": "src/views/layout/grid/examples/nested-grid-example.js",
-    "revision": "d83db98f975165d4a818ca8b806dc95a"
+    "revision": "469cc806dce6970d70b7c14d4e8a18a6"
   },
   {
     "url": "src/views/layout/grid/examples/no-gutters-example.js",
-    "revision": "f5a881c4b651b118f08448f6c366ff99"
+    "revision": "939d24b929825b580c6cd7daf1559694"
   },
   {
     "url": "src/views/layout/grid/examples/offset-columns-example.js",
-    "revision": "c744ea1f57f866e2b5d8362c2734ce09"
+    "revision": "5e294bbc4fc8b6367163d50b427cf05f"
   },
   {
     "url": "src/views/layout/grid/examples/offset-columns-reset-example.js",
-    "revision": "db6250fa3e0367b06aa7146271a54d61"
+    "revision": "4835dd39311fcfda8d02cd76419f3c54"
   },
   {
     "url": "src/views/layout/grid/examples/one-column-width-example.js",
-    "revision": "657d7957a84617a8fe760b78ae79e1d4"
+    "revision": "9a9cc1a4ee943c41a727e8409590909d"
   },
   {
     "url": "src/views/layout/grid/examples/reorder-columns-example.js",
-    "revision": "0574108547722658c7546fb95e9fa19d"
+    "revision": "e70abdda5c7c6584351f2cd6f23e9207"
   },
   {
     "url": "src/views/layout/grid/examples/reorder-columns-responsive-example.js",
-    "revision": "bdfc638f50d076b599ea56979accffec"
+    "revision": "0e55a9c552931a4bcb6824d6cdeb1df4"
   },
   {
     "url": "src/views/layout/grid/examples/stacked-to-horizontal-example.js",
-    "revision": "79b3e6adc5d03b5772f491097b425787"
+    "revision": "057fd03f325c5cde70cd4f620fc17513"
   },
   {
     "url": "src/views/layout/grid/examples/variable-width-content-example.js",
-    "revision": "249c45938b762102d094d3597b467255"
+    "revision": "cbd9e758b5bb87f40d2f69215ae8dcc1"
   },
   {
     "url": "src/views/layout/grid/examples/vertical-alignment-column-example.js",
-    "revision": "61843f4bc734d1edb4b9dc031114fe8f"
+    "revision": "a187e98c5be18452f2b4318fb59a04f6"
   },
   {
     "url": "src/views/layout/grid/examples/vertical-alignment-example.js",
-    "revision": "9edab8dde0f89c0be4918c70efd1fc33"
+    "revision": "b0b75f4e72b4ac8a819c2b0893d67dbd"
   },
   {
     "url": "src/views/layout/grid/grid-view.js",
-    "revision": "37b59d9ff56a14725194ea3bb62f16bf"
+    "revision": "e9e4634cf25d528431053cf42d911944"
   },
   {
     "url": "src/views/loading/loading-view.js",
-    "revision": "bd2145849b93e2a7be7130d612692e4a"
+    "revision": "4b8aa4365a65cdf21aa49e97a0db5178"
   },
   {
     "url": "web_assets/es-module-shims.min.js",
@@ -1141,7 +1145,7 @@ self.__precacheManifest = [
   },
   {
     "url": "web_assets/import-map.json",
-    "revision": "4c628f4342c1a9e5b643a3c53ffea28d"
+    "revision": "71ee7a7e14cb7d356d8f979dc468330b"
   },
   {
     "url": "web_assets/manifest.json",
@@ -1452,128 +1456,136 @@ self.__precacheManifest = [
     "revision": "132b32c538331115f07cdbb8d5aafd6b"
   },
   {
-    "url": "web_modules/common/bs-close-button-35d76861.js",
-    "revision": "b1b8860bc3f54845fb7bf286ffb831e1"
+    "url": "web_modules/@lit-element-bootstrap/alert.js",
+    "revision": "16dc144abac3d1a52cf105de582db28e"
   },
   {
-    "url": "web_modules/common/bs-content-reboot-css-ebf48278.js",
+    "url": "web_modules/@lit-element-bootstrap/badge.js",
+    "revision": "8b6cbf293ab497008fbbded260649e5c"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/breadcrumb.js",
+    "revision": "0c16c180008f549b4cbac34d63555b50"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/button-group.js",
+    "revision": "e68ab93e6c0025936aa164ae6232f399"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/button.js",
+    "revision": "db21d5b2880a9096a3767adb1d738e3d"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/card.js",
+    "revision": "a1756c52d3894fc8038d0e7c70952d30"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/carousel.js",
+    "revision": "92337591ef14b5e001a8634140471607"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/collapse.js",
+    "revision": "6047b26a27a76f519740bc2bcb37f409"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/content.js",
+    "revision": "0a1562c9267a7bbbed689e8d5337cec6"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/dropdown.js",
+    "revision": "976e08dfa1ffa7e974a977682d05a6a1"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/form.js",
+    "revision": "c68fc80c23926159af456e090bc0e7e1"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/input-group.js",
+    "revision": "6b1622af4266e7017d0c4e994bde4a89"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/jumbotron.js",
+    "revision": "003a939bbedaf859bd917eea7da2ceaa"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/layout.js",
+    "revision": "288d8f4d9fbe571f1d1653cf7d93d8a1"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/list-group.js",
+    "revision": "519a71303d4fd0a5b5c808fd3ab950a9"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/media-object.js",
+    "revision": "c56e5e5c75f5303a9491478043ee4fd8"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/modal.js",
+    "revision": "39b4f7e4f281f5f4b09b8aa6916fe402"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/navbar.js",
+    "revision": "ce03a4447d88624823b214df58688b51"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/navs.js",
+    "revision": "19c7f951c9fb09c4167900177b534b93"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/pagination.js",
+    "revision": "ab0f628e6fdbc30711823dd6738432aa"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/progress.js",
+    "revision": "e80c7fc905ffcb639a48eb2f6b4d22c7"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/theme.js",
+    "revision": "f79ebb8aeeea0e4f73faa2546c5ced1b"
+  },
+  {
+    "url": "web_modules/@lit-element-bootstrap/utilities.js",
+    "revision": "919ff315ff77fb88232b6def44f5ddfd"
+  },
+  {
+    "url": "web_modules/common/bs-close-button-9021156f.js",
+    "revision": "73c6dcdb54cdf3c6f807eb3bc56bc789"
+  },
+  {
+    "url": "web_modules/common/bs-column-xl.css-6b6d2e52.js",
+    "revision": "f0bcf8810561f07455e111a9fb2fef0e"
+  },
+  {
+    "url": "web_modules/common/bs-content-reboot.css-c5865ddd.js",
     "revision": "15b7324c264f414295deb68c14f19dd8"
   },
   {
-    "url": "web_modules/common/bs-flex-align-content-css-b099adc1.js",
-    "revision": "e78b657cadae9e82745ccfcbbc21f00c"
+    "url": "web_modules/common/bs-content-typography.css-0b50b318.js",
+    "revision": "ae9f9c5c66f293fb309140e7f4b79912"
   },
   {
-    "url": "web_modules/common/bs-spacing-css-ba74c20d.js",
+    "url": "web_modules/common/bs-flex-align-items.css-e3493319.js",
+    "revision": "4576bc5c68d167cffc3f76a1cf770cde"
+  },
+  {
+    "url": "web_modules/common/bs-sizing.css-89c18bf2.js",
+    "revision": "3c504e54561ec2e34a0137607705e705"
+  },
+  {
+    "url": "web_modules/common/bs-spacing.css-ba183fdb.js",
     "revision": "1b3987b43bfacaa1916c111979554ae3"
   },
   {
-    "url": "web_modules/common/bs-text-colors-css-726ad9ac.js",
+    "url": "web_modules/common/bs-text-colors.css-1b784395.js",
     "revision": "21883f5d27999004786c9b69130a4aec"
-  },
-  {
-    "url": "web_modules/common/index-603f562a.js",
-    "revision": "c5e90924f7fa2a0636be068876420530"
   },
   {
     "url": "web_modules/common/lit-html-9b6153da.js",
     "revision": "8b22e91252f8c0f13df31c8ef2a86187"
   },
   {
-    "url": "web_modules/lit-element-bootstrap/behaviour/collapse.js",
-    "revision": "f969ad1a052693ce048b03310b12b3bc"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/alert.js",
-    "revision": "bdffffb9d47e1ea720df1e0e473882ab"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/badge.js",
-    "revision": "220ae4f849d718bf05e0a69bf847ca79"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/breadcrumb.js",
-    "revision": "d0900aee3ec50f164bbde42b31f7e180"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/button-group.js",
-    "revision": "bf8e4cb8cf6ceee3f9427af4ec5881b2"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/button.js",
-    "revision": "f07647e7f297817dad5a959e4e1a6ffb"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/card.js",
-    "revision": "9a1c6eb043b8991bb58399ee7791c194"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/carousel.js",
-    "revision": "699941b4a1d1fb1a7ed15526e917ad00"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/dropdown.js",
-    "revision": "f77031918f0a3d2d3d3f71d8080c4e6e"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/form.js",
-    "revision": "7b4bf9f9e15eafb1da74588545c6192d"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/input-group.js",
-    "revision": "ad640bd0fa26e977b96c82236326f2e9"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/jumbotron.js",
-    "revision": "d8a13a097af5dee826429fc0f0fa52ec"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/list-group.js",
-    "revision": "a92adb8b85d775cb8a65e0efc930cfcf"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/media-object.js",
-    "revision": "b6dcf68d4b723915c5b92eb568fcb58b"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/modal.js",
-    "revision": "ff10011f11ea6fccc0e245aa1edf709c"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/navbar.js",
-    "revision": "abf31b45e78e0ab3d1f2e5eedc65d007"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/navs.js",
-    "revision": "076aa49baddcf1b0258fef2b9ff6919d"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/pagination.js",
-    "revision": "de19bbfe9856c5488b384d11b4ea13ca"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/components/progress.js",
-    "revision": "26732558f42217ac87adf94a56eac704"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/content.js",
-    "revision": "51d1d8f24c271ee15625db565b4bd114"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/layout.js",
-    "revision": "5f6a8b182fe22242d0d4979760d40c76"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/theme.js",
-    "revision": "f79ebb8aeeea0e4f73faa2546c5ced1b"
-  },
-  {
-    "url": "web_modules/lit-element-bootstrap/utilities.js",
-    "revision": "0a4f70aea97fa0e797adee29974b3ce1"
-  },
-  {
     "url": "web_modules/lit-element.js",
-    "revision": "501203d7a9886239f00f48d4e596b089"
+    "revision": "adf5c563aec1c61eeb08124ea4bd73c2"
   },
   {
     "url": "web_modules/lit-html/directives/unsafe-html.js",

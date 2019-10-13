@@ -2,7 +2,7 @@
 import { LitElement } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/list-group';
+import '@lit-element-bootstrap/list-group';
 
 class ActiveListGroupItemsExample extends BsExampleMixin(LitElement) {
     

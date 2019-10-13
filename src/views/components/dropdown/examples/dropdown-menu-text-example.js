@@ -1,9 +1,9 @@
 
 import { LitElement } from 'lit-element';
-import { BsClearfixCss, BsTextColorCss, BsSpacingCss } from 'lit-element-bootstrap/utilities';
+import { BsClearfixCss, BsTextColorCss, BsSpacingCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/dropdown';
+import '@lit-element-bootstrap/dropdown';
 
 class DropdownMenuTextExample extends BsExampleMixin(LitElement) {
     

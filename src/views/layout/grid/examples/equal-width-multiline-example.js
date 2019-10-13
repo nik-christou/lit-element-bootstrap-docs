@@ -1,9 +1,9 @@
 
 import { LitElement, css } from 'lit-element';
-import { BsSizingCss } from 'lit-element-bootstrap/utilities';
+import { BsSizingCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/layout';
+import '@lit-element-bootstrap/layout';
 
 class EqualWidthMultilineExample extends BsExampleMixin(LitElement) {
     

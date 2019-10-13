@@ -1,11 +1,11 @@
 
 import { LitElement, html } from 'lit-element';
 import { TableOfContentMixin } from '../../../../component/toc/table-of-content-mixin.js';
-import { BsDocsContentCss } from '../../../../component/content/bs-docs-content-css.js';
-import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BsDocsContentCss } from '../../../../component/content/bs-docs-content.css.js';
+import { BsContentRebootCss, BsContentCodeCss, BsContentTypographyCss } from '@lit-element-bootstrap/content';
 
-import 'lit-element-bootstrap/layout';
-import 'lit-element-bootstrap/components/navs';
+import '@lit-element-bootstrap/layout';
+import '@lit-element-bootstrap/navs';
 
 import '../../../../component/toc/table-of-content.js';
 import '../../../../component/toc/table-of-content-item.js';

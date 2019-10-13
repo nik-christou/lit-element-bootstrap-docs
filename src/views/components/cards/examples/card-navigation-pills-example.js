@@ -1,11 +1,11 @@
 
 import { LitElement } from 'lit-element';
-import { BsTextCss } from 'lit-element-bootstrap/utilities';
+import { BsTextCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/card';
-import 'lit-element-bootstrap/components/navs';
-import 'lit-element-bootstrap/components/list-group';
+import '@lit-element-bootstrap/card';
+import '@lit-element-bootstrap/navs';
+import '@lit-element-bootstrap/list-group';
 
 class CardNavigationPillsExample extends BsExampleMixin(LitElement) {
     

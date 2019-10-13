@@ -1,9 +1,9 @@
 
 import { LitElement, css } from 'lit-element';
-import { BsTextColorCss, BsSpacingCss } from 'lit-element-bootstrap/utilities';
+import { BsTextColorCss, BsSpacingCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/card';
+import '@lit-element-bootstrap/card';
 
 class TitleTextLinksExample extends BsExampleMixin(LitElement) {
     

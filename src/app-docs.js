@@ -1,12 +1,12 @@
 
 import { LitElement, html, css } from 'lit-element';
 import { installRouter } from 'pwa-helpers/router';
-import { BsContentRebootCss } from 'lit-element-bootstrap/content';
-import { DefaultThemeCss } from 'lit-element-bootstrap/theme';
+import { BsContentRebootCss } from '@lit-element-bootstrap/content';
+import { DefaultThemeCss } from '@lit-element-bootstrap/theme';
 import { getTemplateToLoad, getViewCustomElementName,  getViewCustomElementPath } from './app-routing.js';
-
 import { Workbox } from 'workbox-window';
-import 'lit-element-bootstrap/components/alert';
+
+import '@lit-element-bootstrap/alert';
 
 import './component/drawer/drawer-layout.js';
 import './component/drawer/drawer-sidebar.js';

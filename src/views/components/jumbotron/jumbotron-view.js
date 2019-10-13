@@ -3,7 +3,7 @@ import { LitElement, html } from 'lit-element';
 import { BaseViewMixin } from '../../base-view.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
-import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BsContentRebootCss, BsContentTypographyCss } from '@lit-element-bootstrap/content';
 
 import './examples/jumbotron-example.js';
 import './examples/jumbotron-fluid-example.js';

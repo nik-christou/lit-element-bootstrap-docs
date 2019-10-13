@@ -1,10 +1,10 @@
 
 import { LitElement } from 'lit-element';
-import { BsTextCss, BsTextColorCss } from 'lit-element-bootstrap/utilities';
+import { BsTextCss, BsTextColorCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/button';
-import 'lit-element-bootstrap/components/card';
+import '@lit-element-bootstrap/card';
+import '@lit-element-bootstrap/button';
 
 class HeaderAndFooterFeaturedExample extends BsExampleMixin(LitElement) {
     

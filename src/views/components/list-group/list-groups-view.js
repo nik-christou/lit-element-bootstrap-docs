@@ -2,8 +2,8 @@
 import { LitElement, html } from 'lit-element';
 import { BaseViewMixin } from '../../base-view.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
-import { BsDocsContentCss } from '../../../component/content/bs-docs-content-css.js';
-import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
+import { BsDocsContentCss } from '../../../component/content/bs-docs-content.css.js';
+import { BsContentRebootCss, BsContentTypographyCss } from '@lit-element-bootstrap/content';
 
 import '../../../component/callout/bs-callout.js';
 import './examples/basic-list-group-example.js';

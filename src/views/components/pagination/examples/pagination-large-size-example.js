@@ -2,7 +2,7 @@
 import { LitElement } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/pagination';
+import '@lit-element-bootstrap/pagination';
 
 class PaginationLargeSizeExample extends BsExampleMixin(LitElement) {
     

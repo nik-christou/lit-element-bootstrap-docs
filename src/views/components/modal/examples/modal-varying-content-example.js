@@ -2,9 +2,9 @@
 import { LitElement } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/form';
-import 'lit-element-bootstrap/components/modal';
-import 'lit-element-bootstrap/components/button';
+import '@lit-element-bootstrap/form';
+import '@lit-element-bootstrap/modal';
+import '@lit-element-bootstrap/button';
 
 class ModalVaryingContentExample extends BsExampleMixin(LitElement) {
     

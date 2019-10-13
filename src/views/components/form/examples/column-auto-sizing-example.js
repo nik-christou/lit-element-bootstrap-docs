@@ -1,13 +1,12 @@
 
 import { LitElement } from 'lit-element';
-import { BsFlexAlignItemsCss } from 'lit-element-bootstrap/utilities';
-import { BsSpacingCss, BsScreenreaderCss } from 'lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
+import { BsSpacingCss, BsScreenreaderCss, BsFlexAlignItemsCss } from '@lit-element-bootstrap/utilities';
 
-import 'lit-element-bootstrap/layout';
-import 'lit-element-bootstrap/components/form';
-import 'lit-element-bootstrap/components/input-group'
-import 'lit-element-bootstrap/components/form';
+import '@lit-element-bootstrap/layout';
+import '@lit-element-bootstrap/form';
+import '@lit-element-bootstrap/input-group'
+import '@lit-element-bootstrap/form';
 
 class ColumnAutoSizingExample extends BsExampleMixin(LitElement) {
     

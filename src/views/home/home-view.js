@@ -1,12 +1,17 @@
 
 import { LitElement, html, css } from 'lit-element';
-import { BsContentRebootCss, BsContentTypographyCss } from 'lit-element-bootstrap/content';
-import { BsTextCss, BsTextColorCss, BsSpacingCss, BsDisplayCss } from 'lit-element-bootstrap/utilities';
-import { BsFlexDisplayCss, BsFlexJustifyCss, BsFlexWrapCss, BsFlexAlignContentCss, BsFlexDirectionCss, BsFlexOrderCss } from 'lit-element-bootstrap/utilities';
+import { BsContentRebootCss, BsContentTypographyCss } from '@lit-element-bootstrap/content';
+import { BsTextCss, BsTextColorCss, BsSpacingCss, BsDisplayCss } from '@lit-element-bootstrap/utilities';
+import { BsFlexDisplayCss, 
+    BsFlexJustifyCss, 
+    BsFlexWrapCss, 
+    BsFlexAlignContentCss, 
+    BsFlexDirectionCss, 
+    BsFlexOrderCss } from '@lit-element-bootstrap/utilities';
 
-import 'lit-element-bootstrap/layout';
-import 'lit-element-bootstrap/components/button';
-import 'lit-element-bootstrap/components/jumbotron'; 
+import '@lit-element-bootstrap/layout';
+import '@lit-element-bootstrap/button';
+import '@lit-element-bootstrap/jumbotron'; 
 
 class HomeView extends LitElement {
     

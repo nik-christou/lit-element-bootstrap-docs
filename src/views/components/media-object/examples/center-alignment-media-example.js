@@ -1,10 +1,10 @@
 
 import { LitElement } from 'lit-element';
-import { BsSpacingCss } from 'lit-element-bootstrap/utilities';
-import { BsFlexAlignSelfCss } from 'lit-element-bootstrap/utilities';
+import { BsSpacingCss } from '@lit-element-bootstrap/utilities';
+import { BsFlexAlignSelfCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/media-object';
+import '@lit-element-bootstrap/media-object';
 
 class CenterAlignmentMediaExample extends BsExampleMixin(LitElement) {
     

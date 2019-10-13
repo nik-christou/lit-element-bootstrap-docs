@@ -1,9 +1,9 @@
 
 import { LitElement, css } from 'lit-element';
-import { BsSizingCss, BsDisplayCss } from 'lit-element-bootstrap/utilities';
+import { BsSizingCss, BsDisplayCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/carousel';
+import '@lit-element-bootstrap/carousel';
 
 class SlidesWithIndicatorsExample extends BsExampleMixin(LitElement) {
     

@@ -2,8 +2,8 @@
 import { LitElement, css } from 'lit-element';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
-import 'lit-element-bootstrap/components/card';
-import 'lit-element-bootstrap/components/list-group';
+import '@lit-element-bootstrap/card';
+import '@lit-element-bootstrap/list-group';
 
 class CardListGroupFeaturedExample extends BsExampleMixin(LitElement) {
     
