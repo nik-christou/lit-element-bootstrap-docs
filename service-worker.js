@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "src/app-docs.js",
-    "revision": "458af5b1b239f01220145a51c14731fa"
+    "revision": "404e7d399f420005683637617a3ba8db"
   },
   {
     "url": "src/app-routing.js",

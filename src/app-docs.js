@@ -33,6 +33,7 @@ export class AppDocs extends LitElement {
                     bottom: 0;
                     left: 20px;
                     z-index: 1030;
+                    visibility: hidden;
                 }
 
                 bs-alert-link {
@@ -158,6 +159,7 @@ export class AppDocs extends LitElement {
             // alert component should provide a show/hide functions
             // to avoid the need to react on attributes changes
             const refreshAlertElement = this.shadowRoot.querySelector('bs-alert');
+            refreshAlertElement.style.visibility = 'visible';
             refreshAlertElement.setAttribute('show', true);
         });
     
