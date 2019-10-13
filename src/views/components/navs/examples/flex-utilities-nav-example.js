@@ -1,6 +1,6 @@
 
 import { LitElement } from 'lit-element';
-import { BsTextCss } from 'lit-element-bootstrap/utilities';
+import { BsTextCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 import { BsFlexWrapCss, BsFlexDirectionCss } from '@lit-element-bootstrap/utilities';
 

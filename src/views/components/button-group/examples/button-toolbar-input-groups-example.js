@@ -1,7 +1,6 @@
 
 import { LitElement, css } from 'lit-element';
-import { BsSpacingCss } from 'lit-element-bootstrap/utilities';
-import { BsFlexJustifyCss } from 'lit-element-bootstrap/utilities';
+import { BsSpacingCss, BsFlexJustifyCss } from '@lit-element-bootstrap/utilities';
 import { BsExampleMixin } from '../../../../component/example/bs-example-mixin.js';
 
 import '@lit-element-bootstrap/button';
