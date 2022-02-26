@@ -20,7 +20,7 @@
         "@webcomponents/webcomponentsjs": "^2.3.0",
         "lit-element": "^2.2.1",
         "lit-html": "^1.1.2",
-        "prismjs": "^1.17.1",
+        "prismjs": "^1.27.0",
         "pwa-helpers": "^0.9.1",
         "workbox-sw": "^4.3.1",
         "workbox-window": "^4.3.1",
